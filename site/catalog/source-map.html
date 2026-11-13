@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Source map for Sergei Snegov’s Dictator, with chapter and source references.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="htmx-config" content='{"historyRestoreAsHxRequest":false,"scrollIntoViewOnBoost":false}'>
+  <title>Source map · Dictator</title>
+  <script>
+    (() => {
+      let saved;
+      try { saved = localStorage.getItem('dictator-theme'); } catch (_) {}
+      const dark = saved === 'dark' || (saved !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    })();
+  </script>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/htmx.min.js" defer></script>
+  <script src="../assets/site.js" defer></script>
+</head>
+<body hx-boost="true" hx-target="#main-content" hx-select="#main-content" hx-swap="outerHTML" hx-indicator="#navigation-progress">
+  <a class="skip-link" href="#main-content" hx-boost="false">Skip to reading</a>
+  <header class="masthead">
+    <a class="book-brand" href="../index.html" data-persistent-link aria-label="Dictator reading companion home">
+      <span class="book-title">Dictator</span>
+      <span class="book-author">Sergei Snegov</span>
+    </a>
+    <div class="masthead-tools">
+      <span class="edition-label">A reading companion</span>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>
+        <svg class="theme-icon icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20.5 13.4A8.7 8.7 0 0 1 10.6 3.5 8.7 8.7 0 1 0 20.5 13.4Z"/></svg>
+        <svg class="theme-icon icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4m0-14.2-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+        <span id="theme-label">Dark mode</span>
+      </button>
+    </div>
+  </header>
+  <div id="navigation-progress" class="navigation-progress htmx-indicator" aria-hidden="true"></div>
+  <div class="reading-layout">
+    <aside class="sidebar" aria-label="Reading navigation">
+      <details id="site-contents" class="contents-panel" open>
+        <summary class="contents-heading"><span>Contents</span><span class="contents-hint">6 parts · 73 chapters</span></summary>
+        <div class="contents-body">
+          <div class="chapter-search" hidden>
+            <label class="sr-only" for="chapter-filter">Filter chapter titles</label>
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+            <input id="chapter-filter" type="search" placeholder="Find a chapter…" autocomplete="off" aria-controls="book-navigation" aria-describedby="filter-status">
+          </div>
+          <p id="filter-status" class="filter-status" role="status" hidden></p>
+          <nav id="book-navigation" class="contents-nav" aria-label="Book contents">
+            <a class="contents-link" data-page-id="overview" href="../index.html">Overview</a>
+<p class="contents-section-label">The chapter summaries</p>
+<details class="contents-group" data-part="1"><summary>Part I · The Impulse to Power</summary><ol class="chapter-list">
+<li><a data-page-id="p1-c01" data-search="Part I · Chapter 1 The Thursday Warning" href="../chapters/p1-c01.html"><span class="chapter-number">01</span> The Thursday Warning</a></li>
+<li><a data-page-id="p1-c02" data-search="Part I · Chapter 2 The War Turns" href="../chapters/p1-c02.html"><span class="chapter-number">02</span> The War Turns</a></li>
+<li><a data-page-id="p1-c03" data-search="Part I · Chapter 3 The Barta Position" href="../chapters/p1-c03.html"><span class="chapter-number">03</span> The Barta Position</a></li>
+<li><a data-page-id="p1-c04" data-search="Part I · Chapter 4 The Captive and the Money Convoy" href="../chapters/p1-c04.html"><span class="chapter-number">04</span> The Captive and the Money Convoy</a></li>
+<li><a data-page-id="p1-c05" data-search="Part I · Chapter 5 Victory for Cash" href="../chapters/p1-c05.html"><span class="chapter-number">05</span> Victory for Cash</a></li>
+<li><a data-page-id="p1-c06" data-search="Part I · Chapter 6 The Price of Courage" href="../chapters/p1-c06.html"><span class="chapter-number">06</span> The Price of Courage</a></li>
+<li><a data-page-id="p1-c07" data-search="Part I · Chapter 7 A Division Freed, a Corps Created" href="../chapters/p1-c07.html"><span class="chapter-number">07</span> A Division Freed, a Corps Created</a></li>
+<li><a data-page-id="p1-c08" data-search="Part I · Chapter 8 Reconciliation and an Execution" href="../chapters/p1-c08.html"><span class="chapter-number">08</span> Reconciliation and an Execution</a></li>
+<li><a data-page-id="p1-c09" data-search="Part I · Chapter 9 The Offer of Power" href="../chapters/p1-c09.html"><span class="chapter-number">09</span> The Offer of Power</a></li>
+<li><a data-page-id="p1-c10" data-search="Part I · Chapter 10 The Seizure of Power" href="../chapters/p1-c10.html"><span class="chapter-number">10</span> The Seizure of Power</a></li>
+</ol></details>
+<details class="contents-group" data-part="2"><summary>Part II · Sacred Terror</summary><ol class="chapter-list">
+<li><a data-page-id="p2-c01" data-search="Part II · Chapter 1 Gold, Humiliation, and a Dictator" href="../chapters/p2-c01.html"><span class="chapter-number">01</span> Gold, Humiliation, and a Dictator</a></li>
+<li><a data-page-id="p2-c02" data-search="Part II · Chapter 2 The First Address and the Sacred Terror" href="../chapters/p2-c02.html"><span class="chapter-number">02</span> The First Address and the Sacred Terror</a></li>
+<li><a data-page-id="p2-c03" data-search="Part II · Chapter 3 Rewards, Executions, and International Courts" href="../chapters/p2-c03.html"><span class="chapter-number">03</span> Rewards, Executions, and International Courts</a></li>
+<li><a data-page-id="p2-c04" data-search="Part II · Chapter 4 The Opposition as an Instrument of Fear" href="../chapters/p2-c04.html"><span class="chapter-number">04</span> The Opposition as an Instrument of Fear</a></li>
+<li><a data-page-id="p2-c05" data-search="Part II · Chapter 5 Making Enemies and Exposing Zabon" href="../chapters/p2-c05.html"><span class="chapter-number">05</span> Making Enemies and Exposing Zabon</a></li>
+<li><a data-page-id="p2-c06" data-search="Part II · Chapter 6 Refusing Retreat and Staging Betrayal" href="../chapters/p2-c06.html"><span class="chapter-number">06</span> Refusing Retreat and Staging Betrayal</a></li>
+<li><a data-page-id="p2-c07" data-search="Part II · Chapter 7 The Deluge and Nordag&#39;s Attack" href="../chapters/p2-c07.html"><span class="chapter-number">07</span> The Deluge and Nordag&#39;s Attack</a></li>
+<li><a data-page-id="p2-c08" data-search="Part II · Chapter 8 A False Threat Becomes an Order" href="../chapters/p2-c08.html"><span class="chapter-number">08</span> A False Threat Becomes an Order</a></li>
+<li><a data-page-id="p2-c09" data-search="Part II · Chapter 9 Zabon Is Saved, but Mercy Fails" href="../chapters/p2-c09.html"><span class="chapter-number">09</span> Zabon Is Saved, but Mercy Fails</a></li>
+</ol></details>
+<details class="contents-group" data-part="3"><summary>Part III · Turning Point</summary><ol class="chapter-list">
+<li><a data-page-id="p3-c01" data-search="Part III · Chapter 1 The Price of Terror" href="../chapters/p3-c01.html"><span class="chapter-number">01</span> The Price of Terror</a></li>
+<li><a data-page-id="p3-c02" data-search="Part III · Chapter 2 Mercy Under Threat" href="../chapters/p3-c02.html"><span class="chapter-number">02</span> Mercy Under Threat</a></li>
+<li><a data-page-id="p3-c03" data-search="Part III · Chapter 3 A Spy Becomes a Channel" href="../chapters/p3-c03.html"><span class="chapter-number">03</span> A Spy Becomes a Channel</a></li>
+<li><a data-page-id="p3-c04" data-search="Part III · Chapter 4 War Before the Court of Humanity" href="../chapters/p3-c04.html"><span class="chapter-number">04</span> War Before the Court of Humanity</a></li>
+<li><a data-page-id="p3-c05" data-search="Part III · Chapter 5 The Fleet Behind the Front" href="../chapters/p3-c05.html"><span class="chapter-number">05</span> The Fleet Behind the Front</a></li>
+<li><a data-page-id="p3-c06" data-search="Part III · Chapter 6 Gamov Risks His Mandate" href="../chapters/p3-c06.html"><span class="chapter-number">06</span> Gamov Risks His Mandate</a></li>
+<li><a data-page-id="p3-c07" data-search="Part III · Chapter 7 Victory at the Ballot, Danger on Every Front" href="../chapters/p3-c07.html"><span class="chapter-number">07</span> Victory at the Ballot, Danger on Every Front</a></li>
+<li><a data-page-id="p3-c08" data-search="Part III · Chapter 8 The Punishment of Konduk" href="../chapters/p3-c08.html"><span class="chapter-number">08</span> The Punishment of Konduk</a></li>
+<li><a data-page-id="p3-c09" data-search="Part III · Chapter 9 A False Agent and a Real Doubt" href="../chapters/p3-c09.html"><span class="chapter-number">09</span> A False Agent and a Real Doubt</a></li>
+<li><a data-page-id="p3-c10" data-search="Part III · Chapter 10 The Mutiny That Demanded Battle" href="../chapters/p3-c10.html"><span class="chapter-number">10</span> The Mutiny That Demanded Battle</a></li>
+<li><a data-page-id="p3-c11" data-search="Part III · Chapter 11 The Captive Who Understands the Plan" href="../chapters/p3-c11.html"><span class="chapter-number">11</span> The Captive Who Understands the Plan</a></li>
+<li><a data-page-id="p3-c12" data-search="Part III · Chapter 12 The Traitor He Agrees to Become" href="../chapters/p3-c12.html"><span class="chapter-number">12</span> The Traitor He Agrees to Become</a></li>
+<li><a data-page-id="p3-c13" data-search="Part III · Chapter 13 Darkness Beneath the Gallows" href="../chapters/p3-c13.html"><span class="chapter-number">13</span> Darkness Beneath the Gallows</a></li>
+</ol></details>
+<details class="contents-group" data-part="4"><summary>Part IV · Offensive</summary><ol class="chapter-list">
+<li><a data-page-id="p4-c01" data-search="Part IV · Chapter 1 A secret return to life" href="../chapters/p4-c01.html"><span class="chapter-number">01</span> A secret return to life</a></li>
+<li><a data-page-id="p4-c02" data-search="Part IV · Chapter 2 A window onto nuclear destruction" href="../chapters/p4-c02.html"><span class="chapter-number">02</span> A window onto nuclear destruction</a></li>
+<li><a data-page-id="p4-c03" data-search="Part IV · Chapter 3 Doubt, complicity, and a delayed return" href="../chapters/p4-c03.html"><span class="chapter-number">03</span> Doubt, complicity, and a delayed return</a></li>
+<li><a data-page-id="p4-c04" data-search="Part IV · Chapter 4 The hidden air army" href="../chapters/p4-c04.html"><span class="chapter-number">04</span> The hidden air army</a></li>
+<li><a data-page-id="p4-c05" data-search="Part IV · Chapter 5 A storm opens the prison camps" href="../chapters/p4-c05.html"><span class="chapter-number">05</span> A storm opens the prison camps</a></li>
+<li><a data-page-id="p4-c06" data-search="Part IV · Chapter 6 Terror, mercy, and public resurrection" href="../chapters/p4-c06.html"><span class="chapter-number">06</span> Terror, mercy, and public resurrection</a></li>
+<li><a data-page-id="p4-c07" data-search="Part IV · Chapter 7 Six strongholds close around the enemy" href="../chapters/p4-c07.html"><span class="chapter-number">07</span> Six strongholds close around the enemy</a></li>
+<li><a data-page-id="p4-c08" data-search="Part IV · Chapter 8 The person beneath the mask" href="../chapters/p4-c08.html"><span class="chapter-number">08</span> The person beneath the mask</a></li>
+<li><a data-page-id="p4-c09" data-search="Part IV · Chapter 9 Independence as punishment, agreement by force" href="../chapters/p4-c09.html"><span class="chapter-number">09</span> Independence as punishment, agreement by force</a></li>
+<li><a data-page-id="p4-c10" data-search="Part IV · Chapter 10 Food pressure and a terrible reprisal" href="../chapters/p4-c10.html"><span class="chapter-number">10</span> Food pressure and a terrible reprisal</a></li>
+<li><a data-page-id="p4-c11" data-search="Part IV · Chapter 11 The execution flight and its unexpected welcome" href="../chapters/p4-c11.html"><span class="chapter-number">11</span> The execution flight and its unexpected welcome</a></li>
+<li><a data-page-id="p4-c12" data-search="Part IV · Chapter 12 Gamov moves the war into public feeling" href="../chapters/p4-c12.html"><span class="chapter-number">12</span> Gamov moves the war into public feeling</a></li>
+<li><a data-page-id="p4-c13" data-search="Part IV · Chapter 13 Private love and failed diplomacy" href="../chapters/p4-c13.html"><span class="chapter-number">13</span> Private love and failed diplomacy</a></li>
+<li><a data-page-id="p4-c14" data-search="Part IV · Chapter 14 Mothers confronted with the war" href="../chapters/p4-c14.html"><span class="chapter-number">14</span> Mothers confronted with the war</a></li>
+<li><a data-page-id="p4-c15" data-search="Part IV · Chapter 15 Nordag’s thirst and a daughter’s defiance" href="../chapters/p4-c15.html"><span class="chapter-number">15</span> Nordag’s thirst and a daughter’s defiance</a></li>
+</ol></details>
+<details class="contents-group" data-part="5"><summary>Part V · The Devil of a God Not Ours</summary><ol class="chapter-list">
+<li><a data-page-id="p5-c01" data-search="Part V · Chapter 1 Anna Kursai&#39;s revenge for Floria" href="../chapters/p5-c01.html"><span class="chapter-number">01</span> Anna Kursai&#39;s revenge for Floria</a></li>
+<li><a data-page-id="p5-c02" data-search="Part V · Chapter 2 A homecoming and an enemy beyond military plans" href="../chapters/p5-c02.html"><span class="chapter-number">02</span> A homecoming and an enemy beyond military plans</a></li>
+<li><a data-page-id="p5-c03" data-search="Part V · Chapter 3 Saving enemy children by force" href="../chapters/p5-c03.html"><span class="chapter-number">03</span> Saving enemy children by force</a></li>
+<li><a data-page-id="p5-c04" data-search="Part V · Chapter 4 Mercy on the public stage" href="../chapters/p5-c04.html"><span class="chapter-number">04</span> Mercy on the public stage</a></li>
+<li><a data-page-id="p5-c05" data-search="Part V · Chapter 5 The first split in the Core" href="../chapters/p5-c05.html"><span class="chapter-number">05</span> The first split in the Core</a></li>
+<li><a data-page-id="p5-c06" data-search="Part V · Chapter 6 Famine, revolt, and a rejected appeal" href="../chapters/p5-c06.html"><span class="chapter-number">06</span> Famine, revolt, and a rejected appeal</a></li>
+<li><a data-page-id="p5-c07" data-search="Part V · Chapter 7 Gamov collapses before the assembled government" href="../chapters/p5-c07.html"><span class="chapter-number">07</span> Gamov collapses before the assembled government</a></li>
+<li><a data-page-id="p5-c08" data-search="Part V · Chapter 8 The sickroom becomes a political force" href="../chapters/p5-c08.html"><span class="chapter-number">08</span> The sickroom becomes a political force</a></li>
+<li><a data-page-id="p5-c09" data-search="Part V · Chapter 9 Semipalov obeys the vote he opposed" href="../chapters/p5-c09.html"><span class="chapter-number">09</span> Semipalov obeys the vote he opposed</a></li>
+<li><a data-page-id="p5-c10" data-search="Part V · Chapter 10 Aid changes the alliances" href="../chapters/p5-c10.html"><span class="chapter-number">10</span> Aid changes the alliances</a></li>
+<li><a data-page-id="p5-c11" data-search="Part V · Chapter 11 Cortezia&#39;s crisis ends in peace" href="../chapters/p5-c11.html"><span class="chapter-number">11</span> Cortezia&#39;s crisis ends in peace</a></li>
+</ol></details>
+<details class="contents-group" data-part="6"><summary>Part VI · Cleansing</summary><ol class="chapter-list">
+<li><a data-page-id="p6-c01" data-search="Part VI · Chapter 1 The condemned return alive" href="../chapters/p6-c01.html"><span class="chapter-number">01</span> The condemned return alive</a></li>
+<li><a data-page-id="p6-c02" data-search="Part VI · Chapter 2 The cost of a useful deception" href="../chapters/p6-c02.html"><span class="chapter-number">02</span> The cost of a useful deception</a></li>
+<li><a data-page-id="p6-c03" data-search="Part VI · Chapter 3 The victor demands a trial" href="../chapters/p6-c03.html"><span class="chapter-number">03</span> The victor demands a trial</a></li>
+<li><a data-page-id="p6-c04" data-search="Part VI · Chapter 4 Semipalov reviews the road to victory" href="../chapters/p6-c04.html"><span class="chapter-number">04</span> Semipalov reviews the road to victory</a></li>
+<li><a data-page-id="p6-c05" data-search="Part VI · Chapter 5 An enemy warns against self-destruction" href="../chapters/p6-c05.html"><span class="chapter-number">05</span> An enemy warns against self-destruction</a></li>
+<li><a data-page-id="p6-c06" data-search="Part VI · Chapter 6 The prosecution exposes the price of policy" href="../chapters/p6-c06.html"><span class="chapter-number">06</span> The prosecution exposes the price of policy</a></li>
+<li><a data-page-id="p6-c07" data-search="Part VI · Chapter 7 Gamov wrote both sides of the dispute" href="../chapters/p6-c07.html"><span class="chapter-number">07</span> Gamov wrote both sides of the dispute</a></li>
+<li><a data-page-id="p6-c08" data-search="Part VI · Chapter 8 Voityuk&#39;s accusation and the shadows of good" href="../chapters/p6-c08.html"><span class="chapter-number">08</span> Voityuk&#39;s accusation and the shadows of good</a></li>
+<li><a data-page-id="p6-c09" data-search="Part VI · Chapter 9 Gonzalez asks for his own death" href="../chapters/p6-c09.html"><span class="chapter-number">09</span> Gonzalez asks for his own death</a></li>
+<li><a data-page-id="p6-c10" data-search="Part VI · Chapter 10 The army prepares to stop an execution" href="../chapters/p6-c10.html"><span class="chapter-number">10</span> The army prepares to stop an execution</a></li>
+<li><a data-page-id="p6-c11" data-search="Part VI · Chapter 11 The individual victim and the unknown origin" href="../chapters/p6-c11.html"><span class="chapter-number">11</span> The individual victim and the unknown origin</a></li>
+<li><a data-page-id="p6-c12" data-search="Part VI · Chapter 12 Sentence, intervention, and the desire to disappear" href="../chapters/p6-c12.html"><span class="chapter-number">12</span> Sentence, intervention, and the desire to disappear</a></li>
+<li><a data-page-id="p6-c13" data-search="Part VI · Chapter 13 A living departure replaces martyrdom" href="../chapters/p6-c13.html"><span class="chapter-number">13</span> A living departure replaces martyrdom</a></li>
+<li><a data-page-id="p6-c14" data-search="Part VI · Chapter 14 Gonzalez changes the passenger" href="../chapters/p6-c14.html"><span class="chapter-number">14</span> Gonzalez changes the passenger</a></li>
+<li><a data-page-id="p6-c15" data-search="Part VI · Chapter 15 The peace-maker faces another divided world" href="../chapters/p6-c15.html"><span class="chapter-number">15</span> The peace-maker faces another divided world</a></li>
+</ol></details>
+<p class="contents-section-label">The reference library</p>
+<a class="contents-link" data-page-id="catalog-index" href="index.html">Explore the novel</a>
+<a class="contents-link" data-page-id="catalog-characters" href="characters.html">Characters and relationships</a>
+<a class="contents-link" data-page-id="catalog-places" href="places.html">Places and political geography</a>
+<a class="contents-link" data-page-id="catalog-timeline" href="timeline.html">Timeline and events</a>
+<a class="contents-link" data-page-id="catalog-world" href="world.html">World and technology</a>
+<a class="contents-link" data-page-id="catalog-continuity" href="continuity.html">Continuity and open questions</a>
+<a class="contents-link" data-page-id="catalog-source-map" href="source-map.html" aria-current="page">Source map</a>
+<a class="contents-link" data-page-id="catalog-chapter-reviews" href="chapter-reviews.html">Chapter evidence</a>
+
+          </nav>
+          <p class="sidebar-note">An English summary and reference.<br>Contains spoilers for the full novel.</p>
+        </div>
+      </details>
+    </aside>
+    <div class="reader-column" hx-history-elt>
+    <main id="main-content" class="main-content" data-page-id="catalog-source-map" data-page-kind="catalog" tabindex="-1">
+      <header class="page-header">
+        <p class="page-label">Reference library</p>
+        <h1>Source map</h1>
+      </header>
+      <article class="reading-content">
+        <span id="source-map"></span>
+<p>Generated by <code>scripts/book-source inventory</code>. Chapter text is Russian source prose; headings and metadata in this map are English. Navigation comes from <code>../../src/toc.ncx</code>. Continuation files are listed in each chapter's <code>file_counts</code> field in <code>source-map.json</code>.</p>
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>ID</th>
+<th>Part</th>
+<th style="text-align: right;">Chapter</th>
+<th>Start source</th>
+<th>Source span files</th>
+<th style="text-align: right;">Paragraphs</th>
+<th style="text-align: right;">Text bytes</th>
+<th style="text-align: right;">Source bytes</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="p1-c01"></a>P1-C01</td>
+<td>Part One — Drive to Power</td>
+<td style="text-align: right;">1</td>
+<td><a href="../source/text/part0002.html" data-hx-boost="false"><code>src/text/part0002.html</code></a></td>
+<td><code>src/text/part0002.html</code></td>
+<td style="text-align: right;">139</td>
+<td style="text-align: right;">55193</td>
+<td style="text-align: right;">57694</td>
+<td><a href="../evidence/chapter-text/P1-C01.txt" data-hx-boost="false"><code>tmp/chapter-text/P1-C01.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p1-c02"></a>P1-C02</td>
+<td>Part One — Drive to Power</td>
+<td style="text-align: right;">2</td>
+<td><a href="../source/text/part0002.html#1T18G-e57e33ea454c44b1aa8a6263a5c5ad60" data-hx-boost="false"><code>src/text/part0002.html#1T18G-e57e33ea454c44b1aa8a6263a5c5ad60</code></a></td>
+<td><code>src/text/part0002.html</code></td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">15565</td>
+<td style="text-align: right;">16212</td>
+<td><a href="../evidence/chapter-text/P1-C02.txt" data-hx-boost="false"><code>tmp/chapter-text/P1-C02.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p1-c03"></a>P1-C03</td>
+<td>Part One — Drive to Power</td>
+<td style="text-align: right;">3</td>
+<td><a href="../source/text/part0003.html" data-hx-boost="false"><code>src/text/part0003.html</code></a></td>
+<td><code>src/text/part0003.html</code></td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">30028</td>
+<td style="text-align: right;">31539</td>
+<td><a href="../evidence/chapter-text/P1-C03.txt" data-hx-boost="false"><code>tmp/chapter-text/P1-C03.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p1-c04"></a>P1-C04</td>
+<td>Part One — Drive to Power</td>
+<td style="text-align: right;">4</td>
+<td><a href="../source/text/part0004.html" data-hx-boost="false"><code>src/text/part0004.html</code></a></td>
+<td><code>src/text/part0004.html</code></td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">23644</td>
+<td style="text-align: right;">25155</td>
+<td><a href="../evidence/chapter-text/P1-C04.txt" data-hx-boost="false"><code>tmp/chapter-text/P1-C04.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p1-c05"></a>P1-C05</td>
+<td>Part One — Drive to Power</td>
+<td style="text-align: right;">5</td>
+<td><a href="../source/text/part0005.html" data-hx-boost="false"><code>src/text/part0005.html</code></a></td>
+<td><code>src/text/part0005.html</code></td>
+<td style="text-align: right;">123</td>
+<td style="text-align: right;">46713</td>
+<td style="text-align: right;">48935</td>
+<td><a href="../evidence/chapter-text/P1-C05.txt" data-hx-boost="false"><code>tmp/chapter-text/P1-C05.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p1-c06"></a>P1-C06</td>
+<td>Part One — Drive to Power</td>
+<td style="text-align: right;">6</td>
+<td><a href="../source/text/part0006.html" data-hx-boost="false"><code>src/text/part0006.html</code></a></td>
+<td><code>src/text/part0006.html</code></td>
+<td style="text-align: right;">105</td>
+<td style="text-align: right;">29872</td>
+<td style="text-align: right;">31761</td>
+<td><a href="../evidence/chapter-text/P1-C06.txt" data-hx-boost="false"><code>tmp/chapter-text/P1-C06.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p1-c07"></a>P1-C07</td>
+<td>Part One — Drive to Power</td>
+<td style="text-align: right;">7</td>
+<td><a href="../source/text/part0007.html" data-hx-boost="false"><code>src/text/part0007.html</code></a></td>
+<td><code>src/text/part0007.html</code></td>
+<td style="text-align: right;">101</td>
+<td style="text-align: right;">43226</td>
+<td style="text-align: right;">45043</td>
+<td><a href="../evidence/chapter-text/P1-C07.txt" data-hx-boost="false"><code>tmp/chapter-text/P1-C07.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p1-c08"></a>P1-C08</td>
+<td>Part One — Drive to Power</td>
+<td style="text-align: right;">8</td>
+<td><a href="../source/text/part0008.html" data-hx-boost="false"><code>src/text/part0008.html</code></a></td>
+<td><code>src/text/part0008.html</code></td>
+<td style="text-align: right;">103</td>
+<td style="text-align: right;">37514</td>
+<td style="text-align: right;">39367</td>
+<td><a href="../evidence/chapter-text/P1-C08.txt" data-hx-boost="false"><code>tmp/chapter-text/P1-C08.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p1-c09"></a>P1-C09</td>
+<td>Part One — Drive to Power</td>
+<td style="text-align: right;">9</td>
+<td><a href="../source/text/part0009.html" data-hx-boost="false"><code>src/text/part0009.html</code></a></td>
+<td><code>src/text/part0009.html</code></td>
+<td style="text-align: right;">115</td>
+<td style="text-align: right;">37546</td>
+<td style="text-align: right;">39615</td>
+<td><a href="../evidence/chapter-text/P1-C09.txt" data-hx-boost="false"><code>tmp/chapter-text/P1-C09.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p1-c10"></a>P1-C10</td>
+<td>Part One — Drive to Power</td>
+<td style="text-align: right;">10</td>
+<td><a href="../source/text/part0010.html" data-hx-boost="false"><code>src/text/part0010.html</code></a></td>
+<td><code>src/text/part0010.html</code></td>
+<td style="text-align: right;">125</td>
+<td style="text-align: right;">40931</td>
+<td style="text-align: right;">43180</td>
+<td><a href="../evidence/chapter-text/P1-C10.txt" data-hx-boost="false"><code>tmp/chapter-text/P1-C10.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p2-c01"></a>P2-C01</td>
+<td>Part Two — Sacred Terror</td>
+<td style="text-align: right;">1</td>
+<td><a href="../source/text/part0011.html#AFM66-e57e33ea454c44b1aa8a6263a5c5ad60" data-hx-boost="false"><code>src/text/part0011.html#AFM66-e57e33ea454c44b1aa8a6263a5c5ad60</code></a></td>
+<td><code>src/text/part0011.html</code></td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">13857</td>
+<td style="text-align: right;">14450</td>
+<td><a href="../evidence/chapter-text/P2-C01.txt" data-hx-boost="false"><code>tmp/chapter-text/P2-C01.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p2-c02"></a>P2-C02</td>
+<td>Part Two — Sacred Terror</td>
+<td style="text-align: right;">2</td>
+<td><a href="../source/text/part0012.html" data-hx-boost="false"><code>src/text/part0012.html</code></a></td>
+<td><code>src/text/part0012.html</code></td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">40089</td>
+<td style="text-align: right;">41276</td>
+<td><a href="../evidence/chapter-text/P2-C02.txt" data-hx-boost="false"><code>tmp/chapter-text/P2-C02.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p2-c03"></a>P2-C03</td>
+<td>Part Two — Sacred Terror</td>
+<td style="text-align: right;">3</td>
+<td><a href="../source/text/part0013.html" data-hx-boost="false"><code>src/text/part0013.html</code></a></td>
+<td><code>src/text/part0013.html</code></td>
+<td style="text-align: right;">113</td>
+<td style="text-align: right;">48148</td>
+<td style="text-align: right;">50181</td>
+<td><a href="../evidence/chapter-text/P2-C03.txt" data-hx-boost="false"><code>tmp/chapter-text/P2-C03.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p2-c04"></a>P2-C04</td>
+<td>Part Two — Sacred Terror</td>
+<td style="text-align: right;">4</td>
+<td><a href="../source/text/part0014.html" data-hx-boost="false"><code>src/text/part0014.html</code></a></td>
+<td><code>src/text/part0014.html</code></td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">30322</td>
+<td style="text-align: right;">31239</td>
+<td><a href="../evidence/chapter-text/P2-C04.txt" data-hx-boost="false"><code>tmp/chapter-text/P2-C04.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p2-c05"></a>P2-C05</td>
+<td>Part Two — Sacred Terror</td>
+<td style="text-align: right;">5</td>
+<td><a href="../source/text/part0015.html" data-hx-boost="false"><code>src/text/part0015.html</code></a></td>
+<td><code>src/text/part0015.html</code></td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">35858</td>
+<td style="text-align: right;">37491</td>
+<td><a href="../evidence/chapter-text/P2-C05.txt" data-hx-boost="false"><code>tmp/chapter-text/P2-C05.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p2-c06"></a>P2-C06</td>
+<td>Part Two — Sacred Terror</td>
+<td style="text-align: right;">6</td>
+<td><a href="../source/text/part0016.html" data-hx-boost="false"><code>src/text/part0016.html</code></a></td>
+<td><code>src/text/part0016.html</code></td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">25687</td>
+<td style="text-align: right;">26928</td>
+<td><a href="../evidence/chapter-text/P2-C06.txt" data-hx-boost="false"><code>tmp/chapter-text/P2-C06.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p2-c07"></a>P2-C07</td>
+<td>Part Two — Sacred Terror</td>
+<td style="text-align: right;">7</td>
+<td><a href="../source/text/part0017.html" data-hx-boost="false"><code>src/text/part0017.html</code></a></td>
+<td><code>src/text/part0017.html</code></td>
+<td style="text-align: right;">103</td>
+<td style="text-align: right;">46202</td>
+<td style="text-align: right;">48055</td>
+<td><a href="../evidence/chapter-text/P2-C07.txt" data-hx-boost="false"><code>tmp/chapter-text/P2-C07.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p2-c08"></a>P2-C08</td>
+<td>Part Two — Sacred Terror</td>
+<td style="text-align: right;">8</td>
+<td><a href="../source/text/part0018.html" data-hx-boost="false"><code>src/text/part0018.html</code></a></td>
+<td><code>src/text/part0018.html</code></td>
+<td style="text-align: right;">97</td>
+<td style="text-align: right;">38234</td>
+<td style="text-align: right;">39979</td>
+<td><a href="../evidence/chapter-text/P2-C08.txt" data-hx-boost="false"><code>tmp/chapter-text/P2-C08.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p2-c09"></a>P2-C09</td>
+<td>Part Two — Sacred Terror</td>
+<td style="text-align: right;">9</td>
+<td><a href="../source/text/part0019.html" data-hx-boost="false"><code>src/text/part0019.html</code></a></td>
+<td><code>src/text/part0019.html</code></td>
+<td style="text-align: right;">113</td>
+<td style="text-align: right;">35663</td>
+<td style="text-align: right;">37705</td>
+<td><a href="../evidence/chapter-text/P2-C09.txt" data-hx-boost="false"><code>tmp/chapter-text/P2-C09.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p3-c01"></a>P3-C01</td>
+<td>Part Three — Turning Point</td>
+<td style="text-align: right;">1</td>
+<td><a href="../source/text/part0021.html" data-hx-boost="false"><code>src/text/part0021.html</code></a></td>
+<td><code>src/text/part0021.html</code></td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">29027</td>
+<td style="text-align: right;">30268</td>
+<td><a href="../evidence/chapter-text/P3-C01.txt" data-hx-boost="false"><code>tmp/chapter-text/P3-C01.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p3-c02"></a>P3-C02</td>
+<td>Part Three — Turning Point</td>
+<td style="text-align: right;">2</td>
+<td><a href="../source/text/part0021.html#K0RSA-e57e33ea454c44b1aa8a6263a5c5ad60" data-hx-boost="false"><code>src/text/part0021.html#K0RSA-e57e33ea454c44b1aa8a6263a5c5ad60</code></a></td>
+<td><code>src/text/part0021.html</code></td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">15993</td>
+<td style="text-align: right;">16568</td>
+<td><a href="../evidence/chapter-text/P3-C02.txt" data-hx-boost="false"><code>tmp/chapter-text/P3-C02.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p3-c03"></a>P3-C03</td>
+<td>Part Three — Turning Point</td>
+<td style="text-align: right;">3</td>
+<td><a href="../source/text/part0022.html" data-hx-boost="false"><code>src/text/part0022.html</code></a></td>
+<td><code>src/text/part0022.html</code></td>
+<td style="text-align: right;">132</td>
+<td style="text-align: right;">36999</td>
+<td style="text-align: right;">39374</td>
+<td><a href="../evidence/chapter-text/P3-C03.txt" data-hx-boost="false"><code>tmp/chapter-text/P3-C03.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p3-c04"></a>P3-C04</td>
+<td>Part Three — Turning Point</td>
+<td style="text-align: right;">4</td>
+<td><a href="../source/text/part0023.html" data-hx-boost="false"><code>src/text/part0023.html</code></a></td>
+<td><code>src/text/part0023.html</code>, <code>src/text/part0024.html</code></td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">66112</td>
+<td style="text-align: right;">69510</td>
+<td><a href="../evidence/chapter-text/P3-C04.txt" data-hx-boost="false"><code>tmp/chapter-text/P3-C04.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p3-c05"></a>P3-C05</td>
+<td>Part Three — Turning Point</td>
+<td style="text-align: right;">5</td>
+<td><a href="../source/text/part0025.html" data-hx-boost="false"><code>src/text/part0025.html</code></a></td>
+<td><code>src/text/part0025.html</code></td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">26668</td>
+<td style="text-align: right;">28017</td>
+<td><a href="../evidence/chapter-text/P3-C05.txt" data-hx-boost="false"><code>tmp/chapter-text/P3-C05.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p3-c06"></a>P3-C06</td>
+<td>Part Three — Turning Point</td>
+<td style="text-align: right;">6</td>
+<td><a href="../source/text/part0025.html#NQU4G-e57e33ea454c44b1aa8a6263a5c5ad60" data-hx-boost="false"><code>src/text/part0025.html#NQU4G-e57e33ea454c44b1aa8a6263a5c5ad60</code></a></td>
+<td><code>src/text/part0025.html</code></td>
+<td style="text-align: right;">59</td>
+<td style="text-align: right;">16577</td>
+<td style="text-align: right;">17638</td>
+<td><a href="../evidence/chapter-text/P3-C06.txt" data-hx-boost="false"><code>tmp/chapter-text/P3-C06.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p3-c07"></a>P3-C07</td>
+<td>Part Three — Turning Point</td>
+<td style="text-align: right;">7</td>
+<td><a href="../source/text/part0026.html" data-hx-boost="false"><code>src/text/part0026.html</code></a></td>
+<td><code>src/text/part0026.html</code></td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">33703</td>
+<td style="text-align: right;">35376</td>
+<td><a href="../evidence/chapter-text/P3-C07.txt" data-hx-boost="false"><code>tmp/chapter-text/P3-C07.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p3-c08"></a>P3-C08</td>
+<td>Part Three — Turning Point</td>
+<td style="text-align: right;">8</td>
+<td><a href="../source/text/part0027.html" data-hx-boost="false"><code>src/text/part0027.html</code></a></td>
+<td><code>src/text/part0027.html</code></td>
+<td style="text-align: right;">99</td>
+<td style="text-align: right;">44284</td>
+<td style="text-align: right;">46065</td>
+<td><a href="../evidence/chapter-text/P3-C08.txt" data-hx-boost="false"><code>tmp/chapter-text/P3-C08.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p3-c09"></a>P3-C09</td>
+<td>Part Three — Turning Point</td>
+<td style="text-align: right;">9</td>
+<td><a href="../source/text/part0028.html" data-hx-boost="false"><code>src/text/part0028.html</code></a></td>
+<td><code>src/text/part0028.html</code></td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">20744</td>
+<td style="text-align: right;">22111</td>
+<td><a href="../evidence/chapter-text/P3-C09.txt" data-hx-boost="false"><code>tmp/chapter-text/P3-C09.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p3-c10"></a>P3-C10</td>
+<td>Part Three — Turning Point</td>
+<td style="text-align: right;">10</td>
+<td><a href="../source/text/part0029.html" data-hx-boost="false"><code>src/text/part0029.html</code></a></td>
+<td><code>src/text/part0029.html</code></td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">43003</td>
+<td style="text-align: right;">44532</td>
+<td><a href="../evidence/chapter-text/P3-C10.txt" data-hx-boost="false"><code>tmp/chapter-text/P3-C10.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p3-c11"></a>P3-C11</td>
+<td>Part Three — Turning Point</td>
+<td style="text-align: right;">11</td>
+<td><a href="../source/text/part0030.html" data-hx-boost="false"><code>src/text/part0030.html</code></a></td>
+<td><code>src/text/part0030.html</code></td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">27229</td>
+<td style="text-align: right;">28632</td>
+<td><a href="../evidence/chapter-text/P3-C11.txt" data-hx-boost="false"><code>tmp/chapter-text/P3-C11.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p3-c12"></a>P3-C12</td>
+<td>Part Three — Turning Point</td>
+<td style="text-align: right;">12</td>
+<td><a href="../source/text/part0031.html" data-hx-boost="false"><code>src/text/part0031.html</code></a></td>
+<td><code>src/text/part0031.html</code></td>
+<td style="text-align: right;">158</td>
+<td style="text-align: right;">44459</td>
+<td style="text-align: right;">47302</td>
+<td><a href="../evidence/chapter-text/P3-C12.txt" data-hx-boost="false"><code>tmp/chapter-text/P3-C12.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p3-c13"></a>P3-C13</td>
+<td>Part Three — Turning Point</td>
+<td style="text-align: right;">13</td>
+<td><a href="../source/text/part0031.html#id35" data-hx-boost="false"><code>src/text/part0031.html#id35</code></a></td>
+<td><code>src/text/part0031.html</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3505</td>
+<td style="text-align: right;">3594</td>
+<td><a href="../evidence/chapter-text/P3-C13.txt" data-hx-boost="false"><code>tmp/chapter-text/P3-C13.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p4-c01"></a>P4-C01</td>
+<td>Part Four — Offensive</td>
+<td style="text-align: right;">1</td>
+<td><a href="../source/text/part0032.html#UGI06-e57e33ea454c44b1aa8a6263a5c5ad60" data-hx-boost="false"><code>src/text/part0032.html#UGI06-e57e33ea454c44b1aa8a6263a5c5ad60</code></a></td>
+<td><code>src/text/part0032.html</code></td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">17855</td>
+<td style="text-align: right;">19204</td>
+<td><a href="../evidence/chapter-text/P4-C01.txt" data-hx-boost="false"><code>tmp/chapter-text/P4-C01.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p4-c02"></a>P4-C02</td>
+<td>Part Four — Offensive</td>
+<td style="text-align: right;">2</td>
+<td><a href="../source/text/part0033.html" data-hx-boost="false"><code>src/text/part0033.html</code></a></td>
+<td><code>src/text/part0033.html</code></td>
+<td style="text-align: right;">113</td>
+<td style="text-align: right;">41203</td>
+<td style="text-align: right;">43236</td>
+<td><a href="../evidence/chapter-text/P4-C02.txt" data-hx-boost="false"><code>tmp/chapter-text/P4-C02.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p4-c03"></a>P4-C03</td>
+<td>Part Four — Offensive</td>
+<td style="text-align: right;">3</td>
+<td><a href="../source/text/part0034.html" data-hx-boost="false"><code>src/text/part0034.html</code></a></td>
+<td><code>src/text/part0034.html</code></td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">19904</td>
+<td style="text-align: right;">20875</td>
+<td><a href="../evidence/chapter-text/P4-C03.txt" data-hx-boost="false"><code>tmp/chapter-text/P4-C03.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p4-c04"></a>P4-C04</td>
+<td>Part Four — Offensive</td>
+<td style="text-align: right;">4</td>
+<td><a href="../source/text/part0034.html#10DJ5R-e57e33ea454c44b1aa8a6263a5c5ad60" data-hx-boost="false"><code>src/text/part0034.html#10DJ5R-e57e33ea454c44b1aa8a6263a5c5ad60</code></a></td>
+<td><code>src/text/part0034.html</code></td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">11973</td>
+<td style="text-align: right;">12692</td>
+<td><a href="../evidence/chapter-text/P4-C04.txt" data-hx-boost="false"><code>tmp/chapter-text/P4-C04.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p4-c05"></a>P4-C05</td>
+<td>Part Four — Offensive</td>
+<td style="text-align: right;">5</td>
+<td><a href="../source/text/part0035.html" data-hx-boost="false"><code>src/text/part0035.html</code></a></td>
+<td><code>src/text/part0035.html</code></td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">31818</td>
+<td style="text-align: right;">32663</td>
+<td><a href="../evidence/chapter-text/P4-C05.txt" data-hx-boost="false"><code>tmp/chapter-text/P4-C05.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p4-c06"></a>P4-C06</td>
+<td>Part Four — Offensive</td>
+<td style="text-align: right;">6</td>
+<td><a href="../source/text/part0036.html" data-hx-boost="false"><code>src/text/part0036.html</code></a></td>
+<td><code>src/text/part0036.html</code></td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">32240</td>
+<td style="text-align: right;">33589</td>
+<td><a href="../evidence/chapter-text/P4-C06.txt" data-hx-boost="false"><code>tmp/chapter-text/P4-C06.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p4-c07"></a>P4-C07</td>
+<td>Part Four — Offensive</td>
+<td style="text-align: right;">7</td>
+<td><a href="../source/text/part0037.html" data-hx-boost="false"><code>src/text/part0037.html</code></a></td>
+<td><code>src/text/part0037.html</code></td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">32325</td>
+<td style="text-align: right;">33582</td>
+<td><a href="../evidence/chapter-text/P4-C07.txt" data-hx-boost="false"><code>tmp/chapter-text/P4-C07.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p4-c08"></a>P4-C08</td>
+<td>Part Four — Offensive</td>
+<td style="text-align: right;">8</td>
+<td><a href="../source/text/part0038.html" data-hx-boost="false"><code>src/text/part0038.html</code></a></td>
+<td><code>src/text/part0038.html</code></td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">27503</td>
+<td style="text-align: right;">29050</td>
+<td><a href="../evidence/chapter-text/P4-C08.txt" data-hx-boost="false"><code>tmp/chapter-text/P4-C08.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p4-c09"></a>P4-C09</td>
+<td>Part Four — Offensive</td>
+<td style="text-align: right;">9</td>
+<td><a href="../source/text/part0039.html" data-hx-boost="false"><code>src/text/part0039.html</code></a></td>
+<td><code>src/text/part0039.html</code></td>
+<td style="text-align: right;">210</td>
+<td style="text-align: right;">76430</td>
+<td style="text-align: right;">80209</td>
+<td><a href="../evidence/chapter-text/P4-C09.txt" data-hx-boost="false"><code>tmp/chapter-text/P4-C09.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p4-c10"></a>P4-C10</td>
+<td>Part Four — Offensive</td>
+<td style="text-align: right;">10</td>
+<td><a href="../source/text/part0040.html" data-hx-boost="false"><code>src/text/part0040.html</code></a></td>
+<td><code>src/text/part0040.html</code></td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">29153</td>
+<td style="text-align: right;">30124</td>
+<td><a href="../evidence/chapter-text/P4-C10.txt" data-hx-boost="false"><code>tmp/chapter-text/P4-C10.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p4-c11"></a>P4-C11</td>
+<td>Part Four — Offensive</td>
+<td style="text-align: right;">11</td>
+<td><a href="../source/text/part0041.html" data-hx-boost="false"><code>src/text/part0041.html</code></a></td>
+<td><code>src/text/part0041.html</code></td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">32220</td>
+<td style="text-align: right;">33101</td>
+<td><a href="../evidence/chapter-text/P4-C11.txt" data-hx-boost="false"><code>tmp/chapter-text/P4-C11.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p4-c12"></a>P4-C12</td>
+<td>Part Four — Offensive</td>
+<td style="text-align: right;">12</td>
+<td><a href="../source/text/part0042.html" data-hx-boost="false"><code>src/text/part0042.html</code></a></td>
+<td><code>src/text/part0042.html</code></td>
+<td style="text-align: right;">56</td>
+<td style="text-align: right;">28083</td>
+<td style="text-align: right;">29090</td>
+<td><a href="../evidence/chapter-text/P4-C12.txt" data-hx-boost="false"><code>tmp/chapter-text/P4-C12.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p4-c13"></a>P4-C13</td>
+<td>Part Four — Offensive</td>
+<td style="text-align: right;">13</td>
+<td><a href="../source/text/part0043.html" data-hx-boost="false"><code>src/text/part0043.html</code></a></td>
+<td><code>src/text/part0043.html</code></td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">27738</td>
+<td style="text-align: right;">29087</td>
+<td><a href="../evidence/chapter-text/P4-C13.txt" data-hx-boost="false"><code>tmp/chapter-text/P4-C13.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p4-c14"></a>P4-C14</td>
+<td>Part Four — Offensive</td>
+<td style="text-align: right;">14</td>
+<td><a href="../source/text/part0044.html" data-hx-boost="false"><code>src/text/part0044.html</code></a></td>
+<td><code>src/text/part0044.html</code></td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">57337</td>
+<td style="text-align: right;">58974</td>
+<td><a href="../evidence/chapter-text/P4-C14.txt" data-hx-boost="false"><code>tmp/chapter-text/P4-C14.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p4-c15"></a>P4-C15</td>
+<td>Part Four — Offensive</td>
+<td style="text-align: right;">15</td>
+<td><a href="../source/text/part0045.html" data-hx-boost="false"><code>src/text/part0045.html</code></a></td>
+<td><code>src/text/part0045.html</code></td>
+<td style="text-align: right;">136</td>
+<td style="text-align: right;">50154</td>
+<td style="text-align: right;">52611</td>
+<td><a href="../evidence/chapter-text/P4-C15.txt" data-hx-boost="false"><code>tmp/chapter-text/P4-C15.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p5-c01"></a>P5-C01</td>
+<td>Part Five — The Devil of a God Not Ours</td>
+<td style="text-align: right;">1</td>
+<td><a href="../source/text/part0047.html" data-hx-boost="false"><code>src/text/part0047.html</code></a></td>
+<td><code>src/text/part0047.html</code></td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">23891</td>
+<td style="text-align: right;">25168</td>
+<td><a href="../evidence/chapter-text/P5-C01.txt" data-hx-boost="false"><code>tmp/chapter-text/P5-C01.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p5-c02"></a>P5-C02</td>
+<td>Part Five — The Devil of a God Not Ours</td>
+<td style="text-align: right;">2</td>
+<td><a href="../source/text/part0048.html" data-hx-boost="false"><code>src/text/part0048.html</code></a></td>
+<td><code>src/text/part0048.html</code></td>
+<td style="text-align: right;">74</td>
+<td style="text-align: right;">27119</td>
+<td style="text-align: right;">28450</td>
+<td><a href="../evidence/chapter-text/P5-C02.txt" data-hx-boost="false"><code>tmp/chapter-text/P5-C02.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p5-c03"></a>P5-C03</td>
+<td>Part Five — The Devil of a God Not Ours</td>
+<td style="text-align: right;">3</td>
+<td><a href="../source/text/part0049.html" data-hx-boost="false"><code>src/text/part0049.html</code></a></td>
+<td><code>src/text/part0049.html</code></td>
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">22863</td>
+<td style="text-align: right;">23636</td>
+<td><a href="../evidence/chapter-text/P5-C03.txt" data-hx-boost="false"><code>tmp/chapter-text/P5-C03.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p5-c04"></a>P5-C04</td>
+<td>Part Five — The Devil of a God Not Ours</td>
+<td style="text-align: right;">4</td>
+<td><a href="../source/text/part0050.html" data-hx-boost="false"><code>src/text/part0050.html</code></a></td>
+<td><code>src/text/part0050.html</code></td>
+<td style="text-align: right;">169</td>
+<td style="text-align: right;">66980</td>
+<td style="text-align: right;">70021</td>
+<td><a href="../evidence/chapter-text/P5-C04.txt" data-hx-boost="false"><code>tmp/chapter-text/P5-C04.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p5-c05"></a>P5-C05</td>
+<td>Part Five — The Devil of a God Not Ours</td>
+<td style="text-align: right;">5</td>
+<td><a href="../source/text/part0050.html#1FLS9E-e57e33ea454c44b1aa8a6263a5c5ad60" data-hx-boost="false"><code>src/text/part0050.html#1FLS9E-e57e33ea454c44b1aa8a6263a5c5ad60</code></a></td>
+<td><code>src/text/part0050.html</code></td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">16839</td>
+<td style="text-align: right;">17450</td>
+<td><a href="../evidence/chapter-text/P5-C05.txt" data-hx-boost="false"><code>tmp/chapter-text/P5-C05.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p5-c06"></a>P5-C06</td>
+<td>Part Five — The Devil of a God Not Ours</td>
+<td style="text-align: right;">6</td>
+<td><a href="../source/text/part0051.html" data-hx-boost="false"><code>src/text/part0051.html</code></a></td>
+<td><code>src/text/part0051.html</code></td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">59997</td>
+<td style="text-align: right;">62301</td>
+<td><a href="../evidence/chapter-text/P5-C06.txt" data-hx-boost="false"><code>tmp/chapter-text/P5-C06.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p5-c07"></a>P5-C07</td>
+<td>Part Five — The Devil of a God Not Ours</td>
+<td style="text-align: right;">7</td>
+<td><a href="../source/text/part0052.html" data-hx-boost="false"><code>src/text/part0052.html</code></a></td>
+<td><code>src/text/part0052.html</code></td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">24079</td>
+<td style="text-align: right;">24816</td>
+<td><a href="../evidence/chapter-text/P5-C07.txt" data-hx-boost="false"><code>tmp/chapter-text/P5-C07.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p5-c08"></a>P5-C08</td>
+<td>Part Five — The Devil of a God Not Ours</td>
+<td style="text-align: right;">8</td>
+<td><a href="../source/text/part0053.html" data-hx-boost="false"><code>src/text/part0053.html</code></a></td>
+<td><code>src/text/part0053.html</code>, <code>src/text/part0054.html</code></td>
+<td style="text-align: right;">195</td>
+<td style="text-align: right;">92824</td>
+<td style="text-align: right;">96333</td>
+<td><a href="../evidence/chapter-text/P5-C08.txt" data-hx-boost="false"><code>tmp/chapter-text/P5-C08.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p5-c09"></a>P5-C09</td>
+<td>Part Five — The Devil of a God Not Ours</td>
+<td style="text-align: right;">9</td>
+<td><a href="../source/text/part0055.html" data-hx-boost="false"><code>src/text/part0055.html</code></a></td>
+<td><code>src/text/part0055.html</code></td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">36610</td>
+<td style="text-align: right;">37653</td>
+<td><a href="../evidence/chapter-text/P5-C09.txt" data-hx-boost="false"><code>tmp/chapter-text/P5-C09.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p5-c10"></a>P5-C10</td>
+<td>Part Five — The Devil of a God Not Ours</td>
+<td style="text-align: right;">10</td>
+<td><a href="../source/text/part0056.html" data-hx-boost="false"><code>src/text/part0056.html</code></a></td>
+<td><code>src/text/part0056.html</code></td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">75030</td>
+<td style="text-align: right;">76685</td>
+<td><a href="../evidence/chapter-text/P5-C10.txt" data-hx-boost="false"><code>tmp/chapter-text/P5-C10.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p5-c11"></a>P5-C11</td>
+<td>Part Five — The Devil of a God Not Ours</td>
+<td style="text-align: right;">11</td>
+<td><a href="../source/text/part0057.html" data-hx-boost="false"><code>src/text/part0057.html</code></a></td>
+<td><code>src/text/part0057.html</code>, <code>src/text/part0058.html</code></td>
+<td style="text-align: right;">133</td>
+<td style="text-align: right;">89594</td>
+<td style="text-align: right;">91987</td>
+<td><a href="../evidence/chapter-text/P5-C11.txt" data-hx-boost="false"><code>tmp/chapter-text/P5-C11.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p6-c01"></a>P6-C01</td>
+<td>Part Six — Cleansing</td>
+<td style="text-align: right;">1</td>
+<td><a href="../source/text/part0060.html" data-hx-boost="false"><code>src/text/part0060.html</code></a></td>
+<td><code>src/text/part0060.html</code></td>
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">29352</td>
+<td style="text-align: right;">30125</td>
+<td><a href="../evidence/chapter-text/P6-C01.txt" data-hx-boost="false"><code>tmp/chapter-text/P6-C01.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p6-c02"></a>P6-C02</td>
+<td>Part Six — Cleansing</td>
+<td style="text-align: right;">2</td>
+<td><a href="../source/text/part0061.html" data-hx-boost="false"><code>src/text/part0061.html</code></a></td>
+<td><code>src/text/part0061.html</code></td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">18659</td>
+<td style="text-align: right;">19756</td>
+<td><a href="../evidence/chapter-text/P6-C02.txt" data-hx-boost="false"><code>tmp/chapter-text/P6-C02.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p6-c03"></a>P6-C03</td>
+<td>Part Six — Cleansing</td>
+<td style="text-align: right;">3</td>
+<td><a href="../source/text/part0062.html" data-hx-boost="false"><code>src/text/part0062.html</code></a></td>
+<td><code>src/text/part0062.html</code></td>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">29126</td>
+<td style="text-align: right;">30853</td>
+<td><a href="../evidence/chapter-text/P6-C03.txt" data-hx-boost="false"><code>tmp/chapter-text/P6-C03.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p6-c04"></a>P6-C04</td>
+<td>Part Six — Cleansing</td>
+<td style="text-align: right;">4</td>
+<td><a href="../source/text/part0063.html" data-hx-boost="false"><code>src/text/part0063.html</code></a></td>
+<td><code>src/text/part0063.html</code></td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">21391</td>
+<td style="text-align: right;">22290</td>
+<td><a href="../evidence/chapter-text/P6-C04.txt" data-hx-boost="false"><code>tmp/chapter-text/P6-C04.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p6-c05"></a>P6-C05</td>
+<td>Part Six — Cleansing</td>
+<td style="text-align: right;">5</td>
+<td><a href="../source/text/part0063.html#1S2JFN-e57e33ea454c44b1aa8a6263a5c5ad60" data-hx-boost="false"><code>src/text/part0063.html#1S2JFN-e57e33ea454c44b1aa8a6263a5c5ad60</code></a></td>
+<td><code>src/text/part0063.html</code></td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">13558</td>
+<td style="text-align: right;">14277</td>
+<td><a href="../evidence/chapter-text/P6-C05.txt" data-hx-boost="false"><code>tmp/chapter-text/P6-C05.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p6-c06"></a>P6-C06</td>
+<td>Part Six — Cleansing</td>
+<td style="text-align: right;">6</td>
+<td><a href="../source/text/part0064.html" data-hx-boost="false"><code>src/text/part0064.html</code></a></td>
+<td><code>src/text/part0064.html</code></td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">30785</td>
+<td style="text-align: right;">31612</td>
+<td><a href="../evidence/chapter-text/P6-C06.txt" data-hx-boost="false"><code>tmp/chapter-text/P6-C06.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p6-c07"></a>P6-C07</td>
+<td>Part Six — Cleansing</td>
+<td style="text-align: right;">7</td>
+<td><a href="../source/text/part0065.html" data-hx-boost="false"><code>src/text/part0065.html</code></a></td>
+<td><code>src/text/part0065.html</code></td>
+<td style="text-align: right;">65</td>
+<td style="text-align: right;">30525</td>
+<td style="text-align: right;">31694</td>
+<td><a href="../evidence/chapter-text/P6-C07.txt" data-hx-boost="false"><code>tmp/chapter-text/P6-C07.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p6-c08"></a>P6-C08</td>
+<td>Part Six — Cleansing</td>
+<td style="text-align: right;">8</td>
+<td><a href="../source/text/part0066.html" data-hx-boost="false"><code>src/text/part0066.html</code></a></td>
+<td><code>src/text/part0066.html</code></td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">37049</td>
+<td style="text-align: right;">38146</td>
+<td><a href="../evidence/chapter-text/P6-C08.txt" data-hx-boost="false"><code>tmp/chapter-text/P6-C08.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p6-c09"></a>P6-C09</td>
+<td>Part Six — Cleansing</td>
+<td style="text-align: right;">9</td>
+<td><a href="../source/text/part0067.html" data-hx-boost="false"><code>src/text/part0067.html</code></a></td>
+<td><code>src/text/part0067.html</code></td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">25733</td>
+<td style="text-align: right;">26200</td>
+<td><a href="../evidence/chapter-text/P6-C09.txt" data-hx-boost="false"><code>tmp/chapter-text/P6-C09.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p6-c10"></a>P6-C10</td>
+<td>Part Six — Cleansing</td>
+<td style="text-align: right;">10</td>
+<td><a href="../source/text/part0067.html#1VSLMV-e57e33ea454c44b1aa8a6263a5c5ad60" data-hx-boost="false"><code>src/text/part0067.html#1VSLMV-e57e33ea454c44b1aa8a6263a5c5ad60</code></a></td>
+<td><code>src/text/part0067.html</code></td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">15024</td>
+<td style="text-align: right;">15761</td>
+<td><a href="../evidence/chapter-text/P6-C10.txt" data-hx-boost="false"><code>tmp/chapter-text/P6-C10.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p6-c11"></a>P6-C11</td>
+<td>Part Six — Cleansing</td>
+<td style="text-align: right;">11</td>
+<td><a href="../source/text/part0068.html" data-hx-boost="false"><code>src/text/part0068.html</code></a></td>
+<td><code>src/text/part0068.html</code></td>
+<td style="text-align: right;">144</td>
+<td style="text-align: right;">59819</td>
+<td style="text-align: right;">62410</td>
+<td><a href="../evidence/chapter-text/P6-C11.txt" data-hx-boost="false"><code>tmp/chapter-text/P6-C11.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p6-c12"></a>P6-C12</td>
+<td>Part Six — Cleansing</td>
+<td style="text-align: right;">12</td>
+<td><a href="../source/text/part0069.html" data-hx-boost="false"><code>src/text/part0069.html</code></a></td>
+<td><code>src/text/part0069.html</code></td>
+<td style="text-align: right;">74</td>
+<td style="text-align: right;">23694</td>
+<td style="text-align: right;">25025</td>
+<td><a href="../evidence/chapter-text/P6-C12.txt" data-hx-boost="false"><code>tmp/chapter-text/P6-C12.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p6-c13"></a>P6-C13</td>
+<td>Part Six — Cleansing</td>
+<td style="text-align: right;">13</td>
+<td><a href="../source/text/part0070.html" data-hx-boost="false"><code>src/text/part0070.html</code></a></td>
+<td><code>src/text/part0070.html</code></td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">37599</td>
+<td style="text-align: right;">39182</td>
+<td><a href="../evidence/chapter-text/P6-C13.txt" data-hx-boost="false"><code>tmp/chapter-text/P6-C13.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p6-c14"></a>P6-C14</td>
+<td>Part Six — Cleansing</td>
+<td style="text-align: right;">14</td>
+<td><a href="../source/text/part0070.html#22O7ET-e57e33ea454c44b1aa8a6263a5c5ad60" data-hx-boost="false"><code>src/text/part0070.html#22O7ET-e57e33ea454c44b1aa8a6263a5c5ad60</code></a></td>
+<td><code>src/text/part0070.html</code></td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">14238</td>
+<td style="text-align: right;">15115</td>
+<td><a href="../evidence/chapter-text/P6-C14.txt" data-hx-boost="false"><code>tmp/chapter-text/P6-C14.txt</code></a></td>
+</tr>
+<tr>
+<td><a id="p6-c15"></a>P6-C15</td>
+<td>Part Six — Cleansing</td>
+<td style="text-align: right;">15</td>
+<td><a href="../source/text/part0071.html" data-hx-boost="false"><code>src/text/part0071.html</code></a></td>
+<td><code>src/text/part0071.html</code></td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">39183</td>
+<td style="text-align: right;">40362</td>
+<td><a href="../evidence/chapter-text/P6-C15.txt" data-hx-boost="false"><code>tmp/chapter-text/P6-C15.txt</code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Front matter: <a href="../evidence/chapter-text/front-matter.txt" data-hx-boost="false"><code>tmp/chapter-text/front-matter.txt</code></a> (14 paragraphs).</p>
+<p>Source files are hashed in <code>source-map.json</code>; unreferenced continuation HTML is assigned by NCX order to the preceding chapter.</p>
+<p>Counts include every source <code>&lt;p&gt;</code> block, including chapter headings and two empty blocks. <code>text_bytes</code> counts UTF-8 prose bytes after inline markup removal and ASCII layout-whitespace normalization; it excludes cache IDs, paths, tabs, and line endings. Unicode spaces remain unchanged. <code>source_bytes</code> counts the original paragraph markup bytes. <code>output_bytes</code> counts each complete cache file.</p>
+<p>JSON <code>title</code> values are English navigation labels; <code>source_title</code> preserves the Russian NCX label. Global offsets are zero-based paragraph indices; <code>end_global</code> is the next chapter start and can include intervening part-title blocks assigned to front matter. <code>offset</code> is a zero-based source-byte offset of the NCX anchor's <code>id</code> or <code>name</code> attribute, or zero for a whole-file chapter start.</p>
+<p>Run <code>scripts/book-source verify</code> for an independent XML-based check of the complete HTML inventory, source text, chapter boundaries, ownership, hashes, cache bytes, and generated map rows.</p>
+<h2 id="download-the-source-records">Download the source records</h2>
+<p><a href="../evidence/source-map.json" data-hx-boost="false">Source map (JSON)</a> · <a href="../evidence/source-coverage.tsv" data-hx-boost="false">Source coverage (TSV)</a></p>
+
+      </article>
+      <nav class="page-navigation" aria-label="Continue reading">
+        <a class="previous" href="../index.html"><span class="page-direction">Previous</span><span class="page-name">Overview</span></a>
+<a class="next" href="index.html"><span class="page-direction">Next</span><span class="page-name">Explore the novel</span></a>
+
+      </nav>
+      <footer class="reading-footer">
+        <span>Dictator · Sergei Snegov</span>
+        <a href="#main-content" hx-boost="false">Back to top <span aria-hidden="true">↑</span></a>
+      </footer>
+    </main>
+    </div>
+  </div>
+  <div id="navigation-announcement" class="sr-only" role="status" aria-live="polite"></div>
+</body>
+</html>

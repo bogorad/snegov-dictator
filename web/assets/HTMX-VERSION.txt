@@ -1,0 +1,11 @@
+htmx 2.0.8
+License: Zero-Clause BSD (see HTMX-LICENSE.txt)
+
+Unmodified distribution:
+https://unpkg.com/htmx.org@2.0.8/dist/htmx.min.js
+
+License source:
+https://unpkg.com/htmx.org@2.0.8/LICENSE
+
+SHA-256 (htmx.min.js):
+22283ef68cb7545914f0a88a1bdedc7256a703d1d580c1d255217d0a50d31313

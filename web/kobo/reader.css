@@ -1,0 +1,19 @@
+/* Reflowable Kobo text. Device font, size, colors and margins remain available. */
+body { margin: 0; padding: 0; line-height: 1.35; }
+h1, h2, h3, h4 { line-height: 1.2; text-align: left; page-break-after: avoid; }
+h1 { font-size: 1.55em; margin: 1.2em 0 0.8em; }
+h2 { font-size: 1.25em; margin: 1.2em 0 0.65em; }
+h3 { font-size: 1.1em; margin: 1em 0 0.5em; }
+p { margin: 0 0 0.8em; text-indent: 0; orphans: 2; widows: 2; }
+li { margin-bottom: 0.45em; }
+ul, ol { padding-left: 1.4em; }
+a { text-decoration: underline; }
+code { font-size: 0.9em; overflow-wrap: anywhere; word-wrap: break-word; }
+blockquote { margin: 1em 0.8em; }
+.record { margin: 1.2em 0; }
+.record p { margin-bottom: 0.5em; }
+.locator { overflow-wrap: anywhere; word-wrap: break-word; }
+.titlepage { text-align: center; margin-top: 12%; }
+.titlepage h1 { text-align: center; }
+.cover { margin: 0; padding: 0; text-align: center; }
+.cover img { width: 100%; height: auto; max-width: 100%; }

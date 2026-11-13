@@ -1,0 +1,140 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use utf8;
+use open qw(:std :encoding(UTF-8));
+use File::Basename qw(dirname);
+use File::Path qw(make_path);
+use Digest::SHA qw(sha256_hex);
+use JSON::PP qw(encode_json decode_json);
+use Encode qw(decode encode FB_CROAK);
+
+my $ROOT = dirname(dirname(__FILE__));
+my $SRC = "$ROOT/src";
+my $OUT = "$ROOT/tmp/chapter-text";
+my $MAP_JSON = "$ROOT/docs/knowledge/source-map.json";
+my $MAP_MD = "$ROOT/docs/knowledge/source-map.md";
+my $COVERAGE = "$ROOT/docs/knowledge/source-coverage.tsv";
+
+sub read_file { my ($p)=@_; open my $fh, '<:raw', $p or die "read $p: $!\n"; local $/; my $s=<$fh>; close $fh; return $s; }
+sub write_file { my ($p,$s)=@_; $s=encode('UTF-8',$s,FB_CROAK) if utf8::is_utf8($s); return if -f $p && read_file($p) eq $s; my $d=dirname($p); make_path($d) unless -d $d; open my $fh, '>:raw', $p or die "write $p: $!\n"; print {$fh} $s; close $fh; }
+sub xml_unescape {
+  my ($s)=@_;
+  $s =~ s/&#x([0-9A-Fa-f]+);/chr(hex($1))/ge;
+  $s =~ s/&#([0-9]+);/chr($1)/ge;
+  $s =~ s/&nbsp;/\x{A0}/g;
+  $s =~ s/&amp;/&/g; $s =~ s/&lt;/</g; $s =~ s/&gt;/>/g;
+  $s =~ s/&quot;/"/g; $s =~ s/&apos;/'/g;
+  return $s;
+}
+sub plain_p {
+  my ($tok)=@_;
+  return '' if $tok =~ m{<p\b[^>]*?/\s*>\s*$}si;
+  $tok = decode('UTF-8',$tok,FB_CROAK);
+  $tok =~ s{^.*?>}{}s; $tok =~ s{</p>\s*$}{}si;
+  $tok =~ s{<[^>]+>}{}gs;
+  $tok = xml_unescape($tok);
+  $tok =~ s/[\t\r\n ]+/ /g;
+  $tok =~ s/^[\t\r\n ]+//; $tok =~ s/[\t\r\n ]+$//;
+  return encode('UTF-8',$tok,FB_CROAK);
+}
+sub parse_opf {
+  my $s=read_file("$SRC/content.opf");
+  my %manifest;
+  while($s =~ m{<item\s+([^>]+?)/>}gsi){ my $a=$1; my($id)=$a =~ /\bid="([^"]+)"/; my($href)=$a =~ /\bhref="([^"]+)"/; $manifest{$id}=$href if defined $id && defined $href; }
+  my @spine;
+  while($s =~ m{<itemref\s+([^>]+?)/>}gsi){ my($id)=$1 =~ /\bidref="([^"]+)"/; push @spine,$manifest{$id} if defined $id && exists $manifest{$id}; }
+  return (\%manifest,\@spine);
+}
+sub parse_ncx {
+  my $s=read_file("$SRC/toc.ncx"); my(@stack,@roots);
+  while($s =~ m{(<navPoint\b[^>]*>|</navPoint>|<navLabel>\s*<text>(.*?)</text>\s*</navLabel>|<content\s+src="([^"]+)")}sg){
+    my($tag,$label,$src)=($1,$2,$3);
+    if($tag =~ /^<navPoint/){ push @stack,{label=>'',src=>'',children=>[]}; }
+    elsif($tag eq '</navPoint>'){ my $n=pop @stack; if(@stack){ push @{$stack[-1]{children}},$n; } else { push @roots,$n; } }
+    elsif(defined $label){ $stack[-1]{label}=xml_unescape(decode('UTF-8',$label,FB_CROAK)) if @stack; }
+    elsif(defined $src){ $stack[-1]{src}=xml_unescape($src) if @stack; }
+  }
+  return \@roots;
+}
+sub norm_href { my($h)=@_; $h =~ s{^\.\./}{}; return $h; }
+sub parse_paragraphs {
+  my($file,$href,$fi)=@_; my @p;
+  while($file =~ m{<p\b[^>]*?(?:/\s*>|>.*?</p>)}sig){
+    my $tok=$&; my $start=$-[0]; my $end=$+[0];
+    push @p,{file=>$href,fi=>$fi,start=>$start,end=>$end,raw=>$tok,text=>plain_p($tok)};
+  }
+  return \@p;
+}
+sub anchor_offset {
+  my($raw,$anchor)=@_; return 0 unless defined $anchor && length $anchor;
+  if($raw =~ m{\bid\s*=\s*["']\Q$anchor\E["']}si){ return $-[0]; }
+  if($raw =~ m{\bname\s*=\s*["']\Q$anchor\E["']}si){ return $-[0]; }
+  die "anchor not found: $anchor\n";
+}
+sub main_inventory {
+  my($manifest,$spine)=parse_opf(); my $roots=parse_ncx();
+  my %part_en=(1=>'Part One — Drive to Power',2=>'Part Two — Sacred Terror',3=>'Part Three — Turning Point',4=>'Part Four — Offensive',5=>'Part Five — The Devil of a God Not Ours',6=>'Part Six — Cleansing');
+  my @files; my %fi;
+  for my $i (0..$#$spine){ my $href=$spine->[$i]; my $path="$SRC/$href"; my $raw=read_file($path); my $ps=parse_paragraphs($raw,$href,$i); $fi{$href}=$i; push @files,{href=>$href,raw=>$raw,paragraphs=>$ps,bytes=>length($raw)}; }
+  my @parts; my @chapters; my $part_no=0;
+  for my $part (@$roots){ next unless @{$part->{children}||[]}; $part_no++; my $title=$part->{label}; my @kids; my $ch_no=0;
+    for my $ch (@{$part->{children}}){ $ch_no++; my($h,$a)=split(/#/,$ch->{src},2); $h=norm_href($h); die "chapter path not in spine: $h\n" unless exists $fi{$h}; my $start_off=anchor_offset($files[$fi{$h}]{raw},$a); my $id=sprintf('P%d-C%02d',$part_no,$ch_no);
+      my $row={id=>$id,part=>$part_no,chapter=>$ch_no,label=>$ch->{label},source=>"src/$h".(defined $a ? "#$a" : ''),href=>$h,anchor=>defined($a)?$a:'',fi=>$fi{$h},offset=>$start_off}; push @chapters,$row; push @kids,$row;
+    }
+    push @parts,{part=>$part_no,title=>$part_en{$part_no},source_title=>$title,source=>'src/'.norm_href((split /#/,$part->{src})[0]),chapters=>\@kids};
+  }
+  @chapters=sort { $a->{fi}<=>$b->{fi} || $a->{offset}<=>$b->{offset} } @chapters;
+  my @all; for my $f (@files){ push @all,@{$f->{paragraphs}}; }
+  # Paragraph index per file and global token boundaries.
+  my %first; my %last; for my $i (0..$#all){ my $p=$all[$i]; $p->{global}=$i; $first{$p->{fi}} //= $i; $last{$p->{fi}}=$i; }
+  for my $c (@chapters){ my $idx=$first{$c->{fi}} // scalar(@all); for my $p (@all){ next unless $p->{fi}==$c->{fi}; if($p->{start}>=$c->{offset}){$idx=$p->{global};last;} } $c->{start_global}=$idx; }
+  for my $i (0..$#chapters-1){ $chapters[$i]{end_global}=$chapters[$i+1]{start_global}; }
+  $chapters[-1]{end_global}=scalar(@all) if @chapters;
+  # Mark part-title paragraphs as front matter. A part file can also contain
+  # chapter 1, in which case only the prefix before its anchor is front matter.
+  my %part_source = map { my $s=$_->{source}; $s =~ s{^src/}{}; $s=>1 } @parts;
+  my %front_candidate;
+  for my $p (@all){ next unless $part_source{$p->{file}}; $front_candidate{$p->{global}}=1; }
+  for my $c (@chapters){ next unless $c->{chapter}==1 && $c->{anchor} ne ''; for my $p (@all){ next unless $p->{fi}==$c->{fi}; delete $front_candidate{$p->{global}} if $p->{start}>=$c->{offset}; } }
+  my %claimed; my %rows_by;
+  my $current=-1;
+  for my $i (0..$#all){ next if $front_candidate{$i}; while($current+1 <= $#chapters && $chapters[$current+1]{start_global} <= $i){$current++;} if($current>=0){$claimed{$i}=$chapters[$current]{id}; push @{$rows_by{$chapters[$current]{id}}},$all[$i];} }
+  for my $c (@chapters){ my @rows=@{$rows_by{$c->{id}}||[]}; $c->{paragraphs}=scalar(@rows); $c->{text_bytes}=0; $c->{source_bytes}=0; my %files;
+    my $buf="# $c->{id} | part $c->{part} chapter $c->{chapter}\n# source: $c->{source}\n"; my $n=0;
+    for my $p (@rows){ $n++; my $pid=sprintf('%s-P%04d',$c->{id},$n); $buf .= "$pid\t$p->{file}" . ($c->{anchor} ne '' ? "#$c->{anchor}" : '') . "\t$p->{text}\n"; $c->{text_bytes} += length($p->{text}); $c->{source_bytes} += length($p->{raw}); $files{$p->{file}}++; }
+    $c->{file_counts}=\%files; $c->{path}="tmp/chapter-text/$c->{id}.txt"; write_file("$ROOT/$c->{path}",$buf); $c->{output_bytes}=length($buf);
+  }
+  # Any paragraphs not owned by a chapter are front matter or unreferenced prose. Keep exact source mapping.
+  my $front_buf="# Front matter and non-chapter source paragraphs\n"; my $fn=0; my %front_files; for my $i (0..$#all){ next if $claimed{$i}; my $p=$all[$i]; $fn++; my $pid=sprintf('FRONT-P%04d',$fn); $front_buf .= "$pid\t$p->{file}\t$p->{text}\n"; $front_files{$p->{file}}++; }
+  write_file("$OUT/front-matter.txt",$front_buf);
+  my $total_text=0; $total_text += length($_->{text}) for @all; my $source_hashes={}; for my $f (@files){ $source_hashes->{'src/'.$f->{href}}=sha256_hex($f->{raw}); }
+  my $json={schema=>'dictator-source-map/v1',title=>'The Dictator source map',language=>'ru',source_root=>'src',parts=>\@parts,chapters=>\@chapters,front_matter=>{path=>'tmp/chapter-text/front-matter.txt',paragraphs=>$fn,files=>\%front_files},inventory=>{spine_files=>scalar(@files),source_paragraphs=>scalar(@all),source_text_bytes=>$total_text,source_hashes_sha256=>$source_hashes}};
+  write_file($MAP_JSON,JSON::PP->new->utf8->pretty->canonical->encode($json));
+  my $md="---\ntype: Source Map\ntitle: The Dictator EPUB source map\ndescription: Machine-generated chapter boundaries and source coverage for the Russian EPUB.\nresource: ../../src/content.opf\ntags: [source-map, epub, dictator]\ntimestamp: 2026-11-13\n---\n\n# Source map\n\nGenerated by `scripts/book-source inventory`. Chapter text is Russian source prose; headings and metadata in this map are English. Navigation comes from `../../src/toc.ncx`. Continuation files are listed in each chapter's `file_counts` field in `source-map.json`.\n\n| ID | Part | Chapter | Start source | Source span files | Paragraphs | Text bytes | Source bytes | Output |\n|---|---|---:|---|---|---:|---:|---:|---|\n";
+  for my $c (@chapters){ my $a=$c->{anchor} ne '' ? "#$c->{anchor}" : ''; my $href="../../src/$c->{href}$a"; my $span=join(', ',sort keys %{$c->{file_counts}||{}}); $span =~ s{([^, ]+)}{`src/$1`}g; $md .= "| <a id=\"p$c->{part}-c" . sprintf('%02d',$c->{chapter}) . "\"></a>$c->{id} | $part_en{$c->{part}} | $c->{chapter} | [`src/$c->{href}$a`]($href) | $span | $c->{paragraphs} | $c->{text_bytes} | $c->{source_bytes} | [`tmp/chapter-text/$c->{id}.txt`](../../tmp/chapter-text/$c->{id}.txt) |\n"; }
+  $md .= "\nFront matter: [`tmp/chapter-text/front-matter.txt`](../../tmp/chapter-text/front-matter.txt) ($fn paragraphs).\n\nSource files are hashed in `source-map.json`; unreferenced continuation HTML is assigned by NCX order to the preceding chapter.\n";
+  $md .= "\nCounts include every source `<p>` block, including chapter headings and two empty blocks. `text_bytes` counts UTF-8 prose bytes after inline markup removal and ASCII layout-whitespace normalization; it excludes cache IDs, paths, tabs, and line endings. Unicode spaces remain unchanged. `source_bytes` counts the original paragraph markup bytes. `output_bytes` counts each complete cache file.\n\nJSON `title` values are English navigation labels; `source_title` preserves the Russian NCX label. Global offsets are zero-based paragraph indices; `end_global` is the next chapter start and can include intervening part-title blocks assigned to front matter. `offset` is a zero-based source-byte offset of the NCX anchor's `id` or `name` attribute, or zero for a whole-file chapter start.\n\nRun `scripts/book-source verify` for an independent XML-based check of the complete HTML inventory, source text, chapter boundaries, ownership, hashes, cache bytes, and generated map rows.\n";
+  write_file($MAP_MD,$md);
+  my $front_text_bytes=$total_text; $front_text_bytes -= $_->{text_bytes} for @chapters;
+  my $tsv="kind\tid\tsource\tparagraphs\ttext_bytes\toutput\n"; for my $c (@chapters){ $tsv .= "chapter\t$c->{id}\t$c->{source}\t$c->{paragraphs}\t$c->{text_bytes}\t$c->{path}\n"; }
+  $tsv .= "front\tFRONT\tspine paragraphs outside chapter boundaries\t$fn\t" . $front_text_bytes . "\ttmp/chapter-text/front-matter.txt\n";
+  $tsv .= "inventory\tTOTAL\tspine HTML files\t".scalar(@files)."\t$total_text\t".scalar(@all)." source paragraphs\n";
+  $tsv .= "paragraph\tglobal\tsource\towner\ttext_sha256\ttext_bytes\n";
+  for my $p (@all){ my $owner=$claimed{$p->{global}} // 'FRONT'; $tsv .= "paragraph\t$p->{global}\t$p->{file}\t$owner\t" . sha256_hex($p->{text}) . "\t" . length($p->{text}) . "\n"; }
+  write_file($COVERAGE,$tsv);
+  print "parts=$part_no chapters=".scalar(@chapters)." spine_files=".scalar(@files)." source_paragraphs=".scalar(@all)." front_paragraphs=$fn\n";
+  for my $c (@chapters){ print "$c->{id}\t$c->{source}\t$c->{paragraphs} paragraphs\t$c->{path}\n"; }
+}
+sub main_read {
+  binmode STDOUT, ':raw'; my($id,$from,$to)=@_; die "usage: book-source read P1-C01 START END\n" unless defined $id && defined $from && defined $to && $from =~ /^\d+$/ && $to =~ /^\d+$/;
+  my $path="$OUT/$id.txt"; die "unknown chapter $id\n" unless -f $path; my @lines=split(/\n/,read_file($path)); my $n=0; for my $line (@lines){ next if $line =~ /^#/ || $line eq ''; $n++; print "$line\n" if $n >= $from && $n <= $to; } die "range outside chapter (paragraphs=$n)\n" if $from>$n;
+}
+sub main_verify {
+  # A separate XML parser derives its inputs directly from OPF/NCX/HTML.
+  # It also compares every cache byte, not just source hashes and owner counts.
+  chdir $ROOT or die "enter $ROOT: $!\n";
+  exec 'go', 'run', 'scripts/audit-book-source.go';
+  die "run independent source audit: $!\n";
+}
+my $cmd=shift(@ARGV)||''; if($cmd eq 'inventory'){main_inventory()} elsif($cmd eq 'read'){main_read(@ARGV)} elsif($cmd eq 'verify'){main_verify()} else { die "usage: scripts/book-source inventory|read ID START END|verify\n"; }

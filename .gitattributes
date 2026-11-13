@@ -1,0 +1,11 @@
+# Preserve imported EPUB bytes and the site's exact source copies.
+src/** -text
+site/source/** -text
+
+# These original files retain their supplied XML spacing and CRLF endings.
+src/META-INF/container.xml whitespace=-blank-at-eol,-blank-at-eof
+src/stylesheet.css whitespace=cr-at-eol
+site/source/stylesheet.css whitespace=cr-at-eol
+
+# Numbered evidence is tab-separated; an empty final field is significant.
+site/evidence/chapter-text/*.txt -text whitespace=-blank-at-eol

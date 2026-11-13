@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Places and political geography for Sergei Snegov’s Dictator, with chapter and source references.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="htmx-config" content='{"historyRestoreAsHxRequest":false,"scrollIntoViewOnBoost":false}'>
+  <title>Places and political geography · Dictator</title>
+  <script>
+    (() => {
+      let saved;
+      try { saved = localStorage.getItem('dictator-theme'); } catch (_) {}
+      const dark = saved === 'dark' || (saved !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    })();
+  </script>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/htmx.min.js" defer></script>
+  <script src="../assets/site.js" defer></script>
+</head>
+<body hx-boost="true" hx-target="#main-content" hx-select="#main-content" hx-swap="outerHTML" hx-indicator="#navigation-progress">
+  <a class="skip-link" href="#main-content" hx-boost="false">Skip to reading</a>
+  <header class="masthead">
+    <a class="book-brand" href="../index.html" data-persistent-link aria-label="Dictator reading companion home">
+      <span class="book-title">Dictator</span>
+      <span class="book-author">Sergei Snegov</span>
+    </a>
+    <div class="masthead-tools">
+      <span class="edition-label">A reading companion</span>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>
+        <svg class="theme-icon icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20.5 13.4A8.7 8.7 0 0 1 10.6 3.5 8.7 8.7 0 1 0 20.5 13.4Z"/></svg>
+        <svg class="theme-icon icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4m0-14.2-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+        <span id="theme-label">Dark mode</span>
+      </button>
+    </div>
+  </header>
+  <div id="navigation-progress" class="navigation-progress htmx-indicator" aria-hidden="true"></div>
+  <div class="reading-layout">
+    <aside class="sidebar" aria-label="Reading navigation">
+      <details id="site-contents" class="contents-panel" open>
+        <summary class="contents-heading"><span>Contents</span><span class="contents-hint">6 parts · 73 chapters</span></summary>
+        <div class="contents-body">
+          <div class="chapter-search" hidden>
+            <label class="sr-only" for="chapter-filter">Filter chapter titles</label>
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+            <input id="chapter-filter" type="search" placeholder="Find a chapter…" autocomplete="off" aria-controls="book-navigation" aria-describedby="filter-status">
+          </div>
+          <p id="filter-status" class="filter-status" role="status" hidden></p>
+          <nav id="book-navigation" class="contents-nav" aria-label="Book contents">
+            <a class="contents-link" data-page-id="overview" href="../index.html">Overview</a>
+<p class="contents-section-label">The chapter summaries</p>
+<details class="contents-group" data-part="1"><summary>Part I · The Impulse to Power</summary><ol class="chapter-list">
+<li><a data-page-id="p1-c01" data-search="Part I · Chapter 1 The Thursday Warning" href="../chapters/p1-c01.html"><span class="chapter-number">01</span> The Thursday Warning</a></li>
+<li><a data-page-id="p1-c02" data-search="Part I · Chapter 2 The War Turns" href="../chapters/p1-c02.html"><span class="chapter-number">02</span> The War Turns</a></li>
+<li><a data-page-id="p1-c03" data-search="Part I · Chapter 3 The Barta Position" href="../chapters/p1-c03.html"><span class="chapter-number">03</span> The Barta Position</a></li>
+<li><a data-page-id="p1-c04" data-search="Part I · Chapter 4 The Captive and the Money Convoy" href="../chapters/p1-c04.html"><span class="chapter-number">04</span> The Captive and the Money Convoy</a></li>
+<li><a data-page-id="p1-c05" data-search="Part I · Chapter 5 Victory for Cash" href="../chapters/p1-c05.html"><span class="chapter-number">05</span> Victory for Cash</a></li>
+<li><a data-page-id="p1-c06" data-search="Part I · Chapter 6 The Price of Courage" href="../chapters/p1-c06.html"><span class="chapter-number">06</span> The Price of Courage</a></li>
+<li><a data-page-id="p1-c07" data-search="Part I · Chapter 7 A Division Freed, a Corps Created" href="../chapters/p1-c07.html"><span class="chapter-number">07</span> A Division Freed, a Corps Created</a></li>
+<li><a data-page-id="p1-c08" data-search="Part I · Chapter 8 Reconciliation and an Execution" href="../chapters/p1-c08.html"><span class="chapter-number">08</span> Reconciliation and an Execution</a></li>
+<li><a data-page-id="p1-c09" data-search="Part I · Chapter 9 The Offer of Power" href="../chapters/p1-c09.html"><span class="chapter-number">09</span> The Offer of Power</a></li>
+<li><a data-page-id="p1-c10" data-search="Part I · Chapter 10 The Seizure of Power" href="../chapters/p1-c10.html"><span class="chapter-number">10</span> The Seizure of Power</a></li>
+</ol></details>
+<details class="contents-group" data-part="2"><summary>Part II · Sacred Terror</summary><ol class="chapter-list">
+<li><a data-page-id="p2-c01" data-search="Part II · Chapter 1 Gold, Humiliation, and a Dictator" href="../chapters/p2-c01.html"><span class="chapter-number">01</span> Gold, Humiliation, and a Dictator</a></li>
+<li><a data-page-id="p2-c02" data-search="Part II · Chapter 2 The First Address and the Sacred Terror" href="../chapters/p2-c02.html"><span class="chapter-number">02</span> The First Address and the Sacred Terror</a></li>
+<li><a data-page-id="p2-c03" data-search="Part II · Chapter 3 Rewards, Executions, and International Courts" href="../chapters/p2-c03.html"><span class="chapter-number">03</span> Rewards, Executions, and International Courts</a></li>
+<li><a data-page-id="p2-c04" data-search="Part II · Chapter 4 The Opposition as an Instrument of Fear" href="../chapters/p2-c04.html"><span class="chapter-number">04</span> The Opposition as an Instrument of Fear</a></li>
+<li><a data-page-id="p2-c05" data-search="Part II · Chapter 5 Making Enemies and Exposing Zabon" href="../chapters/p2-c05.html"><span class="chapter-number">05</span> Making Enemies and Exposing Zabon</a></li>
+<li><a data-page-id="p2-c06" data-search="Part II · Chapter 6 Refusing Retreat and Staging Betrayal" href="../chapters/p2-c06.html"><span class="chapter-number">06</span> Refusing Retreat and Staging Betrayal</a></li>
+<li><a data-page-id="p2-c07" data-search="Part II · Chapter 7 The Deluge and Nordag&#39;s Attack" href="../chapters/p2-c07.html"><span class="chapter-number">07</span> The Deluge and Nordag&#39;s Attack</a></li>
+<li><a data-page-id="p2-c08" data-search="Part II · Chapter 8 A False Threat Becomes an Order" href="../chapters/p2-c08.html"><span class="chapter-number">08</span> A False Threat Becomes an Order</a></li>
+<li><a data-page-id="p2-c09" data-search="Part II · Chapter 9 Zabon Is Saved, but Mercy Fails" href="../chapters/p2-c09.html"><span class="chapter-number">09</span> Zabon Is Saved, but Mercy Fails</a></li>
+</ol></details>
+<details class="contents-group" data-part="3"><summary>Part III · Turning Point</summary><ol class="chapter-list">
+<li><a data-page-id="p3-c01" data-search="Part III · Chapter 1 The Price of Terror" href="../chapters/p3-c01.html"><span class="chapter-number">01</span> The Price of Terror</a></li>
+<li><a data-page-id="p3-c02" data-search="Part III · Chapter 2 Mercy Under Threat" href="../chapters/p3-c02.html"><span class="chapter-number">02</span> Mercy Under Threat</a></li>
+<li><a data-page-id="p3-c03" data-search="Part III · Chapter 3 A Spy Becomes a Channel" href="../chapters/p3-c03.html"><span class="chapter-number">03</span> A Spy Becomes a Channel</a></li>
+<li><a data-page-id="p3-c04" data-search="Part III · Chapter 4 War Before the Court of Humanity" href="../chapters/p3-c04.html"><span class="chapter-number">04</span> War Before the Court of Humanity</a></li>
+<li><a data-page-id="p3-c05" data-search="Part III · Chapter 5 The Fleet Behind the Front" href="../chapters/p3-c05.html"><span class="chapter-number">05</span> The Fleet Behind the Front</a></li>
+<li><a data-page-id="p3-c06" data-search="Part III · Chapter 6 Gamov Risks His Mandate" href="../chapters/p3-c06.html"><span class="chapter-number">06</span> Gamov Risks His Mandate</a></li>
+<li><a data-page-id="p3-c07" data-search="Part III · Chapter 7 Victory at the Ballot, Danger on Every Front" href="../chapters/p3-c07.html"><span class="chapter-number">07</span> Victory at the Ballot, Danger on Every Front</a></li>
+<li><a data-page-id="p3-c08" data-search="Part III · Chapter 8 The Punishment of Konduk" href="../chapters/p3-c08.html"><span class="chapter-number">08</span> The Punishment of Konduk</a></li>
+<li><a data-page-id="p3-c09" data-search="Part III · Chapter 9 A False Agent and a Real Doubt" href="../chapters/p3-c09.html"><span class="chapter-number">09</span> A False Agent and a Real Doubt</a></li>
+<li><a data-page-id="p3-c10" data-search="Part III · Chapter 10 The Mutiny That Demanded Battle" href="../chapters/p3-c10.html"><span class="chapter-number">10</span> The Mutiny That Demanded Battle</a></li>
+<li><a data-page-id="p3-c11" data-search="Part III · Chapter 11 The Captive Who Understands the Plan" href="../chapters/p3-c11.html"><span class="chapter-number">11</span> The Captive Who Understands the Plan</a></li>
+<li><a data-page-id="p3-c12" data-search="Part III · Chapter 12 The Traitor He Agrees to Become" href="../chapters/p3-c12.html"><span class="chapter-number">12</span> The Traitor He Agrees to Become</a></li>
+<li><a data-page-id="p3-c13" data-search="Part III · Chapter 13 Darkness Beneath the Gallows" href="../chapters/p3-c13.html"><span class="chapter-number">13</span> Darkness Beneath the Gallows</a></li>
+</ol></details>
+<details class="contents-group" data-part="4"><summary>Part IV · Offensive</summary><ol class="chapter-list">
+<li><a data-page-id="p4-c01" data-search="Part IV · Chapter 1 A secret return to life" href="../chapters/p4-c01.html"><span class="chapter-number">01</span> A secret return to life</a></li>
+<li><a data-page-id="p4-c02" data-search="Part IV · Chapter 2 A window onto nuclear destruction" href="../chapters/p4-c02.html"><span class="chapter-number">02</span> A window onto nuclear destruction</a></li>
+<li><a data-page-id="p4-c03" data-search="Part IV · Chapter 3 Doubt, complicity, and a delayed return" href="../chapters/p4-c03.html"><span class="chapter-number">03</span> Doubt, complicity, and a delayed return</a></li>
+<li><a data-page-id="p4-c04" data-search="Part IV · Chapter 4 The hidden air army" href="../chapters/p4-c04.html"><span class="chapter-number">04</span> The hidden air army</a></li>
+<li><a data-page-id="p4-c05" data-search="Part IV · Chapter 5 A storm opens the prison camps" href="../chapters/p4-c05.html"><span class="chapter-number">05</span> A storm opens the prison camps</a></li>
+<li><a data-page-id="p4-c06" data-search="Part IV · Chapter 6 Terror, mercy, and public resurrection" href="../chapters/p4-c06.html"><span class="chapter-number">06</span> Terror, mercy, and public resurrection</a></li>
+<li><a data-page-id="p4-c07" data-search="Part IV · Chapter 7 Six strongholds close around the enemy" href="../chapters/p4-c07.html"><span class="chapter-number">07</span> Six strongholds close around the enemy</a></li>
+<li><a data-page-id="p4-c08" data-search="Part IV · Chapter 8 The person beneath the mask" href="../chapters/p4-c08.html"><span class="chapter-number">08</span> The person beneath the mask</a></li>
+<li><a data-page-id="p4-c09" data-search="Part IV · Chapter 9 Independence as punishment, agreement by force" href="../chapters/p4-c09.html"><span class="chapter-number">09</span> Independence as punishment, agreement by force</a></li>
+<li><a data-page-id="p4-c10" data-search="Part IV · Chapter 10 Food pressure and a terrible reprisal" href="../chapters/p4-c10.html"><span class="chapter-number">10</span> Food pressure and a terrible reprisal</a></li>
+<li><a data-page-id="p4-c11" data-search="Part IV · Chapter 11 The execution flight and its unexpected welcome" href="../chapters/p4-c11.html"><span class="chapter-number">11</span> The execution flight and its unexpected welcome</a></li>
+<li><a data-page-id="p4-c12" data-search="Part IV · Chapter 12 Gamov moves the war into public feeling" href="../chapters/p4-c12.html"><span class="chapter-number">12</span> Gamov moves the war into public feeling</a></li>
+<li><a data-page-id="p4-c13" data-search="Part IV · Chapter 13 Private love and failed diplomacy" href="../chapters/p4-c13.html"><span class="chapter-number">13</span> Private love and failed diplomacy</a></li>
+<li><a data-page-id="p4-c14" data-search="Part IV · Chapter 14 Mothers confronted with the war" href="../chapters/p4-c14.html"><span class="chapter-number">14</span> Mothers confronted with the war</a></li>
+<li><a data-page-id="p4-c15" data-search="Part IV · Chapter 15 Nordag’s thirst and a daughter’s defiance" href="../chapters/p4-c15.html"><span class="chapter-number">15</span> Nordag’s thirst and a daughter’s defiance</a></li>
+</ol></details>
+<details class="contents-group" data-part="5"><summary>Part V · The Devil of a God Not Ours</summary><ol class="chapter-list">
+<li><a data-page-id="p5-c01" data-search="Part V · Chapter 1 Anna Kursai&#39;s revenge for Floria" href="../chapters/p5-c01.html"><span class="chapter-number">01</span> Anna Kursai&#39;s revenge for Floria</a></li>
+<li><a data-page-id="p5-c02" data-search="Part V · Chapter 2 A homecoming and an enemy beyond military plans" href="../chapters/p5-c02.html"><span class="chapter-number">02</span> A homecoming and an enemy beyond military plans</a></li>
+<li><a data-page-id="p5-c03" data-search="Part V · Chapter 3 Saving enemy children by force" href="../chapters/p5-c03.html"><span class="chapter-number">03</span> Saving enemy children by force</a></li>
+<li><a data-page-id="p5-c04" data-search="Part V · Chapter 4 Mercy on the public stage" href="../chapters/p5-c04.html"><span class="chapter-number">04</span> Mercy on the public stage</a></li>
+<li><a data-page-id="p5-c05" data-search="Part V · Chapter 5 The first split in the Core" href="../chapters/p5-c05.html"><span class="chapter-number">05</span> The first split in the Core</a></li>
+<li><a data-page-id="p5-c06" data-search="Part V · Chapter 6 Famine, revolt, and a rejected appeal" href="../chapters/p5-c06.html"><span class="chapter-number">06</span> Famine, revolt, and a rejected appeal</a></li>
+<li><a data-page-id="p5-c07" data-search="Part V · Chapter 7 Gamov collapses before the assembled government" href="../chapters/p5-c07.html"><span class="chapter-number">07</span> Gamov collapses before the assembled government</a></li>
+<li><a data-page-id="p5-c08" data-search="Part V · Chapter 8 The sickroom becomes a political force" href="../chapters/p5-c08.html"><span class="chapter-number">08</span> The sickroom becomes a political force</a></li>
+<li><a data-page-id="p5-c09" data-search="Part V · Chapter 9 Semipalov obeys the vote he opposed" href="../chapters/p5-c09.html"><span class="chapter-number">09</span> Semipalov obeys the vote he opposed</a></li>
+<li><a data-page-id="p5-c10" data-search="Part V · Chapter 10 Aid changes the alliances" href="../chapters/p5-c10.html"><span class="chapter-number">10</span> Aid changes the alliances</a></li>
+<li><a data-page-id="p5-c11" data-search="Part V · Chapter 11 Cortezia&#39;s crisis ends in peace" href="../chapters/p5-c11.html"><span class="chapter-number">11</span> Cortezia&#39;s crisis ends in peace</a></li>
+</ol></details>
+<details class="contents-group" data-part="6"><summary>Part VI · Cleansing</summary><ol class="chapter-list">
+<li><a data-page-id="p6-c01" data-search="Part VI · Chapter 1 The condemned return alive" href="../chapters/p6-c01.html"><span class="chapter-number">01</span> The condemned return alive</a></li>
+<li><a data-page-id="p6-c02" data-search="Part VI · Chapter 2 The cost of a useful deception" href="../chapters/p6-c02.html"><span class="chapter-number">02</span> The cost of a useful deception</a></li>
+<li><a data-page-id="p6-c03" data-search="Part VI · Chapter 3 The victor demands a trial" href="../chapters/p6-c03.html"><span class="chapter-number">03</span> The victor demands a trial</a></li>
+<li><a data-page-id="p6-c04" data-search="Part VI · Chapter 4 Semipalov reviews the road to victory" href="../chapters/p6-c04.html"><span class="chapter-number">04</span> Semipalov reviews the road to victory</a></li>
+<li><a data-page-id="p6-c05" data-search="Part VI · Chapter 5 An enemy warns against self-destruction" href="../chapters/p6-c05.html"><span class="chapter-number">05</span> An enemy warns against self-destruction</a></li>
+<li><a data-page-id="p6-c06" data-search="Part VI · Chapter 6 The prosecution exposes the price of policy" href="../chapters/p6-c06.html"><span class="chapter-number">06</span> The prosecution exposes the price of policy</a></li>
+<li><a data-page-id="p6-c07" data-search="Part VI · Chapter 7 Gamov wrote both sides of the dispute" href="../chapters/p6-c07.html"><span class="chapter-number">07</span> Gamov wrote both sides of the dispute</a></li>
+<li><a data-page-id="p6-c08" data-search="Part VI · Chapter 8 Voityuk&#39;s accusation and the shadows of good" href="../chapters/p6-c08.html"><span class="chapter-number">08</span> Voityuk&#39;s accusation and the shadows of good</a></li>
+<li><a data-page-id="p6-c09" data-search="Part VI · Chapter 9 Gonzalez asks for his own death" href="../chapters/p6-c09.html"><span class="chapter-number">09</span> Gonzalez asks for his own death</a></li>
+<li><a data-page-id="p6-c10" data-search="Part VI · Chapter 10 The army prepares to stop an execution" href="../chapters/p6-c10.html"><span class="chapter-number">10</span> The army prepares to stop an execution</a></li>
+<li><a data-page-id="p6-c11" data-search="Part VI · Chapter 11 The individual victim and the unknown origin" href="../chapters/p6-c11.html"><span class="chapter-number">11</span> The individual victim and the unknown origin</a></li>
+<li><a data-page-id="p6-c12" data-search="Part VI · Chapter 12 Sentence, intervention, and the desire to disappear" href="../chapters/p6-c12.html"><span class="chapter-number">12</span> Sentence, intervention, and the desire to disappear</a></li>
+<li><a data-page-id="p6-c13" data-search="Part VI · Chapter 13 A living departure replaces martyrdom" href="../chapters/p6-c13.html"><span class="chapter-number">13</span> A living departure replaces martyrdom</a></li>
+<li><a data-page-id="p6-c14" data-search="Part VI · Chapter 14 Gonzalez changes the passenger" href="../chapters/p6-c14.html"><span class="chapter-number">14</span> Gonzalez changes the passenger</a></li>
+<li><a data-page-id="p6-c15" data-search="Part VI · Chapter 15 The peace-maker faces another divided world" href="../chapters/p6-c15.html"><span class="chapter-number">15</span> The peace-maker faces another divided world</a></li>
+</ol></details>
+<p class="contents-section-label">The reference library</p>
+<a class="contents-link" data-page-id="catalog-index" href="index.html">Explore the novel</a>
+<a class="contents-link" data-page-id="catalog-characters" href="characters.html">Characters and relationships</a>
+<a class="contents-link" data-page-id="catalog-places" href="places.html" aria-current="page">Places and political geography</a>
+<a class="contents-link" data-page-id="catalog-timeline" href="timeline.html">Timeline and events</a>
+<a class="contents-link" data-page-id="catalog-world" href="world.html">World and technology</a>
+<a class="contents-link" data-page-id="catalog-continuity" href="continuity.html">Continuity and open questions</a>
+<a class="contents-link" data-page-id="catalog-source-map" href="source-map.html">Source map</a>
+<a class="contents-link" data-page-id="catalog-chapter-reviews" href="chapter-reviews.html">Chapter evidence</a>
+
+          </nav>
+          <p class="sidebar-note">An English summary and reference.<br>Contains spoilers for the full novel.</p>
+        </div>
+      </details>
+    </aside>
+    <div class="reader-column" hx-history-elt>
+    <main id="main-content" class="main-content" data-page-id="catalog-places" data-page-kind="catalog" tabindex="-1">
+      <header class="page-header">
+        <p class="page-label">Reference library</p>
+        <h1>Places and political geography</h1>
+      </header>
+      <article class="reading-content">
+        <span id="places-and-political-geography"></span>
+<p><a href="index.html">Catalog index</a>. Keep location identity separate from changing political control. Record uncertain distances, directions, and routes as uncertain.</p>
+<p><a id="latania"></a></p>
+<h2>Latania</h2>
+<p>Semipalov's country and the setting of Bar's Thursday gathering. Bar lives in a three-room apartment on the outskirts. Police maintain tolerable order on central avenues, while gangs control neighborhood territory at night. Gamov describes Latania as unprepared and politically foolish in the face of Cortezian power. Source: <a href="source-map.html#p1-c01">P1-C01</a>.</p>
+<p><a id="cortezia"></a></p>
+<h2>Cortezia</h2>
+<p>A major foreign power and Woodworth's former homeland. Gamov calls the Cortezians predators and predicts that their meteorological stations are being forced into action. The news later reports that Cortezia's overseas stations enter enhanced operation and that its fleet leaves port. Source: <a href="source-map.html#p1-c01">P1-C01</a>.</p>
+<p><a id="patina"></a></p>
+<h2>Patina</h2>
+<p>State in a long dispute with Lamaria over three border villages. Marutzian promises support for Patina; Patina then attacks Lamaria. Gamov calls Patina an ally whose leaders may use Latania's support for their own interests. Source: <a href="source-map.html#p1-c01">P1-C01</a>.</p>
+<p><a id="lamaria"></a></p>
+<h2>Lamaria</h2>
+<p>State opposing Patina in the border dispute. Its capital is Lama. The news reports that Lamaria requests help from Cortezia and Roder after Patina's attack. Source: <a href="source-map.html#p1-c01">P1-C01</a>.</p>
+<p><a id="lama"></a></p>
+<h2>Lama</h2>
+<p>Capital of Lamaria. The news says Patina's army is advancing toward Lama after breaking Lamaria's defenses. Source: <a href="source-map.html#p1-c01">P1-C01</a>.</p>
+<p><a id="rodera"></a> <a id="roder"></a></p>
+<h2>Roder</h2>
+<p>State named in the broadcast as another power from which Lamaria requests help. The Russian nominative is Roder; Rodera is its genitive case, not another state. Roder is Cortezia's principal ally and an old military nation that disarmed for three decades after losing its last major war. Patina crosses its border early in the war; Cortezian troops and weapons arrive through Roder's ports, and the combined force later drives Patina and Latanian volunteers back. Source: <a href="source-map.html#p1-c01">P1-C01</a>, <a href="source-map.html#p1-c02">P1-C02</a>, P0003.</p>
+<p><a id="bar-apartment"></a></p>
+<h2 id="gottlieb-bars-apartment">Gottlieb Bar's apartment</h2>
+<p>Three-room apartment in an unspecified Latanian district, large enough for three armchairs and six chairs. It is the site of the first political debate and Semipalov's first sustained exposure to Gamov's ideas. Source: <a href="source-map.html#p1-c01">P1-C01</a>.</p>
+<p><a id="latanian-outskirts"></a></p>
+<h2 id="latanian-outskirts-at-night">Latanian outskirts at night</h2>
+<p>Poorly policed neighborhood where five gang members attack two women. Semipalov and Gamov leave the scene after a violent fight; Woodworth arrives from a nearby street. Source: <a href="source-map.html#p1-c01">P1-C01</a>.</p>
+<p><a id="adan"></a></p>
+<h2>Adan</h2>
+<p>Capital of Latania and site of the allied conference, later the destination of Elena's pharmaceutical mobilization. Source: <a href="source-map.html#p1-c02">P1-C02</a>.</p>
+<p><a id="nordag"></a></p>
+<h2>Nordag</h2>
+<p>Friendly state represented at the allied conference in Adan. No further geography is supplied. Source: <a href="source-map.html#p1-c02">P1-C02</a>.</p>
+<p><a id="great-lepin"></a></p>
+<h2>Great Lepin</h2>
+<p>Friendly state represented at the allied conference in Adan. No further geography is supplied. Source: <a href="source-map.html#p1-c02">P1-C02</a>.</p>
+<p><a id="sobrana"></a></p>
+<h2>Sobrana</h2>
+<p>Friendly state represented at the allied conference in Adan. No further geography is supplied. Source: <a href="source-map.html#p1-c02">P1-C02</a>.</p>
+<p><a id="torbash"></a></p>
+<h2>Torbash</h2>
+<p>Small state described as lacking an army and industry. Its hereditary king, Knurka IX, attends the Adan conference in person. Source: <a href="source-map.html#p1-c02">P1-C02</a>.</p>
+<p><a id="zabon"></a></p>
+<h2>Zabon</h2>
+<p>City where Semipalov and Elena spend their final evening before wartime assignments. The city is blacked out; street lamps have been removed and only four interior lights remain in their apartment. Source: <a href="source-map.html#p1-c02">P1-C02</a>.</p>
+<p><a id="patina-wooded-mountains"></a></p>
+<h2 id="patinas-wooded-mountains">Patina's wooded mountains</h2>
+<p>Western, forested region of Patina where Semipalov is ordered to serve after mobilization. Source: <a href="source-map.html#p1-c02">P1-C02</a>.</p>
+<p><a id="steel-ram-division"></a></p>
+<h2>Steel Ram division</h2>
+<p>Latanian volunteer division commanded by General Leonid Prishchepa. It uses radio-pulse devices, resonance guns, and electro-artillery; Semipalov joins as a radio saboteur. Source: <a href="source-map.html#p1-c02">P1-C02</a>.</p>
+<p><a id="barta-river"></a></p>
+<h2 id="barta-river-and-wooded-hills">Barta River and wooded hills</h2>
+<p>A winding river dividing Latanian forces from Roder. Steel Ram holds two wooded hills above a bend in the river and builds its main electro-barrier there after two months of retreat. Source: <a href="source-map.html#p1-c03">P1-C03</a>.</p>
+<p><a id="golden-wings-division"></a></p>
+<h2>Golden Wings division</h2>
+<p>Volunteer division thirty kilometres ahead of Steel Ram on the main defense line. Its condensed-water energy depot explodes, causing panic and exposing the front to Roder's guards. Source: <a href="source-map.html#p1-c03">P1-C03</a>.</p>
+<p><a id="steel-ram-front"></a></p>
+<h2 id="steel-ram-forward-position">Steel Ram forward position</h2>
+<p>A nearly encircled position after Patina requests separate peace. Patina corps stand behind and on both flanks, Golden Wings lies behind them, and professional Latanian units rebuild a line protecting the road to Adan. Source: <a href="source-map.html#p1-c03">P1-C03</a>.</p>
+<h3 id="p1-c04-front-updates">P1-C04 front updates</h3>
+<p>Roder replaces Patina's third and fifth corps on Steel Ram's flanks; the fourth remains in the rear. Shtok reports a plan for the fourth to attack the two volunteer divisions after a new agreement. A road at least thirty kilometres west of Steel Ram carries Parp's money convoy. The Central Front is held by two professional Latanian armies against Cortezia, according to Shtok. Source: <a href="source-map.html#p1-c04">P1-C04</a>, P0002–P0004, P0047–P0059.</p>
+<h3 id="p1-c05-front-updates">P1-C05 front updates</h3>
+<p>Roder's second army attacks Golden Wings from south and east after replacing Patina's fifth corps. Golden Wings' rear is pressed against the sea, where no enemy ships are yet visible. Its last line is threatened and unified command collapses, according to the respective Korkin and Komlin reports. Source: <a href="source-map.html#p1-c05">P1-C05</a>, P0100–P0106.</p>
+<h3 id="p1-c06-rescue-route">P1-C06 rescue route</h3>
+<p>Golden Wings surrenders. Its captive columns are expected to pass roughly fifty kilometres from Steel Ram. Semipalov proposes crossing west over the Barta to free them, then returning east with the combined force. Northern/southern enemy forces and Patina's fourth corps in the east make the westward route the best available exit; this is an approved plan, not yet completed movement. Source: <a href="source-map.html#p1-c06">P1-C06</a>, P0003–P0008, P0058–P0068.</p>
+<p><a id="volunteer-corps"></a></p>
+<h2 id="combined-volunteer-corps">Combined volunteer corps</h2>
+<p>Steel Ram frees Golden Wings beside an unnamed evacuated village and surrounding hills on the captive columns' road. The two divisions form a corps under Gamov, with appointments initially made in the field. Two enemy corps converge from the east and from across the Barta; Gamov plans to strike before they combine. Source: <a href="source-map.html#p1-c07">P1-C07</a>, P0050–P0054, P0065–P0096.</p>
+<h3 id="p1-c08-reported-conditions-in-latania">P1-C08 reported conditions in Latania</h3>
+<p>Mordasov reports 200,000 prisoners lost on the Western Front, drought/crop damage from Cortezian interception of cyclones, diverted food reserves, desertion, and violent banditry in Adan. These are his nationwide claims; the narrator is still in the corps. Source: <a href="source-map.html#p1-c08">P1-C08</a>, P0034–P0046.</p>
+<p><a id="parku"></a></p>
+<h2>Parku</h2>
+<p>Rail junction reached by road during the corps' return. Lines lead to Zabon and Adan. Elena meets Semipalov here using Woodworth's pass; civilians are otherwise barred. The officers board Woodworth's train with the loyal raiding battalion. Source: <a href="source-map.html#p1-c09">P1-C09</a>, P0036–P0042, P0062.</p>
+<h3 id="p1-c10-adan-and-strategic-geography">P1-C10 Adan and strategic geography</h3>
+<p>The party travels from Zabon to Adan. The narrator observes closed shops, queues, and the absence of evacuated children. Pavel's men seize the railway and broadcast stations, surround security barracks with heavy vibrators, and cut city/palace communication as soldiers occupy the government chamber. Shtupa reports new Cortezian weather stations under construction in Roder and Lamaria. Source: <a href="source-map.html#p1-c10">P1-C10</a>, P0006–P0012, P0028, P0039–P0044, P0056–P0084.</p>
+<h2 id="part-2-adan-zabon-and-the-northern-war">Part 2 — Adan, Zabon, and the northern war</h2>
+<p>Semipalov and Elena now stay in an Adan hotel while their Zabon home is locked. This is a wartime residence change, not a change in the identity of either city. <a href="source-map.html#p2-c02">P2-C02</a>, P0002.</p>
+<h3 id="p2-c03-palace-and-intended-front">P2-C03 — Palace and intended front</h3>
+<p>Gamov's smaller semicircular council room adjoins his living rooms and private “confessional.” Peano describes the intended real offensive on the southern sector of the Western Front, toward lost areas of Lamaria and Patina; the false leak instead names the north near Zabon. These are plans at this point. <a href="source-map.html#p2-c03">P2-C03</a>, P0033–P0037, P0094–P0099.</p>
+<p><a id="korina"></a> <a id="podnebesnaya"></a></p>
+<h3 id="p2-c05-conference-geography">P2-C05 — Conference geography</h3>
+<p>The visitors stay at Adan's Podnebesnaya hotel. Korina is then neutral, across a narrow strait from northern Roder. Zabon is Latania's second center; its defenses can resist several divisions, but Semipalov doubts they can stop several corps. The earlier southern offensive is now described as a central attack toward Lamaria and Patina; see <a href="continuity.html#c010">C010</a>. <a href="source-map.html#p2-c05">P2-C05</a>, P0005–P0011, P0077–P0091.</p>
+<h3 id="p2-c06-zabon-and-the-rejected-strategic-sacrifice">P2-C06 — Zabon and the rejected strategic sacrifice</h3>
+<p>The enemy attacks Zabon after finding no northern Latanian concentration. Semipalov proposes abandoning the city, breaking the weakened center, and encircling its captors from the west. Gamov instead orders its defense and an immediate central offensive. Woodworth warns that enemy corps near Nordag could provoke its defection. These proposed alternatives must remain separate from the eventual campaign. <a href="source-map.html#p2-c06">P2-C06</a>, P0017–P0035.</p>
+<h3 id="p2-c07-zabon-encircled">P2-C07 — Zabon encircled</h3>
+<p>Hills arc from the east around Zabon toward the northern sea; the southwest approach is low and marshy. Nordag lies northeast. A failed flood attack delays Vaksel but also inundates Zabon and Nordag's border districts. Nordag then overwhelms the border defenses and reaches Zabon's northeast outskirts. <a href="source-map.html#p2-c07">P2-C07</a>, P0021–P0026, P0043, P0089–P0103.</p>
+<h3 id="p2-c09-the-blockade-ends">P2-C09 — The blockade ends</h3>
+<p>Nordag holds Zabon's outer airfield and food depots beyond narrow gorges. Its withdrawal reopens the gorge; restored road contact with Adan is expected by evening. This observed relief precedes any completed peace treaty. The captives are displayed in a glass-walled enclosure with an opaque roof, implementing the prior cage order with different materials. <a href="source-map.html#p2-c09">P2-C09</a>, P0002–P0005, P0052–P0061, P0077–P0085.</p>
+<h2 id="part-3-autumn-to-the-new-offensive">Part 3 — Autumn to the new offensive</h2>
+<ul>
+<li><strong>P3-C01:</strong> Peano reports Zabon relieved, but two-thirds of Patina abandoned and Lamaria still unrecovered. Nordag's reported withdrawal line is thirty leagues inland; no modern conversion is supplied. <a href="parts/part-3-ledger.html#p3-c01">Evidence</a>, P0018, P0031–P0035.</li>
+<li><strong>P3-C02:</strong> Operation Cleansing covers Latania's cities, forests, and mountain refuges. Its end of organized banditry is Gamov's announcement; isolated crime is explicitly allowed to persist. <a href="parts/part-3-ledger.html#p3-c02">Evidence</a>, P0003–P0015.</li>
+<li><strong>P3-C03:</strong> Semipalov requests a bank channel in Klur; the country is explicitly neutral in <strong>P3-C04</strong>, when Biber and Falk visit Adan. Their visit does not make Klur a Latanian ally. <a href="parts/part-3-ledger.html#p3-c03">P3-C03</a>, P0089–P0105; <a href="parts/part-3-ledger.html#p3-c04">P3-C04</a>, P0025–P0026.</li>
+</ul>
+<p><a id="klur"></a> <a id="orion-bank"></a></p>
+<h3 id="p3-c05p3-c08-neutrality-ends-and-konduk-falls">P3-C05–P3-C08 — Neutrality ends and Konduk falls</h3>
+<ul>
+<li><strong>P3-C05:</strong> Orion bank in neutral Klur holds the hundred offered accounts. Konda is a place visited by Kirun; its wider status is unstated. The secret aircraft plant occupies an unnamed mountain reached from Adan through forest and a gorge. <a href="parts/part-3-ledger.html#p3-c05">Evidence</a>, P0014, P0022, P0043–P0048.</li>
+<li><strong>P3-C06:</strong> The first natural spring thunderstorm over Adan accompanies the enemy peace terms. Their territorial demands are demands, not completed border changes. <a href="parts/part-3-ledger.html#p3-c06">Evidence</a>, P0002–P0005.</li>
+<li><strong>P3-C07:</strong> Floria is Latania's western autonomous region beside Patina. One week into Vaksel's offensive, Great Lepin, Sobrana, Konduk, Klur, and Korina declare war. Klur and Korina therefore cease to be neutral. Torbash remains formally out. Konduk bombs peaceful desert Sorbas; the early half-dead/half-escaped estimate is preliminary reporting. <a href="parts/part-3-ledger.html#p3-c07">Evidence</a>, P0038–P0041, P0052–P0053, P0077–P0088.</li>
+<li><strong>P3-C08:</strong> Kondina is Konduk's capital, seized by airborne troops while its army still fights at the border. Ground forces follow and an occupation government forms. Do not merge Kondina with Konda. Klur sends two divisions to Vaksel; Korina sends one to Nordag. Woodworth counters Torbash's demands with requests for roads and paid food supplies. <a href="parts/part-3-ledger.html#p3-c08">Evidence</a>, P0010–P0035, P0046–P0077.</li>
+</ul>
+<h3 id="p3-c09p3-c13-renewed-pressure-and-hidden-bases">P3-C09–P3-C13 — Renewed pressure and hidden bases</h3>
+<p>Vaksel advances from Patina into Floria; Nordag again blocks Zabon from north and east. Artificial storms damage the approaches to Adan. <a href="source-map.html#p3-c09">P3-C09</a>, P0002–P0005. The unnamed mutinous airbase has six barracks and underground hangars for 120 operational aircraft; it is one of many divisions. <a href="source-map.html#p3-c10">P3-C10</a>, P0002–P0009, P0047–P0059. Bernoulli's neutral transit country is not identified as now-belligerent Klur. <a href="source-map.html#p3-c11">P3-C11</a>, P0009. Semipalov's public hanging is in Adan at noon. <a href="source-map.html#p3-c13">P3-C13</a>, P0002.</p>
+<h2 id="part-4-recovery-conquest-and-coercive-occupation">Part 4 — Recovery, conquest, and coercive occupation</h2>
+<ul>
+<li><strong>P4-C01–P4-C03:</strong> Semipalov's guarded park and nearby laboratory have no stated locality. Floria's reported loss advances from half to all; the enemy then enters ethnic Latanian territory. Sorbas is also where Kozyura says he was found. <a href="parts/part-4-ledger.html#p4-c01">P4-C01</a>, P0011, P0021; <a href="parts/part-4-ledger.html#p4-c03">P4-C03</a>, P0024, P0028–P0035.</li>
+<li><strong>P4-C02:</strong> The screen shows an unnamed other-world city, then an unnamed nuclear attack elsewhere or elsewhen. No city, country, Earth identity, or historical bombing name is given. Semipalov compares the very tall buildings with his own cities' houses. <a href="parts/part-4-ledger.html#p4-c02">Evidence</a>, P0066–P0101.</li>
+<li><strong>P4-C04–P4-C05:</strong> Fermor is Klur's capital and conference site; delegates lodge in the five-story Svetoch hotel. The principal offensive targets prisoner camps in Patina, Lamaria, and Roder, while the conference raid is secondary. <a href="parts/part-4-ledger.html#p4-c04">P4-C04</a>, P0002, P0031–P0035; <a href="parts/part-4-ledger.html#p4-c05">P4-C05</a>, P0025–P0047.</li>
+</ul>
+<h3 id="p4-c06p4-c10-occupation-limits">P4-C06–P4-C10 — Occupation limits</h3>
+<p>The Fermor force evacuates its captives and leaves Klur within a week, without destroying its fortifications. Freed prisoners are too weak to fight at once, so supplies and six unnamed defensive towns become essential. Less than a month after the raid, Patina, Lamaria, and Roder are described as conquered; Latanian troops stop at Roder's Klur border. <a href="source-map.html#p4-c06">P4-C06</a>, P0002–P0012; <a href="source-map.html#p4-c07">P4-C07</a>, P0004–P0017, P0066–P0068.</p>
+<p>In autumn, returning Latanians receive thirty days' leave; captured enemy soldiers go to rear camps. <a href="source-map.html#p4-c08">P4-C08</a>, P0002–P0004. Floria is made formally independent and neutral, with population transfers, compensation, withdrawn subsidies, and bypass roads. Its expected economic collapse and return are forecasts. Laina is Patina's capital. <a href="source-map.html#p4-c09">P4-C09</a>, P0011–P0027, P0053–P0057. Cortezia's capital is named Kordaza; later source spelling Kordoza denotes the same city. <a href="source-map.html#p4-c10">P4-C10</a>, P0007; <a href="source-map.html#p4-c11">P4-C11</a>, P0034.</p>
+<h3 id="p4-c11p4-c15-the-execution-flight-and-nordag">P4-C11–P4-C15 — The execution flight and Nordag</h3>
+<p>The reprisal crosses Patina, Lamaria, Roder, Klur, and the ocean to Cortezia; hostages are released in Klur on return. Kordoza and earlier Kordaza are source spellings of Cortezia's capital. <a href="source-map.html#p4-c11">P4-C11</a>, P0024, P0034, P0043–P0049. After the public welcome, Klur resumes military patrols: a crowd's response did not establish peace. <a href="source-map.html#p4-c12">P4-C12</a>, P0002–P0008.</p>
+<p>Nordag's city and army supply systems are isolated; Latanian forces initially stay outside the defended settlements. Parko is its capital, distinct from Latania's Parku rail junction. Diverted rain inundates Korina and Klur. Semipalov arrives after Parko capitulates, on the day before Luiza's threatened execution at noon on the first day of leaf-fall. The fictional month is not converted to a Gregorian date. <a href="source-map.html#p4-c15">P4-C15</a>, P0002–P0011, P0033–P0058.</p>
+<h2 id="part-5-epidemic-famine-and-changing-alliances">Part 5 — Epidemic, famine, and changing alliances</h2>
+<ul>
+<li><strong>P5-C01:</strong> Floria's lost supplies and closed borders are effects of the earlier separation policy; Semipalov confirms that they were intended. The attacker's explanation is political grievance. Korina's epidemic threatens movement through Nordag toward Latania, but that spread is not yet observed. <a href="parts/part-5-ledger.html#p5-c01">Evidence</a>, P0011–P0014, P0048–P0065.</li>
+<li><strong>P5-C02–P5-C04:</strong> Sporadic water allergy becomes epidemic in Korina. Suspected then detected Klur cases precede the text's statement that no epidemic has entered it. The rescue plan reaches the coast through Patina, Lamaria, and Nordag. Korina accepts enemy help; Klur eventually permits the weather program. <a href="parts/part-5-ledger.html#p5-c02">P5-C02</a>, P0054–P0066; <a href="parts/part-5-ledger.html#p5-c03">P5-C03</a>, P0004–P0017; <a href="parts/part-5-ledger.html#p5-c04">P5-C04</a>, P0010–P0018.</li>
+<li><strong>P5-C05:</strong> After months, Latania avoids epidemic, but Nordag, Patina, and Klur suffer deaths; Klur's coast is devastated. No rain falls from Adan to the ocean through summer. This corrects earlier optimistic hopes, not an earlier established universal rescue. <a href="parts/part-5-ledger.html#p5-c05">Evidence</a>, P0002–P0003.</li>
+<li><strong>P5-C06:</strong> Cortezia stops exports. Klur and Korina ration food; Amentola demands concessions. In Fermor, women seize palace and broadcast sites; gendarmes crush the revolt, then Pliss restores authoritarian control. Loaded Cortezian food remains blocked by ocean storms. <a href="parts/part-5-ledger.html#p5-c06">Evidence</a>, P0005–P0071.</li>
+</ul>
+<h3 id="p5-c07p5-c11-aid-routes-and-the-end-of-this-war">P5-C07–P5-C11 — Aid routes and the end of this war</h3>
+<p>Anna's campaign produces high milk yields in Floria without ending its hostility to Semipalov. <a href="source-map.html#p5-c07">P5-C07</a>, P0003–P0004. Food travels through Patina, Lamaria, and Roder to Klur's frontier, then enters under armed salutes and civilian welcome; soldiers initially retain their positions. The narrative gives a day's travel and a halt over half a day, but retrospectively returns to the voting day's noon. <a href="source-map.html#p5-c09">P5-C09</a>, P0027–P0047; <a href="source-map.html#p5-c10">P5-C10</a>, P0018–P0047.</p>
+<p>A limited weather corridor lets small boats carry Nordag's food to Korina. It does not make the entire ocean navigable for Cortezia's distant ships. Klur's parade crosses the Alley of Victories, also called Alley of Feats, to the Square of Greatness and Triumphal Arch. <a href="source-map.html#p5-c10">P5-C10</a>, P0030–P0038, P0054, P0069–P0092. Cortezia's final mass strike and palace marches bring a peace announcement; no Latanian transoceanic invasion occurs. <a href="source-map.html#p5-c11">P5-C11</a>, P0022, P0087–P0133.</p>
+<h2 id="part-6-world-settlement-and-the-narrators-final-boundary">Part 6 — World settlement and the narrator's final boundary</h2>
+<p>The survivor conference meets in Adan's hall where Gamov suffered the heart attack. Natural weather is deliberate: he orders no generator use. <a href="source-map.html#p6-c01">P6-C01</a>, P0010–P0015. Adan becomes the temporary world capital after the rulers approve union; they return home to reorganize their states. The detailed national changes are not all narrated. <a href="source-map.html#p6-c03">P6-C03</a>, P0004–P0006. Biber/Falk's earlier Fermor capture is later described more broadly as during Tronshke's army's collapse; see C029.</p>
+<h3 id="p6-c11p6-c15-two-worlds-and-the-knowledge-boundary">P6-C11–P6-C15 — Two worlds and the knowledge boundary</h3>
+<p>Sorbas remains the place near which Gamov recalls rescue; Tarkhun's negative caravan search is reported evidence, not a named birthplace in another world. <a href="source-map.html#p6-c11">P6-C11</a>, P0045–P0108. The departure occurs at the same laboratory, but its later homeland history becomes inaccessible to the narrator. <a href="source-map.html#p6-c14">P6-C14</a>, P0047–P0049.</p>
+<p>Semipalov wakes in an unnamed foreign state's military center, later learning he is on floor 128. Nearby structures are roughly 180–200 floors. Neither city nor state nor historical date is named. The cabin reportedly appeared at a football goal. The final guarded government meeting begins one floor above his confinement. The authorial 1986–1987, Kaliningrad–Komarovo colophon is outside story chronology. <a href="source-map.html#p6-c15">P6-C15</a>, P0002–P0025, P0038, P0053–P0064.</p>
+
+      </article>
+      <nav class="page-navigation" aria-label="Continue reading">
+        <a class="previous" href="../index.html"><span class="page-direction">Previous</span><span class="page-name">Overview</span></a>
+<a class="next" href="index.html"><span class="page-direction">Next</span><span class="page-name">Explore the novel</span></a>
+
+      </nav>
+      <footer class="reading-footer">
+        <span>Dictator · Sergei Snegov</span>
+        <a href="#main-content" hx-boost="false">Back to top <span aria-hidden="true">↑</span></a>
+      </footer>
+    </main>
+    </div>
+  </div>
+  <div id="navigation-announcement" class="sr-only" role="status" aria-live="polite"></div>
+</body>
+</html>

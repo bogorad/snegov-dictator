@@ -1,0 +1,144 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use utf8;
+use JSON::PP qw(decode_json);
+use File::Basename qw(dirname);
+use File::Spec;
+use Cwd qw(abs_path);
+use Encode qw(decode);
+
+my $root = abs_path(dirname(__FILE__) . '/..');
+chdir $root or die "Cannot enter project: $!\n";
+sub read_text {
+    my ($path) = @_;
+    open my $fh, '<:encoding(UTF-8)', $path or die "Cannot read $path: $!\n";
+    local $/;
+    return <$fh>;
+}
+my @errors;
+my $source_map = decode_json(do {
+    open my $fh, '<:raw', 'docs/knowledge/source-map.json' or die "$!\n";
+    local $/; <$fh>;
+});
+my @expected = map { lc $_->{id} } @{$source_map->{chapters}};
+die "Source chapter inventory is empty\n" unless @expected;
+my $summary = read_text('DICTATOR_SUMMARY.md');
+my $reviews = read_text('docs/knowledge/chapter-reviews.md');
+my $timeline = read_text('docs/knowledge/timeline.md');
+
+sub chapter_ids {
+    my ($text) = @_;
+    return $text =~ /<a\s+id=["'](p\d+-c\d+)["']\s*><\/a>/ig;
+}
+sub check_order {
+    my ($name, @actual) = @_;
+    push @errors, "$name chapter order or identity set differs from the source"
+        if join("\n", @actual) ne join("\n", @expected);
+    my %seen;
+    for (@actual) {
+        push @errors, "$name duplicates chapter $_" if $seen{$_}++;
+    }
+    return scalar @actual;
+}
+my $summary_count = check_order('Summary', chapter_ids($summary));
+my $review_count = check_order('Chapter reviews', chapter_ids($reviews));
+my $timeline_count = check_order('Timeline', chapter_ids($timeline));
+push @errors, 'Missing introduction' unless $summary =~ /^## Introduction\b/m;
+push @errors, 'Unfinished document marker' if $summary =~ /\b(?:TODO|TBD)\b|Work in progress|\*\*Draft:|^> Draft:/im;
+
+my @sections = split /(?=<a\s+id=["']p\d+-c\d+["']\s*><\/a>)/i, $summary;
+my %word_counts;
+for my $section (@sections) {
+    my ($id) = chapter_ids($section);
+    next unless defined $id;
+    my @catalog_links = $section =~ /\]\((docs\/knowledge\/[^)\s]+)\)/g;
+    push @errors, "$id has fewer than two catalog references" if @catalog_links < 2;
+    push @errors, "$id lacks a source reference"
+        unless $section =~ /\]\((?:src\/[^)]+|docs\/knowledge\/source-map\.md#[^)]+)\)/;
+    my $prose = $section;
+    $prose =~ s/<[^>]+>//g;
+    $prose =~ s/\[([^\]]+)\]\([^)]+\)/$1/g;
+    my @words = $prose =~ /\b[\p{L}\p{N}][\p{L}\p{N}'-]*\b/g;
+    $word_counts{$id} = scalar @words;
+    push @errors, "$id is too short to be a complete chapter summary"
+        if @words < 100;
+}
+
+my @markdown = ('DICTATOR_SUMMARY.md', sort(glob 'docs/knowledge/*.md'), sort(glob 'docs/knowledge/parts/*.md'));
+my %text_cache;
+my %anchor_cache;
+sub anchors_for {
+    my ($path) = @_;
+    return $anchor_cache{$path} if exists $anchor_cache{$path};
+    my $text = $text_cache{$path} //= read_text($path);
+    my %anchors;
+    while ($text =~ /\bid=["']([^"']+)["']/g) { $anchors{$1} = 1; }
+    if ($path =~ /\.md$/i) {
+        my %seen;
+        while ($text =~ /^#{1,6}\s+(.+?)(?:\s+#+)?\s*$/mg) {
+            my $slug = lc $1;
+            $slug =~ s/<[^>]*>//g;
+            $slug =~ s/\[([^\]]+)\]\([^)]+\)/$1/g;
+            $slug =~ s/[^\p{L}\p{N}_\s-]//g;
+            $slug =~ s/\s/-/g;
+            my $number = $seen{$slug}++;
+            $slug .= "-$number" if $number;
+            $anchors{$slug} = 1;
+        }
+    }
+    return $anchor_cache{$path} = \%anchors;
+}
+my $link_count = 0;
+for my $file (@markdown) {
+    my $text = $text_cache{$file} //= read_text($file);
+    push @errors, "$file contains Cyrillic prose" if $text =~ /\p{Cyrillic}/;
+    if ($file =~ m{^docs/knowledge/}) {
+        my ($front) = $text =~ /\A---\s*\n(.*?)\n---/s;
+        if (!defined $front) { push @errors, "$file lacks frontmatter"; }
+        else {
+            for my $key (qw(type title description resource tags timestamp)) {
+                push @errors, "$file lacks frontmatter key $key"
+                    unless $front =~ /^\Q$key\E:\s*\S/m;
+            }
+        }
+    }
+    my %explicit;
+    while ($text =~ /<a\s+id=["']([^"']+)["']\s*><\/a>/ig) {
+        push @errors, "$file duplicates anchor $1" if $explicit{$1}++;
+    }
+    while ($text =~ /\[[^\]\n]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)/g) {
+        my $target = $1;
+        next if $target =~ m{^(?:https?://|mailto:|data:|[a-z]+://)}i;
+        $target =~ s/^<|>$//g;
+        my ($path, $fragment) = split /#/, $target, 2;
+        $path =~ s/%([0-9A-Fa-f]{2})/chr(hex($1))/eg;
+        my $resolved = length($path)
+            ? File::Spec->canonpath(File::Spec->catfile(dirname($file), $path))
+            : $file;
+        $link_count++;
+        if (!-e $resolved) {
+            push @errors, "$file has missing link target $target";
+            next;
+        }
+        if (defined $fragment && length $fragment && -f $resolved) {
+            $fragment =~ s/%([0-9A-Fa-f]{2})/chr(hex($1))/eg;
+            push @errors, "$file has missing anchor $target"
+                unless anchors_for($resolved)->{$fragment};
+        }
+    }
+}
+print "Source chapters: ", scalar(@expected), "\n";
+print "Summary chapters: $summary_count\n";
+print "Chapter reviews: $review_count\n";
+print "Timeline chapters: $timeline_count\n";
+print "Local links checked: $link_count\n";
+my $total_words = 0;
+$total_words += $_ for values %word_counts;
+print "Chapter-summary words: $total_words\n";
+if (@errors) {
+    print STDERR "FAIL: $_\n" for @errors;
+    exit 1;
+}
+print "PASS: chapter identity/order, references, English prose, frontmatter, local paths and anchors.\n";
+print "Limit: these checks do not establish narrative accuracy or semantic completeness.\n";

@@ -1,0 +1,77 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use utf8;
+use JSON::PP qw(decode_json);
+use Cwd qw(abs_path);
+use File::Basename qw(dirname);
+
+my $root=abs_path(dirname(__FILE__).'/..');
+chdir $root or die "$!\n";
+my $final=@ARGV && $ARGV[0] eq '--final';
+sub text {
+    my ($path)=@_;
+    open my $fh,'<:encoding(UTF-8)',$path or die "$path: $!\n";
+    local $/; return <$fh>;
+}
+open my $map_fh,'<:raw','docs/knowledge/source-map.json' or die "$!\n";
+my $map=decode_json(do { local $/; <$map_fh> });
+my @expected=map { lc $_->{id} } @{$map->{chapters}};
+my %expected=map { $_=>1 } @expected;
+my @included;
+my $body='';
+for my $part (1..6) {
+    my $draft_path="tmp/summary/part-$part.md";
+    my $ledger_path="docs/knowledge/parts/part-$part-ledger.md";
+    next unless -f $draft_path && -f $ledger_path;
+    my $draft=text($draft_path);
+    my $ledger=text($ledger_path);
+    my %documented=map { lc($_)=>1 }
+        ($ledger =~ /<a\s+id=["'](p\d+-c\d+)["']\s*><\/a>/ig);
+    my @pieces=split /(?=<a\s+id=["']p\d+-c\d+["']\s*><\/a>)/i,$draft;
+    my $heading=shift @pieces;
+    my $part_body='';
+    my $count=0;
+    my $next=1;
+    for my $piece (@pieces) {
+        my ($id)=$piece =~ /<a\s+id=["'](p\d+-c\d+)["']\s*><\/a>/i;
+        next unless defined $id;
+        $id=lc $id;
+        die "Unexpected chapter $id in $draft_path\n" unless $expected{$id};
+        last unless $documented{$id};
+        my $ordered=sprintf('p%d-c%02d',$part,$next);
+        die "Non-sequential chapter $id, expected $ordered\n" unless $id eq $ordered;
+        $piece =~ s/\s*\z/\n\n/;
+        $part_body.=$piece;
+        push @included,$id;
+        $count++; $next++;
+    }
+    next unless $count;
+    my $part_total=scalar grep { /^p$part-/ } @expected;
+    $heading =~ s/\s*\z/\n\n/;
+    $body.=$heading;
+    $body.="> Draft: $count of $part_total chapter sections are documented. Final reconciliation is pending.\n\n" unless $final;
+    $body.=$part_body;
+}
+my $total=scalar @expected;
+my $count=scalar @included;
+if ($final) {
+    die "Final assembly lacks chapters or source order\n"
+        unless join("\n",@included) eq join("\n",@expected);
+    my $reviews=text('docs/knowledge/chapter-reviews.md');
+    my @reviewed=$reviews =~ /<a\s+id=["'](p\d+-c\d+)["']\s*><\/a>/ig;
+    die "Central chapter reviews are incomplete or out of order\n"
+        unless join("\n",@reviewed) eq join("\n",@expected);
+}
+my $intro=text('tmp/summary/introduction.md');
+die "Final introduction still contains a draft marker\n"
+    if $final && $intro =~ /\b(?:TODO|TBD)\b|will be completed|work in progress/i;
+my $output="# Dictator — Complete Chapter-by-Chapter Summary\n\n";
+$output.="**Draft: $count of $total chapter sections have source-linked fact ledgers. Global reconciliation and final review remain in progress.**\n\n" unless $final;
+$output.=$intro."\n\n".$body;
+$output =~ s/\n+\z/\n/;
+open my $out,'>:encoding(UTF-8)','DICTATOR_SUMMARY.md.assembling' or die "$!\n";
+print {$out} $output;
+close $out or die "$!\n";
+rename 'DICTATOR_SUMMARY.md.assembling','DICTATOR_SUMMARY.md' or die "$!\n";
+print "Assembled $count/$total chapter sections",($final?' (final)':' (draft)'),"\n";

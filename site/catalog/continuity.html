@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Continuity and inconsistency register for Sergei Snegov’s Dictator, with chapter and source references.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="htmx-config" content='{"historyRestoreAsHxRequest":false,"scrollIntoViewOnBoost":false}'>
+  <title>Continuity and inconsistency register · Dictator</title>
+  <script>
+    (() => {
+      let saved;
+      try { saved = localStorage.getItem('dictator-theme'); } catch (_) {}
+      const dark = saved === 'dark' || (saved !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    })();
+  </script>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/htmx.min.js" defer></script>
+  <script src="../assets/site.js" defer></script>
+</head>
+<body hx-boost="true" hx-target="#main-content" hx-select="#main-content" hx-swap="outerHTML" hx-indicator="#navigation-progress">
+  <a class="skip-link" href="#main-content" hx-boost="false">Skip to reading</a>
+  <header class="masthead">
+    <a class="book-brand" href="../index.html" data-persistent-link aria-label="Dictator reading companion home">
+      <span class="book-title">Dictator</span>
+      <span class="book-author">Sergei Snegov</span>
+    </a>
+    <div class="masthead-tools">
+      <span class="edition-label">A reading companion</span>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>
+        <svg class="theme-icon icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20.5 13.4A8.7 8.7 0 0 1 10.6 3.5 8.7 8.7 0 1 0 20.5 13.4Z"/></svg>
+        <svg class="theme-icon icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4m0-14.2-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+        <span id="theme-label">Dark mode</span>
+      </button>
+    </div>
+  </header>
+  <div id="navigation-progress" class="navigation-progress htmx-indicator" aria-hidden="true"></div>
+  <div class="reading-layout">
+    <aside class="sidebar" aria-label="Reading navigation">
+      <details id="site-contents" class="contents-panel" open>
+        <summary class="contents-heading"><span>Contents</span><span class="contents-hint">6 parts · 73 chapters</span></summary>
+        <div class="contents-body">
+          <div class="chapter-search" hidden>
+            <label class="sr-only" for="chapter-filter">Filter chapter titles</label>
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+            <input id="chapter-filter" type="search" placeholder="Find a chapter…" autocomplete="off" aria-controls="book-navigation" aria-describedby="filter-status">
+          </div>
+          <p id="filter-status" class="filter-status" role="status" hidden></p>
+          <nav id="book-navigation" class="contents-nav" aria-label="Book contents">
+            <a class="contents-link" data-page-id="overview" href="../index.html">Overview</a>
+<p class="contents-section-label">The chapter summaries</p>
+<details class="contents-group" data-part="1"><summary>Part I · The Impulse to Power</summary><ol class="chapter-list">
+<li><a data-page-id="p1-c01" data-search="Part I · Chapter 1 The Thursday Warning" href="../chapters/p1-c01.html"><span class="chapter-number">01</span> The Thursday Warning</a></li>
+<li><a data-page-id="p1-c02" data-search="Part I · Chapter 2 The War Turns" href="../chapters/p1-c02.html"><span class="chapter-number">02</span> The War Turns</a></li>
+<li><a data-page-id="p1-c03" data-search="Part I · Chapter 3 The Barta Position" href="../chapters/p1-c03.html"><span class="chapter-number">03</span> The Barta Position</a></li>
+<li><a data-page-id="p1-c04" data-search="Part I · Chapter 4 The Captive and the Money Convoy" href="../chapters/p1-c04.html"><span class="chapter-number">04</span> The Captive and the Money Convoy</a></li>
+<li><a data-page-id="p1-c05" data-search="Part I · Chapter 5 Victory for Cash" href="../chapters/p1-c05.html"><span class="chapter-number">05</span> Victory for Cash</a></li>
+<li><a data-page-id="p1-c06" data-search="Part I · Chapter 6 The Price of Courage" href="../chapters/p1-c06.html"><span class="chapter-number">06</span> The Price of Courage</a></li>
+<li><a data-page-id="p1-c07" data-search="Part I · Chapter 7 A Division Freed, a Corps Created" href="../chapters/p1-c07.html"><span class="chapter-number">07</span> A Division Freed, a Corps Created</a></li>
+<li><a data-page-id="p1-c08" data-search="Part I · Chapter 8 Reconciliation and an Execution" href="../chapters/p1-c08.html"><span class="chapter-number">08</span> Reconciliation and an Execution</a></li>
+<li><a data-page-id="p1-c09" data-search="Part I · Chapter 9 The Offer of Power" href="../chapters/p1-c09.html"><span class="chapter-number">09</span> The Offer of Power</a></li>
+<li><a data-page-id="p1-c10" data-search="Part I · Chapter 10 The Seizure of Power" href="../chapters/p1-c10.html"><span class="chapter-number">10</span> The Seizure of Power</a></li>
+</ol></details>
+<details class="contents-group" data-part="2"><summary>Part II · Sacred Terror</summary><ol class="chapter-list">
+<li><a data-page-id="p2-c01" data-search="Part II · Chapter 1 Gold, Humiliation, and a Dictator" href="../chapters/p2-c01.html"><span class="chapter-number">01</span> Gold, Humiliation, and a Dictator</a></li>
+<li><a data-page-id="p2-c02" data-search="Part II · Chapter 2 The First Address and the Sacred Terror" href="../chapters/p2-c02.html"><span class="chapter-number">02</span> The First Address and the Sacred Terror</a></li>
+<li><a data-page-id="p2-c03" data-search="Part II · Chapter 3 Rewards, Executions, and International Courts" href="../chapters/p2-c03.html"><span class="chapter-number">03</span> Rewards, Executions, and International Courts</a></li>
+<li><a data-page-id="p2-c04" data-search="Part II · Chapter 4 The Opposition as an Instrument of Fear" href="../chapters/p2-c04.html"><span class="chapter-number">04</span> The Opposition as an Instrument of Fear</a></li>
+<li><a data-page-id="p2-c05" data-search="Part II · Chapter 5 Making Enemies and Exposing Zabon" href="../chapters/p2-c05.html"><span class="chapter-number">05</span> Making Enemies and Exposing Zabon</a></li>
+<li><a data-page-id="p2-c06" data-search="Part II · Chapter 6 Refusing Retreat and Staging Betrayal" href="../chapters/p2-c06.html"><span class="chapter-number">06</span> Refusing Retreat and Staging Betrayal</a></li>
+<li><a data-page-id="p2-c07" data-search="Part II · Chapter 7 The Deluge and Nordag&#39;s Attack" href="../chapters/p2-c07.html"><span class="chapter-number">07</span> The Deluge and Nordag&#39;s Attack</a></li>
+<li><a data-page-id="p2-c08" data-search="Part II · Chapter 8 A False Threat Becomes an Order" href="../chapters/p2-c08.html"><span class="chapter-number">08</span> A False Threat Becomes an Order</a></li>
+<li><a data-page-id="p2-c09" data-search="Part II · Chapter 9 Zabon Is Saved, but Mercy Fails" href="../chapters/p2-c09.html"><span class="chapter-number">09</span> Zabon Is Saved, but Mercy Fails</a></li>
+</ol></details>
+<details class="contents-group" data-part="3"><summary>Part III · Turning Point</summary><ol class="chapter-list">
+<li><a data-page-id="p3-c01" data-search="Part III · Chapter 1 The Price of Terror" href="../chapters/p3-c01.html"><span class="chapter-number">01</span> The Price of Terror</a></li>
+<li><a data-page-id="p3-c02" data-search="Part III · Chapter 2 Mercy Under Threat" href="../chapters/p3-c02.html"><span class="chapter-number">02</span> Mercy Under Threat</a></li>
+<li><a data-page-id="p3-c03" data-search="Part III · Chapter 3 A Spy Becomes a Channel" href="../chapters/p3-c03.html"><span class="chapter-number">03</span> A Spy Becomes a Channel</a></li>
+<li><a data-page-id="p3-c04" data-search="Part III · Chapter 4 War Before the Court of Humanity" href="../chapters/p3-c04.html"><span class="chapter-number">04</span> War Before the Court of Humanity</a></li>
+<li><a data-page-id="p3-c05" data-search="Part III · Chapter 5 The Fleet Behind the Front" href="../chapters/p3-c05.html"><span class="chapter-number">05</span> The Fleet Behind the Front</a></li>
+<li><a data-page-id="p3-c06" data-search="Part III · Chapter 6 Gamov Risks His Mandate" href="../chapters/p3-c06.html"><span class="chapter-number">06</span> Gamov Risks His Mandate</a></li>
+<li><a data-page-id="p3-c07" data-search="Part III · Chapter 7 Victory at the Ballot, Danger on Every Front" href="../chapters/p3-c07.html"><span class="chapter-number">07</span> Victory at the Ballot, Danger on Every Front</a></li>
+<li><a data-page-id="p3-c08" data-search="Part III · Chapter 8 The Punishment of Konduk" href="../chapters/p3-c08.html"><span class="chapter-number">08</span> The Punishment of Konduk</a></li>
+<li><a data-page-id="p3-c09" data-search="Part III · Chapter 9 A False Agent and a Real Doubt" href="../chapters/p3-c09.html"><span class="chapter-number">09</span> A False Agent and a Real Doubt</a></li>
+<li><a data-page-id="p3-c10" data-search="Part III · Chapter 10 The Mutiny That Demanded Battle" href="../chapters/p3-c10.html"><span class="chapter-number">10</span> The Mutiny That Demanded Battle</a></li>
+<li><a data-page-id="p3-c11" data-search="Part III · Chapter 11 The Captive Who Understands the Plan" href="../chapters/p3-c11.html"><span class="chapter-number">11</span> The Captive Who Understands the Plan</a></li>
+<li><a data-page-id="p3-c12" data-search="Part III · Chapter 12 The Traitor He Agrees to Become" href="../chapters/p3-c12.html"><span class="chapter-number">12</span> The Traitor He Agrees to Become</a></li>
+<li><a data-page-id="p3-c13" data-search="Part III · Chapter 13 Darkness Beneath the Gallows" href="../chapters/p3-c13.html"><span class="chapter-number">13</span> Darkness Beneath the Gallows</a></li>
+</ol></details>
+<details class="contents-group" data-part="4"><summary>Part IV · Offensive</summary><ol class="chapter-list">
+<li><a data-page-id="p4-c01" data-search="Part IV · Chapter 1 A secret return to life" href="../chapters/p4-c01.html"><span class="chapter-number">01</span> A secret return to life</a></li>
+<li><a data-page-id="p4-c02" data-search="Part IV · Chapter 2 A window onto nuclear destruction" href="../chapters/p4-c02.html"><span class="chapter-number">02</span> A window onto nuclear destruction</a></li>
+<li><a data-page-id="p4-c03" data-search="Part IV · Chapter 3 Doubt, complicity, and a delayed return" href="../chapters/p4-c03.html"><span class="chapter-number">03</span> Doubt, complicity, and a delayed return</a></li>
+<li><a data-page-id="p4-c04" data-search="Part IV · Chapter 4 The hidden air army" href="../chapters/p4-c04.html"><span class="chapter-number">04</span> The hidden air army</a></li>
+<li><a data-page-id="p4-c05" data-search="Part IV · Chapter 5 A storm opens the prison camps" href="../chapters/p4-c05.html"><span class="chapter-number">05</span> A storm opens the prison camps</a></li>
+<li><a data-page-id="p4-c06" data-search="Part IV · Chapter 6 Terror, mercy, and public resurrection" href="../chapters/p4-c06.html"><span class="chapter-number">06</span> Terror, mercy, and public resurrection</a></li>
+<li><a data-page-id="p4-c07" data-search="Part IV · Chapter 7 Six strongholds close around the enemy" href="../chapters/p4-c07.html"><span class="chapter-number">07</span> Six strongholds close around the enemy</a></li>
+<li><a data-page-id="p4-c08" data-search="Part IV · Chapter 8 The person beneath the mask" href="../chapters/p4-c08.html"><span class="chapter-number">08</span> The person beneath the mask</a></li>
+<li><a data-page-id="p4-c09" data-search="Part IV · Chapter 9 Independence as punishment, agreement by force" href="../chapters/p4-c09.html"><span class="chapter-number">09</span> Independence as punishment, agreement by force</a></li>
+<li><a data-page-id="p4-c10" data-search="Part IV · Chapter 10 Food pressure and a terrible reprisal" href="../chapters/p4-c10.html"><span class="chapter-number">10</span> Food pressure and a terrible reprisal</a></li>
+<li><a data-page-id="p4-c11" data-search="Part IV · Chapter 11 The execution flight and its unexpected welcome" href="../chapters/p4-c11.html"><span class="chapter-number">11</span> The execution flight and its unexpected welcome</a></li>
+<li><a data-page-id="p4-c12" data-search="Part IV · Chapter 12 Gamov moves the war into public feeling" href="../chapters/p4-c12.html"><span class="chapter-number">12</span> Gamov moves the war into public feeling</a></li>
+<li><a data-page-id="p4-c13" data-search="Part IV · Chapter 13 Private love and failed diplomacy" href="../chapters/p4-c13.html"><span class="chapter-number">13</span> Private love and failed diplomacy</a></li>
+<li><a data-page-id="p4-c14" data-search="Part IV · Chapter 14 Mothers confronted with the war" href="../chapters/p4-c14.html"><span class="chapter-number">14</span> Mothers confronted with the war</a></li>
+<li><a data-page-id="p4-c15" data-search="Part IV · Chapter 15 Nordag’s thirst and a daughter’s defiance" href="../chapters/p4-c15.html"><span class="chapter-number">15</span> Nordag’s thirst and a daughter’s defiance</a></li>
+</ol></details>
+<details class="contents-group" data-part="5"><summary>Part V · The Devil of a God Not Ours</summary><ol class="chapter-list">
+<li><a data-page-id="p5-c01" data-search="Part V · Chapter 1 Anna Kursai&#39;s revenge for Floria" href="../chapters/p5-c01.html"><span class="chapter-number">01</span> Anna Kursai&#39;s revenge for Floria</a></li>
+<li><a data-page-id="p5-c02" data-search="Part V · Chapter 2 A homecoming and an enemy beyond military plans" href="../chapters/p5-c02.html"><span class="chapter-number">02</span> A homecoming and an enemy beyond military plans</a></li>
+<li><a data-page-id="p5-c03" data-search="Part V · Chapter 3 Saving enemy children by force" href="../chapters/p5-c03.html"><span class="chapter-number">03</span> Saving enemy children by force</a></li>
+<li><a data-page-id="p5-c04" data-search="Part V · Chapter 4 Mercy on the public stage" href="../chapters/p5-c04.html"><span class="chapter-number">04</span> Mercy on the public stage</a></li>
+<li><a data-page-id="p5-c05" data-search="Part V · Chapter 5 The first split in the Core" href="../chapters/p5-c05.html"><span class="chapter-number">05</span> The first split in the Core</a></li>
+<li><a data-page-id="p5-c06" data-search="Part V · Chapter 6 Famine, revolt, and a rejected appeal" href="../chapters/p5-c06.html"><span class="chapter-number">06</span> Famine, revolt, and a rejected appeal</a></li>
+<li><a data-page-id="p5-c07" data-search="Part V · Chapter 7 Gamov collapses before the assembled government" href="../chapters/p5-c07.html"><span class="chapter-number">07</span> Gamov collapses before the assembled government</a></li>
+<li><a data-page-id="p5-c08" data-search="Part V · Chapter 8 The sickroom becomes a political force" href="../chapters/p5-c08.html"><span class="chapter-number">08</span> The sickroom becomes a political force</a></li>
+<li><a data-page-id="p5-c09" data-search="Part V · Chapter 9 Semipalov obeys the vote he opposed" href="../chapters/p5-c09.html"><span class="chapter-number">09</span> Semipalov obeys the vote he opposed</a></li>
+<li><a data-page-id="p5-c10" data-search="Part V · Chapter 10 Aid changes the alliances" href="../chapters/p5-c10.html"><span class="chapter-number">10</span> Aid changes the alliances</a></li>
+<li><a data-page-id="p5-c11" data-search="Part V · Chapter 11 Cortezia&#39;s crisis ends in peace" href="../chapters/p5-c11.html"><span class="chapter-number">11</span> Cortezia&#39;s crisis ends in peace</a></li>
+</ol></details>
+<details class="contents-group" data-part="6"><summary>Part VI · Cleansing</summary><ol class="chapter-list">
+<li><a data-page-id="p6-c01" data-search="Part VI · Chapter 1 The condemned return alive" href="../chapters/p6-c01.html"><span class="chapter-number">01</span> The condemned return alive</a></li>
+<li><a data-page-id="p6-c02" data-search="Part VI · Chapter 2 The cost of a useful deception" href="../chapters/p6-c02.html"><span class="chapter-number">02</span> The cost of a useful deception</a></li>
+<li><a data-page-id="p6-c03" data-search="Part VI · Chapter 3 The victor demands a trial" href="../chapters/p6-c03.html"><span class="chapter-number">03</span> The victor demands a trial</a></li>
+<li><a data-page-id="p6-c04" data-search="Part VI · Chapter 4 Semipalov reviews the road to victory" href="../chapters/p6-c04.html"><span class="chapter-number">04</span> Semipalov reviews the road to victory</a></li>
+<li><a data-page-id="p6-c05" data-search="Part VI · Chapter 5 An enemy warns against self-destruction" href="../chapters/p6-c05.html"><span class="chapter-number">05</span> An enemy warns against self-destruction</a></li>
+<li><a data-page-id="p6-c06" data-search="Part VI · Chapter 6 The prosecution exposes the price of policy" href="../chapters/p6-c06.html"><span class="chapter-number">06</span> The prosecution exposes the price of policy</a></li>
+<li><a data-page-id="p6-c07" data-search="Part VI · Chapter 7 Gamov wrote both sides of the dispute" href="../chapters/p6-c07.html"><span class="chapter-number">07</span> Gamov wrote both sides of the dispute</a></li>
+<li><a data-page-id="p6-c08" data-search="Part VI · Chapter 8 Voityuk&#39;s accusation and the shadows of good" href="../chapters/p6-c08.html"><span class="chapter-number">08</span> Voityuk&#39;s accusation and the shadows of good</a></li>
+<li><a data-page-id="p6-c09" data-search="Part VI · Chapter 9 Gonzalez asks for his own death" href="../chapters/p6-c09.html"><span class="chapter-number">09</span> Gonzalez asks for his own death</a></li>
+<li><a data-page-id="p6-c10" data-search="Part VI · Chapter 10 The army prepares to stop an execution" href="../chapters/p6-c10.html"><span class="chapter-number">10</span> The army prepares to stop an execution</a></li>
+<li><a data-page-id="p6-c11" data-search="Part VI · Chapter 11 The individual victim and the unknown origin" href="../chapters/p6-c11.html"><span class="chapter-number">11</span> The individual victim and the unknown origin</a></li>
+<li><a data-page-id="p6-c12" data-search="Part VI · Chapter 12 Sentence, intervention, and the desire to disappear" href="../chapters/p6-c12.html"><span class="chapter-number">12</span> Sentence, intervention, and the desire to disappear</a></li>
+<li><a data-page-id="p6-c13" data-search="Part VI · Chapter 13 A living departure replaces martyrdom" href="../chapters/p6-c13.html"><span class="chapter-number">13</span> A living departure replaces martyrdom</a></li>
+<li><a data-page-id="p6-c14" data-search="Part VI · Chapter 14 Gonzalez changes the passenger" href="../chapters/p6-c14.html"><span class="chapter-number">14</span> Gonzalez changes the passenger</a></li>
+<li><a data-page-id="p6-c15" data-search="Part VI · Chapter 15 The peace-maker faces another divided world" href="../chapters/p6-c15.html"><span class="chapter-number">15</span> The peace-maker faces another divided world</a></li>
+</ol></details>
+<p class="contents-section-label">The reference library</p>
+<a class="contents-link" data-page-id="catalog-index" href="index.html">Explore the novel</a>
+<a class="contents-link" data-page-id="catalog-characters" href="characters.html">Characters and relationships</a>
+<a class="contents-link" data-page-id="catalog-places" href="places.html">Places and political geography</a>
+<a class="contents-link" data-page-id="catalog-timeline" href="timeline.html">Timeline and events</a>
+<a class="contents-link" data-page-id="catalog-world" href="world.html">World and technology</a>
+<a class="contents-link" data-page-id="catalog-continuity" href="continuity.html" aria-current="page">Continuity and open questions</a>
+<a class="contents-link" data-page-id="catalog-source-map" href="source-map.html">Source map</a>
+<a class="contents-link" data-page-id="catalog-chapter-reviews" href="chapter-reviews.html">Chapter evidence</a>
+
+          </nav>
+          <p class="sidebar-note">An English summary and reference.<br>Contains spoilers for the full novel.</p>
+        </div>
+      </details>
+    </aside>
+    <div class="reader-column" hx-history-elt>
+    <main id="main-content" class="main-content" data-page-id="catalog-continuity" data-page-kind="catalog" tabindex="-1">
+      <header class="page-header">
+        <p class="page-label">Reference library</p>
+        <h1>Continuity and inconsistency register</h1>
+      </header>
+      <article class="reading-content">
+        <span id="continuity-and-inconsistency-register"></span>
+<p><a href="index.html">Catalog index</a>.</p>
+<p>Use stable IDs <code>C001</code>, <code>C002</code>, and so on. For each item record its classification, status, first evidence, conflicting or clarifying evidence, impact, and resolution if supplied.</p>
+<p>Classification: confirmed contradiction; possible continuity error; numerical or chronological tension; character claim or deception; deliberate mystery; unresolved explanation; source or editorial artifact. Status: open, resolved, or retained ambiguity. Do not count a resolved mystery as a confirmed error.</p>
+<p>The leading status of each item gives its final disposition. Dated updates retain what the reader knew earlier. Confirmed text discrepancies are C020 (reward calculation), C021 (party attribution), C023 (convoy totals), C024 (speaker attribution), and C028 (trial ordinals). C016 confirms different quoted estimates, with uncertain cause. Other retained items are qualified claims, terminology, chronology, or interpretation; they are not all counted as authorial errors.</p>
+<p><a id="c001"></a></p>
+<h2 id="c001-gamovs-precise-war-warning-and-information-source">C001 — Gamov's precise war warning and information source</h2>
+<ul>
+<li><strong>Classification:</strong> unresolved explanation; accurate political prediction. Hidden information is only a possible interpretation.</li>
+<li><strong>Status:</strong> open.</li>
+<li><strong>First evidence:</strong> During the Thursday gathering Gamov predicts that war will begin the next day because Marutzian promises support for Patina. Bar and Shtupa report no visible preparation. Source: <a href="source-map.html#p1-c01">P1-C01</a>, paragraphs P0011–P0013 and P0031–P0039.</li>
+<li><strong>Clarifying evidence:</strong> Before dawn, Patina attacks Lamaria, Marutzian announces mobilization, and the war expands toward Cortezia. Gamov's prediction is accurate in outcome, but the chapter does not state how he knows.</li>
+<li><strong>Impact:</strong> Shows that Gamov reads the political danger more accurately than the gathering. The source does not establish hidden access to information.</li>
+<li><strong>Resolution:</strong> The precision of the original warning remains unexplained. Later scientific/origin hypotheses do not establish its information source. Preserve skepticism followed by confirmation of the prediction.</li>
+</ul>
+<p><a id="c002"></a></p>
+<h2 id="c002-unforecast-hurricane-after-a-stable-weather-report">C002 — Unforecast hurricane after a stable weather report</h2>
+<ul>
+<li><strong>Classification:</strong> initially unexplained event, later identified as a military weather attack.</li>
+<li><strong>Status:</strong> partly resolved in P1-C02: a surprise weather attack is identified; operational details are unstated.</li>
+<li><strong>First evidence:</strong> Shtupa reports planned climate stability, no dangerous disturbance, and excellent weather for the next two days. Gamov insists that Cortezian stations are being forced into action. Source: <a href="source-map.html#p1-c01">P1-C01</a>, paragraphs P0035–P0039 and P0053–P0057.</li>
+<li><strong>Conflicting evidence:</strong> Before dawn an extreme hurricane strikes, although Semipalov says no forecast or ordinary station accident could produce it. The broadcast then reports enhanced operation at Cortezia's overseas weather stations.</li>
+<li><strong>Impact:</strong> Connects the personal warning to demonstrated environmental change and raises the possibility of deliberate meteorological attack.</li>
+<li><strong>Resolution:</strong> P1-C02 P0014–P0017 identifies the surprise attack and its defeat. Specific operators and station remain unstated; the forecast gap is not a confirmed continuity error.</li>
+</ul>
+<p><a id="c003"></a></p>
+<h2 id="c003-official-victory-reports-versus-retreat-evidence">C003 — Official victory reports versus retreat evidence</h2>
+<ul>
+<li><strong>Classification:</strong> character claim or deception; deliberate wartime propaganda.</li>
+<li><strong>Status:</strong> resolved as intentional information conflict, with later direct admissions of fabrication.</li>
+<li><strong>First evidence:</strong> Elena hears stereo reports of Patina's advances while food queues report that Latanian forces are abandoning captured cities. Semipalov says broadcasts and rumors each distort the truth, then admits that political leaders treat truth as an ineffective weapon. Source: <a href="source-map.html#p1-c02">P1-C02</a>, paragraphs P0005–P0010.</li>
+<li><strong>Clarifying evidence:</strong> The narrator confirms that the celebrated victory becomes a real defeat after the allied conference and that the front changes hands. The chapter presents the conflict as manipulation and incomplete information, not as a contradiction in the war's physical events.</li>
+<li><strong>Impact:</strong> Shows how civilians judge the war through competing channels and establishes the political use of false confidence.</li>
+<li><strong>Resolution:</strong> P1-C03–P1-C10 supplies explicit invented battlefield reports and a coerced transfer described publicly as voluntary. These are deliberate representations, not incompatible physical histories.</li>
+</ul>
+<h3 id="c002-update-first-meteorological-attack">C002 update — First meteorological attack</h3>
+<p>P1-C02 P0014–P0017 describes the first storm as a surprise meteorological attack, repelled after one night because distant posts detected its excessive speed. This partly resolves the P1-C01 forecast gap: planned good weather did not exclude an enemy attack. Cyclone steering is unstable and depends on intuition. The immediate context points to Amentola's forces, but the passage does not identify individual operators or a specific station. Status: <strong>partly resolved; remaining operational detail unstated</strong>. This is no demonstrated continuity error.</p>
+<p><a id="c004"></a></p>
+<h2 id="c004-albert-peanos-relationship-with-marutzian">C004 — Albert Peano's relationship with Marutzian</h2>
+<ul>
+<li><strong>Classification:</strong> character claim or deception; retained ambiguity.</li>
+<li><strong>Status:</strong> partly resolved by P1-C10: hostility is confirmed; suspected intent to cause Peano's death at the front is unproved.</li>
+<li><strong>First evidence:</strong> Rumors say Albert Peano is out of favor with his uncle Arthur Marutzian. Semipalov has personally heard warm conversations between them, which does not confirm hostility. Gamov suspects that Marutzian placed Peano in the exposed division so a resonance strike might kill him. Source: <a href="source-map.html#p1-c03">P1-C03</a>, paragraphs P0052–P0059.</li>
+<li><strong>Clarifying evidence:</strong> Peano says that people do not tell his uncle what he dislikes; his smile may conceal his true mood. The chapter does not establish whether the assignment is punishment, protection, ordinary duty, or a deliberate threat.</li>
+<li><strong>Impact:</strong> Makes family loyalty and wartime assignment part of the political mystery around Marutzian.</li>
+<li><strong>Resolution:</strong> Mordasov's order, Woodworth's disclosure, and Marutzian's own P1-C10 P0099 statement confirm hostility. The suspected plan to kill Peano remains unproved; apparent warmth never established genuine loyalty.</li>
+</ul>
+<h3 id="c001-update-patinas-betrayal-prediction">C001 update — Patina's betrayal prediction</h3>
+<p>Gamov says he warned the division that Patina would abandon Latania after defeat. The reader has already heard this prediction on the first Thursday night, P1-C01 P0059. Torba's separate-peace order confirms its outcome in P1-C03 P0042–P0045. Gamov now makes a further prediction: Patina will join Cortezia and turn its weapons against Latania. The separate peace alone does not yet prove this additional claim.</p>
+<h3 id="c003-update-battlefield-propaganda">C003 update — Battlefield propaganda</h3>
+<p>Pavel admits that he supplied an embellished report describing Steel Ram as an impregnable bastion and Gamov as its decisive commander. The report followed Marshal Komlin's request for good news and General Leonid Prishchepa's demand that Gamov be highlighted. This confirms intentional morale propaganda rather than a physical contradiction. Source: <a href="source-map.html#p1-c03">P1-C03</a>.</p>
+<h3 id="p1-c04-updates-c001-c003-and-shtoks-identity">P1-C04 updates — C001, C003, and Shtok's identity</h3>
+<p>Shtok reports negotiations for Patina to fight Latania (P0047), supporting Gamov's further prediction in C001 but not yet proving the attack has happened. Gamov knowingly requests a broadcast of completed encirclement and repelled assaults before either occurs (P0079–P0082), strengthening C003 as deliberate propaganda. Shtok confirms that Birker Shtok is his real name (P0045); Gamov's suspicion of an alias is corrected within the chapter and is no continuity error.</p>
+<p><a id="c005"></a></p>
+<h2 id="c005-making-war-profitable-while-making-it-repulsive">C005 — Making war profitable while making it repulsive</h2>
+<ul>
+<li><strong>Classification/status:</strong> Intentional ideological tension remains; the promised accountability is enacted in P6-C12–P6-C13. This is not an authorial continuity error.</li>
+<li><strong>Evidence:</strong> Gamov pays combat rewards, then states that he wants to abolish war by humiliating it. Semipalov directly objects that rewards make participation profitable, resembling piracy. Gamov distinguishes earned rewards from robbery, stresses motivation, and admits he is still seeking the larger method. Source: <a href="source-map.html#p1-c05">P1-C05</a>, P0040–P0072.</li>
+<li><strong>Impact:</strong> The reader must preserve the unresolved conflict between the anti-war end and the incentives used to win. Soldiers' threats to resist confiscation show the immediate political effect (P0073–P0093).</li>
+</ul>
+<h3 id="c003-update-publicity-as-command-protection">C003 update — Publicity as command protection</h3>
+<p>Gamov's invented Barta report has been broadcast. He explains that fame gives commanders freedom from superior interference (P0021–P0023). Korkin's reassuring reports also conflict with Komlin's admission of collapse (P0100–P0106). Both are identifiable reporting distortions. Source: <a href="source-map.html#p1-c05">P1-C05</a>.</p>
+<h3 id="p1-c06-reward-revision-and-c005">P1-C06 — Reward revision and C005</h3>
+<p>The formal tariff explicitly revises Gamov's improvised payouts (P0075), so doubled equipment-capture rates are not an unexplained numeric conflict. The five-to-one preference for live prisoners is retained. Gamov explains its humanitarian and military logic against Gonzalez's objection (P0079–P0082), developing C005 without ending the broader tension. Semipalov changes from opposition to practical assent (P0073–P0074); the narration gives the cause, so this is character development. His initial guess that Gamov feels shame is corrected by Gamov's stated concern about encirclement (P0052–P0056). Source: <a href="source-map.html#p1-c06">P1-C06</a>.</p>
+<h3 id="p1-c07-propaganda-consent-and-uncertain-thoughts">P1-C07 — Propaganda, consent, and uncertain thoughts</h3>
+<p>C003: Leonid plants a relief-army rumor (P0012); Gamov discloses the real rescue mission (P0026). Komlin uses the invented continuous Barta defense to reject Korkin's appeals, and Leonid contradicts that invented history (P0075–P0076). This concerns the earlier defensive propaganda, not denial of the later breakout barrage. C004: Peano's thoughts about challenging Marutzian are explicitly unknown at this moment (P0099). Leonid's refusal to endorse a permanent tariff follows his earlier tolerance of one payout; this is an explained distinction, not inconsistent characterization (P0003–P0005). Source: <a href="source-map.html#p1-c07">P1-C07</a>.</p>
+<h3 id="p1-c08-c003-and-c004-gain-direct-evidence">P1-C08 — C003 and C004 gain direct evidence</h3>
+<p>C004 is partly clarified: Mordasov quotes Marutzian's distrust of Peano and conditional order to arrest him (P0073–P0077). This supports hostility but does not prove Gamov's earlier suspicion of a lethal frontline assignment. Peano's claim that officials will embezzle the money remains an allegation (P0072). C003: Gamov intentionally recasts Mordasov's legitimate mission as sabotage and repeats his criticism as alleged slander of beloved leaders (P0093–P0095). Mordasov himself corrects the initial “general” label to state councillor (P0038); this is an explicit correction, not an unexplained rank conflict. Source: <a href="source-map.html#p1-c08">P1-C08</a>.</p>
+<p><a id="c006"></a></p>
+<h2 id="c006-serbins-restoration-and-future-influence">C006 — Serbin's restoration and future influence</h2>
+<ul>
+<li><strong>Classification/status:</strong> Later influence resolved by Serbin's guard, sickroom-broadcast, and intervention roles in Parts 5–6. The original crowd's inner motive remains uncertain.</li>
+<li><strong>Evidence:</strong> The crowd that laughed at Serbin's humiliation now celebrates his reconciliation with Gamov. Semipalov wonders if the crowd feels absolved of its own betrayal, but says he never fully understood the event. He retrospectively warns that Serbin also acquired a power with sinister consequences. Source: <a href="source-map.html#p1-c08">P1-C08</a>, P0008–P0013.</li>
+<li><strong>Boundary:</strong> Neither the crowd's motive nor Serbin's later role is established by this scene. Do not treat the emotional reversal as an authorial contradiction.</li>
+</ul>
+<h3 id="p1-c09-c004-mordasov-and-hidden-preparations">P1-C09 — C004, Mordasov, and hidden preparations</h3>
+<p>Woodworth corroborates Peano's embezzlement claim by describing secret government bonuses and admitting his own allocation. He confirms a plan to remove Peano and infers that prison awaited him; imprisonment is not yet observed (P0075). Pavel confirms that he, Peano, and Gonzalez isolated Mordasov's guards before the meeting, without telling Gamov, Semipalov, or either general (P0072–P0074). Woodworth's inference that a death sentence had already been decided is not independently established by that admission. This is later disclosure of concealed action, not a contradiction of the earlier limited viewpoint. Source: <a href="source-map.html#p1-c09">P1-C09</a>.</p>
+<p><a id="c007"></a></p>
+<h2 id="c007-one-week-versus-several-hundred-battle-hours">C007 — One week versus several hundred battle hours</h2>
+<ul>
+<li><strong>Classification/status:</strong> Numerical or chronological tension; retained ambiguity.</li>
+<li><strong>Evidence:</strong> P0002 calls the period the following week; P0003 describes the continuous battle as lasting several hundred hours; P0004 ends it on the last day of that week. A literal seven-day week is 168 hours. Source: <a href="source-map.html#p1-c09">P1-C09</a>.</li>
+<li><strong>Assessment:</strong> “Several hundred” may be rhetorical approximation of exhausting continuous combat. The text does not reconcile the quantities. Preserve this as a small numerical tension, not a proved change to the plot chronology.</li>
+</ul>
+<p><a id="c008"></a></p>
+<h2 id="c008-gamovs-question-about-elena-and-jealousy">C008 — Gamov's question about Elena and jealousy</h2>
+<ul>
+<li><strong>Classification/status:</strong> Resolved foreshadowing: P2-C06 discloses the false triangle; P4-C04–P4-C08 explains Elena's genuine ignorance and grief; P5-C02 narrates the reunion.</li>
+<li><strong>Evidence:</strong> Gamov asks whether Semipalov is jealous, denies romantic intent, and the narrator says he was calculating moves for an improbable situation he would create much later. Source: <a href="source-map.html#p1-c09">P1-C09</a>, P0109–P0115.</li>
+<li><strong>Boundary:</strong> At the first appearance the future plan is withheld. Later disclosure establishes a staged affair, not an actual one; preserve that original knowledge limit.</li>
+</ul>
+<h3 id="p1-c10-part-1-continuity-state">P1-C10 — Part 1 continuity state</h3>
+<ul>
+<li><strong>C004:</strong> Marutzian himself regrets sending Peano to the front rather than prison (P0099), confirming the hostile relationship. This does not independently prove that the frontline assignment aimed to kill him. Gamov displays the bonus document, naming Komlin's two-million-kalon allocation (P0065–P0067), giving documentary support to the financial allegations.</li>
+<li><strong>C003:</strong> The resignation broadcast calls the transfer voluntary, whereas the scene shows armed occupation and Peano's death threat (P0092–P0118). This is deliberate political representation, not conflicting narrative history.</li>
+<li><strong>C001/C002/C005/C006/C007/C008:</strong> Retain their stated boundaries: unexplained precision of prediction; first storm partly explained as attack; ideological tension; Serbin foreshadowing; small numerical ambiguity; and unspecified future use of jealousy.</li>
+<li><strong>Corrected belief:</strong> Semipalov thinks Komlin has lost his mind, then explicitly says future events disproved that impression (P0122). Do not record permanent incapacity.</li>
+</ul>
+<p>Source: <a href="source-map.html#p1-c10">P1-C10</a>. No confirmed plot contradiction was established in Part 1; C007 is the sole recorded numerical tension.</p>
+<p><a id="c009"></a></p>
+<h2 id="c009-gamovs-precise-denial-about-fagustas-article">C009 — Gamov's precise denial about Fagusta's article</h2>
+<ul>
+<li><strong>Classification/status:</strong> Resolved deliberate concealment: P6-C06–P6-C07 reveals Gamov as author of both papers' unsigned editorials.</li>
+<li><strong>First evidence:</strong> Gamov denies that Fagusta showed him the article before sending it to print. Semipalov stresses the deliberately repeated wording, but cannot explain it. <a href="source-map.html#p2-c04">P2-C04</a>, P0048–P0051.</li>
+<li><strong>Boundary:</strong> This does not prove either that Fagusta is insincere or that Gamov has no prior knowledge. Later authorship evidence must be compared with the exact denial.</li>
+</ul>
+<p><a id="c010"></a></p>
+<h2 id="c010-the-voityuk-test-consent-location-and-secrecy">C010 — The Voityuk test: consent, location, and secrecy</h2>
+<p><strong>Final status:</strong> Consent resolved as objection followed by yielding (P2-C08); south/center wording and the four-person secrecy scope retain ambiguity. Voityuk's espionage is later confessed in P3-C03.</p>
+<ul>
+<li><strong>Consent:</strong> Semipalov explicitly objects to the false northern-offensive leak in <a href="source-map.html#p2-c03">P2-C03</a>, P0096–P0099. Pavel says he agreed in <a href="source-map.html#p2-c05">P2-C05</a>, P0087. At this point the claims conflict; later yielding must not erase the objection.</li>
+<li><strong>Offensive location:</strong> The intended real attack is on the southern Western Front in P2-C03 P0094, then in the center in P2-C05 P0089–P0090. <strong>Classification/status:</strong> unresolved operational wording or plan change; retained ambiguity. No text here states that a plan cannot have changed.</li>
+<li><strong>Evidence boundary:</strong> Enemy troop movement follows the planted report, but the characters have not directly observed its transmission. Their confidence is not yet a confession or independent proof.</li>
+</ul>
+<h3 id="c008-update-the-staged-affair-is-disclosed">C008 update — The staged affair is disclosed</h3>
+<p><a href="source-map.html#p2-c06">P2-C06</a>, P0048–P0069, explicitly connects Elena's appointment and the earlier jealousy question to a false triangle intended to make Semipalov's political defection credible. <strong>Status:</strong> the immediate purpose is resolved; later emotional consequences remain to be followed. The planned affair is a performance, not proof of adultery.</p>
+<p><a id="c011"></a></p>
+<h2 id="c011-military-ranks-and-retrospective-labels">C011 — Military ranks and retrospective labels</h2>
+<p><strong>Final status:</strong> Vaksel's general/marshal terminology, Pariona's changed rank/office, and Gamov's retrospective lieutenant-colonel label remain qualified discrepancies. Gamov's later lack of current military office does not erase his historical colonel rank.</p>
+<ul>
+<li><strong>Evidence:</strong> Four-star general and Amentola's deputy in <a href="source-map.html#p2-c05">P2-C05</a>, P0083; “Marshal Vaksel” in <a href="source-map.html#p2-c06">P2-C06</a>, P0048.</li>
+<li><strong>Classification/status:</strong> Rank terminology or unreported promotion; retained ambiguity. An unstated promotion is possible; the text does not yet explain the difference. Use the later regular title Marshal Ferdinand Vaksel without erasing the introduction.</li>
+</ul>
+<h3 id="c011-update-four-stars-remain">C011 update — Four stars remain</h3>
+<p><a href="source-map.html#p2-c07">P2-C07</a>, P0040, calls Vaksel marshal and describes four gold stars. This supports stable insignia across varying labels; it does not prove either a promotion or an error.</p>
+<p><a id="c012"></a></p>
+<h2 id="c012-nordags-aid-expectations">C012 — Nordag's aid expectations</h2>
+<p>Woodworth says Nordag resents refused material aid in <a href="source-map.html#p2-c06">P2-C06</a>, P0029. Semipalov says it did not ask for goods or money in <a href="source-map.html#p2-c07">P2-C07</a>, P0021. <strong>Classification/status:</strong> conflicting reports or unspoken expectations; retained ambiguity. Disappointment does not logically require a formal request. The text does not supply the missing distinction.</p>
+<p><a id="c013"></a></p>
+<h2 id="c013-the-zabon-intelligence-laboratorys-location">C013 — The Zabon intelligence laboratory's location</h2>
+<p><a href="source-map.html#p2-c07">P2-C07</a>, P0011, places the laboratory on headquarters' ninth floor. P0039 calls the laboratory whose displays Semipalov duplicates underground. <strong>Classification/status:</strong> possible spatial continuity error; open. No separate laboratory or move is stated. Neither a floor-numbering convention nor a second site should be invented to resolve it.</p>
+<h3 id="c010-update-objection-followed-by-yielding-secrecy-scope-remains-unclear">C010 update — Objection followed by yielding; secrecy scope remains unclear</h3>
+<p><a href="source-map.html#p2-c08">P2-C08</a>, P0026–P0027, explicitly acknowledges Semipalov's initial objection and his eventual submission. <strong>Consent status: resolved as an explained sequence</strong>, not simultaneous approval and opposition.</p>
+<p>P0032 says the Voityuk mystery is known only to Gamov, Semipalov, Woodworth, and Pavel, although Peano attended P2-C03 P0071–P0100 and P2-C05 P0070–P0091. <strong>Classification/status:</strong> possible secrecy-scope inconsistency; retained ambiguity. It may concern the deeper current operation, but the source does not explicitly delimit it.</p>
+<p><a id="c014"></a></p>
+<h2 id="c014-nordags-condemned-officers-sentence-report-and-later-fate">C014 — Nordag's condemned officers: sentence, report, and later fate</h2>
+<p><strong>Final status:</strong> P6-C01–P6-C02 resolves the named captives' apparent deaths as concealed survival. Real executions remain explicit. Voityuk's later appearance corrects a death inference; the reported saved-person scale is not an exact census.</p>
+<ul>
+<li><strong>First evidence:</strong> <a href="source-map.html#p2-c09">P2-C09</a>, P0091–P0113, orders shooting of the captives after the blockade has ended. It does not narrate the shooting.</li>
+<li><strong>Classification/status at Part 2:</strong> Pending outcome. Semipalov experiences the order as a moral betrayal. Later reports of execution and any later survivors must each retain their source and knowledge state.</li>
+<li><strong>Spy report:</strong> Pavel says Cortezia relayed Voityuk's information to Putrament only after the first refusal (P0087–P0088). This explains the reversal in his intelligence account, not through directly witnessed transmission.</li>
+</ul>
+<p><a id="c015"></a></p>
+<h2 id="c015-appeal-rights-versus-the-claim-that-no-appeal-exists">C015 — Appeal rights versus the claim that no appeal exists</h2>
+<p>The White Court advertises review and brief stays in <a href="source-map.html#p2-c04">P2-C04</a>, P0016. Gonzalez denies cancellation or appeal in <a href="source-map.html#p2-c09">P2-C09</a>, P0103; Pustovoyt's failed protest is explicit at P0111. <strong>Final classification/status:</strong> institutional promise versus public assertion, clarified by P6-C09's concealed Mercy review and simulations. The misleading public claim and genuine abuses remain; this is not automatically an authorial contradiction.</p>
+<h3 id="c014-update-executions-believed-and-reported">C014 update — Executions believed and reported</h3>
+<p><a href="source-map.html#p3-c01">P3-C01</a>, P0002–P0023, treats the officers as executed. Pavel reports a broadcast at 11:00, six hours after the execution, followed by Nordag's cabinet and withdrawal orders. This is the characters' reported history and Semipalov's belief. It does not yet independently settle each captive's actual fate.</p>
+<p><a id="c016"></a></p>
+<h2 id="c016-the-bandit-estimate-changes-in-quotation">C016 — The bandit estimate changes in quotation</h2>
+<p>Pavel estimates <strong>180,000–190,000</strong> in <a href="source-map.html#p3-c01">P3-C01</a>, P0040. Gamov quotes <strong>170,000–180,000</strong> in <a href="source-map.html#p3-c02">P3-C02</a>, P0017. Both source passages were checked. <strong>Classification/status:</strong> confirmed difference between reported numbers; retained ambiguity about inaccurate recollection versus a continuity slip. The later 273,565 surrenders exceed either estimate; that larger total is an explained intelligence failure, not another contradiction.</p>
+<h3 id="c005-update-present-guilt-and-future-judgment">C005 update — Present guilt and future judgment</h3>
+<p><a href="source-map.html#p3-c04">P3-C04</a> qualifies the Declaration's sweeping language during the debate: justified defense can exist, while this current war is condemned. Gamov includes himself in future accountability. The tension between methods and ends remains deliberate; a postwar trial is still a promise.</p>
+<h3 id="c006-update-serbin-protects-gamov">C006 update — Serbin protects Gamov</h3>
+<p><a href="source-map.html#p3-c07">P3-C07</a>, P0055–P0069, shows Serbin wounded while protecting Gamov. This follows humiliation in P1-C06 and public reconciliation in P1-C08, P0008–P0013. It explains a new action, not the crowd's earlier unknowable motive or all of Serbin's future significance.</p>
+<h3 id="source-name-note-mardobamordoba">Source-name note — Mardoba/Mordoba</h3>
+<p>The same Sobrana president is Mardoba in <a href="source-map.html#p2-c06">P2-C06</a>, P0008, and Mordoba in <a href="source-map.html#p3-c05">P3-C05</a>, P0014. Both passages were checked. Use <strong>Mgobo Mardoba</strong> as the editorial name and retain Mordoba as a source spelling variant; no second identity or plot contradiction follows.</p>
+<p><a id="c017"></a></p>
+<h2 id="c017-bernoullis-fund-and-a-doubtful-dialogue-address">C017 — Bernoulli's fund and a doubtful dialogue address</h2>
+<ul>
+<li><strong>Fund wording:</strong> The planned donation targets the “Fund for Vaksel” in <a href="source-map.html#p3-c09">P3-C09</a>, P0018; the actual scandal names Bernoulli's electoral fund in <a href="source-map.html#p3-c11">P3-C11</a>, P0002. Both passages were checked. <strong>Classification/status:</strong> unexplained target or descriptor change; retained ambiguity. No second donation or explicit plan revision is supplied.</li>
+<li><strong>Dialogue:</strong> P3-C09 P0022 appears to continue Pavel's proposal, yet addresses “Pavel” and refers to his Klur fund; P0023 gives Semipalov the next operational task. <strong>Classification/status:</strong> possible speaker/name editorial slip. The intended division of labor is clear, but the address is not silently corrected.</li>
+<li><strong>Narration of deception:</strong> P3-C09 P0047 says every serviceable aircraft went to Konduk; P0048 says “I did not lie.” P3-C08 P0017 and P3-C10's much larger fleet show the statement was false. This is tension in Semipalov's account of his deceptive performance, not evidence of a changing fleet count.</li>
+</ul>
+<p><a id="c018"></a></p>
+<h2 id="c018-semipalovs-apparent-death">C018 — Semipalov's apparent death</h2>
+<p><strong>Final status:</strong> Both apparent deaths are resolved: the hanging was staged (P4-C01), and the shot missed a fatal result (P5-C01). Each earlier cliffhanger remains a limited-viewpoint account.</p>
+<p>The plan in <a href="source-map.html#p3-c12">P3-C12</a>, P0002–P0028 and P0092–P0108, promises a safe staged hanging. In <a href="source-map.html#p3-c13">P3-C13</a>, P0005, Semipalov suddenly believes the hanging is real and experiences darkness. <strong>Classification/status at Part 3:</strong> deliberate cliffhanger; unresolved outcome. His terror is not confirmation of death. Both interpretations of Peano's tears belong to his limited viewpoint.</p>
+<h3 id="c018-resolution-semipalov-survived-the-hanging">C018 resolution — Semipalov survived the hanging</h3>
+<p><a href="source-map.html#p4-c01">P4-C01</a>, P0002–P0016, shows him awake and alive. The two days describe Pustovoyt's vigil, not the whole arrest-to-release interval. <a href="source-map.html#p4-c04">P4-C04</a>, P0005–P0012, explains that even forewarned Peano doubted the ruse. <strong>Status: resolved staged execution and frightened misinterpretation</strong>, not resurrection or a continuity error.</p>
+<p><a id="c019"></a></p>
+<h2 id="c019-kozyuras-origin-and-the-viewed-world">C019 — Kozyura's origin and the viewed world</h2>
+<p><strong>Final status:</strong> Actual transfer is demonstrated in P6-C14–P6-C15. Personal childhood origins, full cosmology, and the full cause of both scientists' altered blood, senses, and appetites remain uncertain. Semipalov's later regret at missing those clues does not supply an explicit causal resolution.</p>
+<ul>
+<li><strong>First account:</strong> <a href="source-map.html#p4-c02">P4-C02</a>, P0032–P0052, reports a nuclear accident and transfer near Sorbas.</li>
+<li><strong>Qualification:</strong> <a href="source-map.html#p4-c03">P4-C03</a>, P0020–P0027, says the amnesiac adolescent later inferred his origin from recognized images; he cannot prove it.</li>
+<li><strong>Classification/status at the first visits:</strong> Extraordinary hypothesis with observed images and incomplete personal memory. The final disposition above preserves the remaining personal/cosmological uncertainty despite demonstrated passage. Do not identify the viewed destruction as Hiroshima or the world as Earth without textual evidence.</li>
+<li><strong>Early prediction boundary:</strong> Gamov was still uninformed about the laboratory in P4-C03 P0025–P0027. This does not explain his P1-C01 next-day war warning.</li>
+</ul>
+<h3 id="c013-update-building-scope">C013 update — Building scope</h3>
+<p><a href="source-map.html#p4-c02">P4-C02</a>, P0083, says houses in Adan, Zabon, and Cortezian cities do not exceed five floors, while P2-C07 P0011 placed the headquarters laboratory on the ninth. “Houses” may mean residences in this discussion of residents climbing stairs; the source does not explicitly state that restriction. Retain a <strong>qualified building-scope tension</strong>, alongside the ninth-floor/underground wording, rather than inventing a universal five-story physical limit.</p>
+<p><a id="c020"></a></p>
+<h2 id="c020-khotas-blood-reward-arithmetic">C020 — Khota's blood reward arithmetic</h2>
+<p><a href="source-map.html#p4-c06">P4-C06</a>, P0054, states two dinas = 2,000 koras, twenty drops per kora, and one gold lat per drop, then awards <strong>2,000,000 lats</strong>. The given multiplication yields <strong>40,000 lats</strong>. <a href="source-map.html#p2-c02">P2-C02</a>, P0029–P0030, and the award's own gold-or-notes choice establish one lat unit; no fiftyfold denomination conversion explains it. <strong>Classification/status: confirmed numerical inconsistency; cause unresolved.</strong> Preserve the narrated award rather than silently repairing it. Hospital subtotals are consistent and are not part of this finding.</p>
+<h3 id="c008-update-elenas-knowledge-and-marriage">C008 update — Elena's knowledge and marriage</h3>
+<p>P4-C04 P0020 confirms that Elena still believed Semipalov dead. P4-C07 P0028 says her real grief and anger were calculated parts of the operation. In <a href="source-map.html#p4-c08">P4-C08</a>, P0042–P0086, she explains her hatred of the believed traitor, denies an actual affair, and receives a promise of eventual return. This is explained emotional conflict. “First met twelve years ago” in P1-C01 P0100 and “nearly twelve years my wife” in P4-C07 P0024 concern different starts and allow rounding; they are not a demonstrated chronological error.</p>
+<p><a id="c021"></a></p>
+<h2 id="c021-patinas-party-labels-reverse-in-the-taunts">C021 — Patina's party labels reverse in the taunts</h2>
+<p><a href="source-map.html#p4-c09">P4-C09</a>, P0195, explicitly assigns Torba to the Maximalists and Markvard to the Optimates. <a href="source-map.html#p4-c10">P4-C10</a>, P0002, makes Optimates taunt Maximalists about “your Ponsiy,” with the reverse reply about “your Vilkomir.” Both passages were checked. <strong>Classification/status: confirmed local attribution discrepancy; likely editorial slip, cause unproved.</strong> No actual party switch is narrated.</p>
+<p><a id="c022"></a></p>
+<h2 id="c022-roder-conquered-versus-a-proposal-to-occupy-it">C022 — Roder conquered versus a proposal to occupy it</h2>
+<p><a href="source-map.html#p4-c07">P4-C07</a>, P0067, calls Roder conquered and puts troops on its Klur border. <a href="source-map.html#p4-c10">P4-C10</a>, P0008–P0009, proposes occupying all Roder and Klur. <strong>Classification/status:</strong> territorial-scope ambiguity. Conquest need not mean complete occupation, but the source does not explicitly explain the distinction. No reversal of the army's allegiance or proved loss of conquered land is inferred.</p>
+<p><a id="c023"></a></p>
+<h2 id="c023-the-execution-convoy-changes-from-24-to-20-to-22-aircraft">C023 — The execution convoy changes from 24 to 20 to 22 aircraft</h2>
+<p><a href="source-map.html#p4-c11">P4-C11</a>, P0024, starts with twenty-four aircraft, ten carrying prisoners; the same paragraph sends “all twenty,” ten transports and ten escorts, toward the ocean. P0044 returns twelve armed aircraft and ten transports, totaling twenty-two. Both passages were checked. <strong>Classification/status: confirmed numerical description inconsistency; unexplained.</strong> No losses, detachments, or reinforcements are narrated. Do not choose one total. Separate prisoner counts can describe different subsets and do not prove the same kind of error.</p>
+<p><a id="c024"></a></p>
+<h2 id="c024-putraments-words-attributed-to-pustovoyt">C024 — Putrament's words attributed to Pustovoyt</h2>
+<p><a href="source-map.html#p4-c15">P4-C15</a>, P0018, explicitly gives Putrament the distinction between an army submitting to the victor's will and civilians to his mercy. P0034 credits the distinction to Pustovoyt. Both passages were checked. <strong>Classification/status: confirmed attribution mismatch; likely name slip, cause unproved.</strong> No separate earlier formulation by Pustovoyt is supplied.</p>
+<h3 id="c014-update-one-concealed-survivor-is-already-explained">C014 update — One concealed survivor is already explained</h3>
+<p>Luiza's stayed death sentence is explicit in P4-C15 P0029, and P0047–P0049/P0074 acknowledge that the public blanket execution announcement hid her survival. This is deliberate misinformation, not unexplained resurrection. Semipalov still recalls Sumo Pariona and Kinza Vardant as dead at P0035–P0040; their individual fates remain to be checked later. Zhanna's death is narrated in P4-C14 P0002, not yet independently revised here.</p>
+<h3 id="c018-new-event-the-part-4-shooting">C018 new event — The Part 4 shooting</h3>
+<p><a href="source-map.html#p4-c15">P4-C15</a>, P0135–P0136, ends with a shot and Pavel's cry that Semipalov has been killed. <strong>Status:</strong> a new unconfirmed apparent death, distinct from the resolved hanging. The attacker and medical outcome are withheld.</p>
+<h3 id="c018-resolution-the-shooting-was-not-fatal">C018 resolution — The shooting was not fatal</h3>
+<p><a href="source-map.html#p5-c01">P5-C01</a>, P0002–P0011, shows Semipalov alive and identifies Anna as the attacker. She acted for Floria, correcting his initial assumption of revenge for Voityuk. <strong>Status: resolved limited-viewpoint cliffhanger</strong>, distinct from the earlier simulated hanging.</p>
+<p><a id="c025"></a></p>
+<h2 id="c025-epidemic-scope-reports-and-later-correction">C025 — Epidemic scope, reports, and later correction</h2>
+<ul>
+<li><strong>Klur:</strong> <a href="source-map.html#p5-c03">P5-C03</a>, P0004, reports several detected cases; <a href="source-map.html#p5-c04">P5-C04</a>, P0012, says the epidemic has not entered. Both passages were checked. <strong>Classification/status:</strong> terminology or retrospective-sequence ambiguity; retained. Imported/sporadic cases need not constitute established epidemic.</li>
+<li><strong>Later state:</strong> P5-C05 P0002–P0003 explicitly gives full coastal devastation; P5-C06 P0002 reports suppression. Thus “no epidemic” must not remain the final status.</li>
+<li><strong>Harvest:</strong> Bar's poor-harvest warning in P5-C05 P0008 becomes a more exact average-harvest report in P5-C06 P0026–P0029, with northern water supply. Amentola's different crop figures are official claims. <strong>Classification:</strong> revised or disputed reports, not a proved impossibility of weather.</li>
+<li><strong>Forecasts:</strong> Early confidence that children will all be saved is later disproved by deaths. This is failed optimism, not two equally authoritative reports of completed rescue.</li>
+</ul>
+<p><a id="c026"></a></p>
+<h2 id="c026-semipalovs-differing-account-of-shars-mercy-request">C026 — Semipalov's differing account of Shar's mercy request</h2>
+<p><a href="source-map.html#p4-c13">P4-C13</a>, P0026–P0027, has Semipalov accept Shar's remembered request and promise of leniency. In <a href="source-map.html#p5-c04">P5-C04</a>, P0149–P0151, he tells Anna that he answered that seeking mercy from him was useless. Both passages were checked. <strong>Classification/status:</strong> inconsistent character retelling; retained ambiguity about evasion, self-presentation, or a source slip. His later offer of rescue work is an actual change in treatment, not proof that either recollection is exact.</p>
+<h3 id="c006-resolution-serbins-political-influence">C006 resolution — Serbin's political influence</h3>
+<p><a href="source-map.html#p5-c07">P5-C07</a>, P0020–P0029, and <a href="source-map.html#p5-c08">P5-C08</a>, P0049–P0066/P0103–P0160, show Serbin as devoted guard, accuser of Semipalov, and effective emotional broadcaster. This supplies the later influence foreshadowed in P1-C08. The original crowd's inner motive remains Semipalov's unresolved interpretation. Gamov's illness is real; scripting Serbin is not proved.</p>
+<h3 id="c011-update-historical-rank-versus-current-office">C011 update — Historical rank versus current office</h3>
+<p><a href="source-map.html#p5-c07">P5-C07</a>, P0030, says Gamov has no current military rank and has not promoted himself. P4-C03 P0009–P0011 explains soldiers' continued “colonel” as the title under which they knew him. This is compatible with the actual earlier promotion in P1-C03; it need not erase his rank history.</p>
+<p><a id="c027"></a></p>
+<h2 id="c027-part-5-wording-conditions-and-compressed-chronology">C027 — Part 5 wording, conditions, and compressed chronology</h2>
+<ul>
+<li><strong>Sickroom direction:</strong> P5-C08 P0050 says Serbin places Gamov on his right side while explaining that he always sleeps on his left; P0103 again says left. The first speech was checked. <strong>Classification:</strong> possible reported-speech/editorial slip; retained, with no invented medical consequence.</li>
+<li><strong>Confiscation condition:</strong> P5-C08 P0046 threatens confiscation if <strong>Latanians</strong> vote no; P5-C09 P0011 has Putrament campaign on confiscation if <strong>Nordags</strong> reject aid. Both were checked. <strong>Classification:</strong> changed reported condition, possibly campaigning distortion; unresolved.</li>
+<li><strong>Transport chronology:</strong> P5-C09 P0031–P0032 gives more than half a day's frontier halt and a day's travel before returning to the narrator's noon vote at P0034. <strong>Classification:</strong> compressed/retrospective narration; no secure same-morning schedule exists.</li>
+<li><strong>Season:</strong> P5-C06 reaches winter/before New Year; P5-C09 describes an autumn ocean and hope of winter calm. <strong>Classification:</strong> loose or inconsistent seasonal wording; retained without invented dates.</li>
+<li><strong>Route/route name:</strong> P5-C10 P0018 abbreviates the country route differently from P5-C09 P0031–P0032; P0069/P0082 calls the parade road Alley of Victories and P0085 Alley of Feats. <strong>Classification:</strong> possible shorthand/editorial variants, not proof of a second convoy or street.</li>
+<li><strong>Korina:</strong> P5-C10 P0050 retains friendship with Cortezia while ending war with Latania; P5-C11 P0005 broadly says old ties were broken. <strong>Assessment:</strong> abandoning the wartime alliance can coexist with retained friendship. Do not equate Korina's peace with Klur's declaration of war on Cortezia.</li>
+</ul>
+<h3 id="c014-resolution-named-survivors-and-real-deaths-coexist">C014 resolution — Named survivors and real deaths coexist</h3>
+<p><a href="source-map.html#p6-c01">P6-C01</a>, P0026–P0035, brings back Zhanna, Sumo Pariona, Kinza Vardant, other Nordag captives, and hundreds of announced victims. Their prior sentences/reported deaths in P2-C09, P3-C01, and P4-C14 remain the earlier public and narrator knowledge. <a href="source-map.html#p6-c02">P6-C02</a>, P0006–P0024, explains the secret system; P0033 explicitly admits real executions. <strong>Status: resolved deception for this identified saved subset, not universal exoneration.</strong> Luiza's stay was already disclosed in P4-C15. No claim that all deaths were fake is supported.</p>
+<h3 id="c011-update-parionas-name-and-rank">C011 update — Pariona's name and rank</h3>
+<p>Sumo Pariona introduces himself as colonel general and deputy commander-in-chief in P2-C09 P0015. <a href="source-map.html#p6-c01">P6-C01</a>, P0031, calls him Suma, army commander, and one of two lieutenant generals. Both passages were checked. <strong>Suma is a true source spelling variant</strong>, not a grammatical case. The changed rank/office is an unexplained retrospective description; a demotion or reassignment is not narrated. Preserve the initial rank and later wording without inventing a transition.</p>
+<p><a id="c029"></a></p>
+<h2 id="c029-other-retrospective-accounts-and-their-limits">C029 — Other retrospective accounts and their limits</h2>
+<ul>
+<li><strong>Biber and Falk:</strong> P4-C12 P0030 places them among conference captives; P6-C02 P0043 says they were captured during Tronshke's army's collapse. <strong>Classification/status:</strong> changed capture framing, possibly broad campaign compression; retained ambiguity, not a fabricated second capture. Biber's survival resolves Pliss's prison report without proving every detail of it.</li>
+<li><strong>War origin:</strong> P6-C05 P0018–P0020 has Bernoulli blame Amentola while Semipalov names Marutzian's declaration. Political causation and formal initiation are different claims.</li>
+<li><strong>Retrospective planning:</strong> P6-C04's reading of early acts as systematic is Semipalov's interpretation. It does not independently prove a complete prewar master plan.</li>
+</ul>
+<h3 id="c009-resolution-the-precise-denial-concealed-authorship">C009 resolution — The precise denial concealed authorship</h3>
+<p><a href="source-map.html#p6-c06">P6-C06</a>, P0026–P0036, reveals Gamov's <em>Herald</em> authorship; <a href="source-map.html#p6-c07">P6-C07</a>, P0020–P0046, reveals the <em>Tribune</em> authorship and the editors' separate knowledge. Gamov did not need Fagusta to show him an article he had written. <strong>Status: resolved deliberate verbal concealment.</strong> Preserve the earlier published disagreement and the sincere reactions it produced.</p>
+<h3 id="c014-update-voityuk-and-the-limit-of-simulation">C014 update — Voityuk and the limit of simulation</h3>
+<p><a href="source-map.html#p6-c08">P6-C08</a>, P0003–P0007, confirms Voityuk alive and identifies the former death belief as Semipalov's inference. <a href="source-map.html#p6-c09">P6-C09</a>, P0007–P0011, confirms Mordasov's actual killing and explains the simulation system. “Several hundred” saved in P6-C02 P0033 versus “thousandfold” earlier operations in P6-C09 P0011 is conflicting scale language, possibly rhetoric; no exact saved-person census is defensible.</p>
+<h3 id="c015-resolution-a-concealed-process-behind-public-refusals">C015 resolution — A concealed process behind public refusals</h3>
+<p>P6-C09 P0009–P0011 says Pustovoyt secretly examined sentences and could prevent actual execution, even where political need required its public appearance. This clarifies the early conflict between announced appeal rights and Gonzalez's public denials. <strong>Status: explained secret practice and misleading public presentation</strong>, with genuine abuses still judged at trial. The final court's unappealable sentence is a separate later event.</p>
+<h3 id="c011-update-gamovs-recalled-rank-conflicts-with-the-early-sequence">C011 update — Gamov's recalled rank conflicts with the early sequence</h3>
+<p><a href="source-map.html#p1-c03">P1-C03</a>, P0003, directly promotes Gamov from major to colonel three days before Barta; encirclement follows at P0042–P0068. <a href="source-map.html#p6-c09">P6-C09</a>, P0006–P0007, recalls him as lieutenant colonel during that encirclement before the Parp raid. Both sides were checked. <strong>Classification/status:</strong> retrospective rank mismatch, possible recollection/source slip; unresolved. No intermediate promotion or demotion is invented. The same paragraph's Peter Porp is the earlier Peter Parp, a source spelling variant.</p>
+<h3 id="c029-update-karmanyuks-family">C029 update — Karmanyuk's family</h3>
+<p><a href="source-map.html#p2-c03">P2-C03</a>, P0021, sends parents and wife north and the three boys to military school. Prosecutor Georgiu says wife and children were exiled in <a href="source-map.html#p6-c06">P6-C06</a>, P0013. Both were checked. <strong>Classification/status:</strong> inconsistent prosecutorial retelling; retained ambiguity about rhetorical compression or source error. Retain the prosecutor attribution rather than overwrite the earlier stated disposition.</p>
+<p><a id="c028"></a></p>
+<h2 id="c028-the-trials-day-numbers">C028 — The trial's day numbers</h2>
+<p>P6-C06 P0006–P0007 sets procedural day one and prosecution day two. P0018 closes that sitting for the next day's defense; P0046 closes another exchange until the following day. P6-C07 describes a night/new day yet ends at P0047 as “the third day.” More directly, <strong>P6-C08 P0002 and P6-C09 P0002 both call their day the fourth</strong>, although P6-C08 P0056 promises rebuttal “tomorrow” and P0059–P0061 records the intervening evening. These passages were checked. <strong>Classification/status: confirmed ordinal chronology inconsistency; unresolved.</strong> Do not silently renumber the court days or confuse this textual problem with the intentional deceptions.</p>
+<p>Sources: <a href="source-map.html#p6-c06">P6-C06</a>, <a href="source-map.html#p6-c07">P6-C07</a>, <a href="source-map.html#p6-c08">P6-C08</a>, <a href="source-map.html#p6-c09">P6-C09</a>.</p>
+<h3 id="c005-final-state-accountability-is-enacted-its-moral-result-remains-contested">C005 final state — Accountability is enacted, its moral result remains contested</h3>
+<p>The anti-war aim is already explicit in P1-C05 P0059. Gamov's developmental account in P6-C13 P0043 is retrospective, not a new exact date for discovering that aim. The promised judgment becomes a real trial, death sentence, public rejection of death, and court abolition in P6-C12–P6-C13. His later martyrdom/symbol motive supplements his conscience argument without proving the whole earlier program insincere. <strong>Status:</strong> ideological tension remains intentional; the plot's accountability promise is fulfilled, not an unresolved missing event.</p>
+<h3 id="c019-final-state-passage-demonstrated-personal-origins-remain-hypotheses">C019 final state — Passage demonstrated; personal origins remain hypotheses</h3>
+<p>P6-C11 P0045–P0127 gives Gamov's incomplete rescue memory and Tarkhun's rejected inference; P6-C13 P0076–P0080 adds images without recovered memory. P6-C14's farewell adopts other-world origin publicly but adds no independent proof. Transfer itself is demonstrated by P6-C14 P0047–P0049 and P6-C15 P0002–P0009. Segovia's language/vanished-people evidence at P6-C15 P0036 supports Semipalov's civilization-origin theory, not every claimed biographical detail. <strong>Status:</strong> crossing resolved as an event; Kozyura/Gamov childhood origins and full cosmology retain uncertainty. Neither Earth nor Hiroshima is named as a confirmed identity.</p>
+<p>P6-C15 P0035 recalls a twenty-to-one time rate from the first laboratory visit. P4-C02–P4-C03 and the rest of Part 4 contain no stated rate, only viewing focus. <strong>Classification:</strong> retrospective added detail/attribution gap, not a demonstrated conflict with a different earlier rate.</p>
+<p><a id="c030"></a></p>
+<h2 id="c030-genealogical-scale-and-qualified-final-counts">C030 — Genealogical scale and qualified final counts</h2>
+<p>Tarkhun claims seventy-four incarnations but sixty-nine generations in P6-C11 P0028; the songs are called five centuries old at P0117/P0136. Literal consecutive generations within five centuries would be unusually short, but the source supplies no genealogy/calendar explanation or exact identity of the two spans. P6-C12 P0043 loosely says “seventy-fourth living descendant.” <strong>Classification/status:</strong> chronological plausibility and terminology tension; retained, not an incarnation-count error.</p>
+<p>P6-C13 P0002 first expresses uncertain memory of whether some Patinians favored death, then lists Patina among states with none. <strong>Classification:</strong> uncertain recollection beside a categorical claim. No reliable exact worldwide tally is supplied or reconstructed.</p>
+<p><a id="c031"></a></p>
+<h2 id="c031-minor-notes-and-rejected-error-claims">C031 — Minor notes and rejected error claims</h2>
+<ul>
+<li>P2-C03 P0083 describes Peano's contempt; P0088 describes surprise replacing contempt in Pavel's eyes. These can be separate observations. <strong>Disposition:</strong> possible attribution slip retained in the local ledger; no proved contradiction.</li>
+<li>P2-C07 P0055 uses midsummer and late-summer language in one weather description. <strong>Disposition:</strong> loose seasonal wording; insufficient for an exact-date contradiction.</li>
+<li>The changed formal reward tariff in P1-C06 is explicitly a revision; the two twelve-year relationship statements have different start events; incomplete production totals are pipeline categories; forecast weather durations refer to different supplies. <strong>Disposition:</strong> no demonstrated inconsistency.</li>
+<li>Roder/Rodera and declined personal-name forms are grammatical cases. Mardoba/Mordoba, Sumo/Suma, Parp/Porp, and Kordaza/Kordoza are actual source variants. English Voityuk/Voytyuk, Kursai/Kursay, and Markvard/Marquard are editorial normalization matters, not book contradictions.</li>
+<li>The narrator's failure to predict motives, a genuine change of mind, an unperformed plan, or an explicitly false public report does not itself establish an authorial error.</li>
+</ul>
+<p>Source detail remains in the <a href="parts/part-1-ledger.html">Part 1</a>, <a href="parts/part-2-ledger.html">Part 2</a>, <a href="parts/part-4-ledger.html">Part 4</a>, and <a href="parts/part-6-ledger.html">Part 6</a> ledgers.</p>
+<p><a id="c032"></a></p>
+<h2 id="c032-the-final-displacement-and-unknown-future">C032 — The final displacement and unknown future</h2>
+<p><a href="source-map.html#p6-c14">P6-C14</a>, P0047–P0049, shows Gonzalez launch Semipalov after pushing Gamov away. <a href="source-map.html#p6-c15">P6-C15</a>, P0033–P0037, explicitly leaves Gonzalez's motive, the homeland's later fate, and rescue unknown. Elena's eventual life with Pavel is Semipalov's hope. The receiving state's technical-monopoly plan is disclosed at P0042; actual torture is only feared, and the final meeting merely begins at P0059–P0061. <strong>Classification/status:</strong> deliberate unresolved ending. Do not invent successful diplomacy, safe return, permanent peace, Gamov's later office, or a final death.</p>
+
+      </article>
+      <nav class="page-navigation" aria-label="Continue reading">
+        <a class="previous" href="../index.html"><span class="page-direction">Previous</span><span class="page-name">Overview</span></a>
+<a class="next" href="index.html"><span class="page-direction">Next</span><span class="page-name">Explore the novel</span></a>
+
+      </nav>
+      <footer class="reading-footer">
+        <span>Dictator · Sergei Snegov</span>
+        <a href="#main-content" hx-boost="false">Back to top <span aria-hidden="true">↑</span></a>
+      </footer>
+    </main>
+    </div>
+  </div>
+  <div id="navigation-announcement" class="sr-only" role="status" aria-live="polite"></div>
+</body>
+</html>

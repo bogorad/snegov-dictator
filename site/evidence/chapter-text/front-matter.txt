@@ -1,0 +1,15 @@
+# Front matter and non-chapter source paragraphs
+FRONT-P0001	text/part0000.html	Сёpгей Снегов
+FRONT-P0002	text/part0000.html	Диктатор
+FRONT-P0003	text/part0001.html	Часть первая
+FRONT-P0004	text/part0001.html	Порыв к власти
+FRONT-P0005	text/part0011.html	Часть вторая
+FRONT-P0006	text/part0011.html	Священный террор
+FRONT-P0007	text/part0020.html	Часть третья
+FRONT-P0008	text/part0020.html	Перелом
+FRONT-P0009	text/part0032.html	Часть четвёртая
+FRONT-P0010	text/part0032.html	Наступление
+FRONT-P0011	text/part0046.html	Часть пятая
+FRONT-P0012	text/part0046.html	Чёрт не нашего бога
+FRONT-P0013	text/part0059.html	Часть шестая
+FRONT-P0014	text/part0059.html	Очищение

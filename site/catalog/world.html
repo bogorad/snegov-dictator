@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Institutions, technology, and world rules for Sergei Snegov’s Dictator, with chapter and source references.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="htmx-config" content='{"historyRestoreAsHxRequest":false,"scrollIntoViewOnBoost":false}'>
+  <title>Institutions, technology, and world rules · Dictator</title>
+  <script>
+    (() => {
+      let saved;
+      try { saved = localStorage.getItem('dictator-theme'); } catch (_) {}
+      const dark = saved === 'dark' || (saved !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    })();
+  </script>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/htmx.min.js" defer></script>
+  <script src="../assets/site.js" defer></script>
+</head>
+<body hx-boost="true" hx-target="#main-content" hx-select="#main-content" hx-swap="outerHTML" hx-indicator="#navigation-progress">
+  <a class="skip-link" href="#main-content" hx-boost="false">Skip to reading</a>
+  <header class="masthead">
+    <a class="book-brand" href="../index.html" data-persistent-link aria-label="Dictator reading companion home">
+      <span class="book-title">Dictator</span>
+      <span class="book-author">Sergei Snegov</span>
+    </a>
+    <div class="masthead-tools">
+      <span class="edition-label">A reading companion</span>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>
+        <svg class="theme-icon icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20.5 13.4A8.7 8.7 0 0 1 10.6 3.5 8.7 8.7 0 1 0 20.5 13.4Z"/></svg>
+        <svg class="theme-icon icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4m0-14.2-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+        <span id="theme-label">Dark mode</span>
+      </button>
+    </div>
+  </header>
+  <div id="navigation-progress" class="navigation-progress htmx-indicator" aria-hidden="true"></div>
+  <div class="reading-layout">
+    <aside class="sidebar" aria-label="Reading navigation">
+      <details id="site-contents" class="contents-panel" open>
+        <summary class="contents-heading"><span>Contents</span><span class="contents-hint">6 parts · 73 chapters</span></summary>
+        <div class="contents-body">
+          <div class="chapter-search" hidden>
+            <label class="sr-only" for="chapter-filter">Filter chapter titles</label>
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+            <input id="chapter-filter" type="search" placeholder="Find a chapter…" autocomplete="off" aria-controls="book-navigation" aria-describedby="filter-status">
+          </div>
+          <p id="filter-status" class="filter-status" role="status" hidden></p>
+          <nav id="book-navigation" class="contents-nav" aria-label="Book contents">
+            <a class="contents-link" data-page-id="overview" href="../index.html">Overview</a>
+<p class="contents-section-label">The chapter summaries</p>
+<details class="contents-group" data-part="1"><summary>Part I · The Impulse to Power</summary><ol class="chapter-list">
+<li><a data-page-id="p1-c01" data-search="Part I · Chapter 1 The Thursday Warning" href="../chapters/p1-c01.html"><span class="chapter-number">01</span> The Thursday Warning</a></li>
+<li><a data-page-id="p1-c02" data-search="Part I · Chapter 2 The War Turns" href="../chapters/p1-c02.html"><span class="chapter-number">02</span> The War Turns</a></li>
+<li><a data-page-id="p1-c03" data-search="Part I · Chapter 3 The Barta Position" href="../chapters/p1-c03.html"><span class="chapter-number">03</span> The Barta Position</a></li>
+<li><a data-page-id="p1-c04" data-search="Part I · Chapter 4 The Captive and the Money Convoy" href="../chapters/p1-c04.html"><span class="chapter-number">04</span> The Captive and the Money Convoy</a></li>
+<li><a data-page-id="p1-c05" data-search="Part I · Chapter 5 Victory for Cash" href="../chapters/p1-c05.html"><span class="chapter-number">05</span> Victory for Cash</a></li>
+<li><a data-page-id="p1-c06" data-search="Part I · Chapter 6 The Price of Courage" href="../chapters/p1-c06.html"><span class="chapter-number">06</span> The Price of Courage</a></li>
+<li><a data-page-id="p1-c07" data-search="Part I · Chapter 7 A Division Freed, a Corps Created" href="../chapters/p1-c07.html"><span class="chapter-number">07</span> A Division Freed, a Corps Created</a></li>
+<li><a data-page-id="p1-c08" data-search="Part I · Chapter 8 Reconciliation and an Execution" href="../chapters/p1-c08.html"><span class="chapter-number">08</span> Reconciliation and an Execution</a></li>
+<li><a data-page-id="p1-c09" data-search="Part I · Chapter 9 The Offer of Power" href="../chapters/p1-c09.html"><span class="chapter-number">09</span> The Offer of Power</a></li>
+<li><a data-page-id="p1-c10" data-search="Part I · Chapter 10 The Seizure of Power" href="../chapters/p1-c10.html"><span class="chapter-number">10</span> The Seizure of Power</a></li>
+</ol></details>
+<details class="contents-group" data-part="2"><summary>Part II · Sacred Terror</summary><ol class="chapter-list">
+<li><a data-page-id="p2-c01" data-search="Part II · Chapter 1 Gold, Humiliation, and a Dictator" href="../chapters/p2-c01.html"><span class="chapter-number">01</span> Gold, Humiliation, and a Dictator</a></li>
+<li><a data-page-id="p2-c02" data-search="Part II · Chapter 2 The First Address and the Sacred Terror" href="../chapters/p2-c02.html"><span class="chapter-number">02</span> The First Address and the Sacred Terror</a></li>
+<li><a data-page-id="p2-c03" data-search="Part II · Chapter 3 Rewards, Executions, and International Courts" href="../chapters/p2-c03.html"><span class="chapter-number">03</span> Rewards, Executions, and International Courts</a></li>
+<li><a data-page-id="p2-c04" data-search="Part II · Chapter 4 The Opposition as an Instrument of Fear" href="../chapters/p2-c04.html"><span class="chapter-number">04</span> The Opposition as an Instrument of Fear</a></li>
+<li><a data-page-id="p2-c05" data-search="Part II · Chapter 5 Making Enemies and Exposing Zabon" href="../chapters/p2-c05.html"><span class="chapter-number">05</span> Making Enemies and Exposing Zabon</a></li>
+<li><a data-page-id="p2-c06" data-search="Part II · Chapter 6 Refusing Retreat and Staging Betrayal" href="../chapters/p2-c06.html"><span class="chapter-number">06</span> Refusing Retreat and Staging Betrayal</a></li>
+<li><a data-page-id="p2-c07" data-search="Part II · Chapter 7 The Deluge and Nordag&#39;s Attack" href="../chapters/p2-c07.html"><span class="chapter-number">07</span> The Deluge and Nordag&#39;s Attack</a></li>
+<li><a data-page-id="p2-c08" data-search="Part II · Chapter 8 A False Threat Becomes an Order" href="../chapters/p2-c08.html"><span class="chapter-number">08</span> A False Threat Becomes an Order</a></li>
+<li><a data-page-id="p2-c09" data-search="Part II · Chapter 9 Zabon Is Saved, but Mercy Fails" href="../chapters/p2-c09.html"><span class="chapter-number">09</span> Zabon Is Saved, but Mercy Fails</a></li>
+</ol></details>
+<details class="contents-group" data-part="3"><summary>Part III · Turning Point</summary><ol class="chapter-list">
+<li><a data-page-id="p3-c01" data-search="Part III · Chapter 1 The Price of Terror" href="../chapters/p3-c01.html"><span class="chapter-number">01</span> The Price of Terror</a></li>
+<li><a data-page-id="p3-c02" data-search="Part III · Chapter 2 Mercy Under Threat" href="../chapters/p3-c02.html"><span class="chapter-number">02</span> Mercy Under Threat</a></li>
+<li><a data-page-id="p3-c03" data-search="Part III · Chapter 3 A Spy Becomes a Channel" href="../chapters/p3-c03.html"><span class="chapter-number">03</span> A Spy Becomes a Channel</a></li>
+<li><a data-page-id="p3-c04" data-search="Part III · Chapter 4 War Before the Court of Humanity" href="../chapters/p3-c04.html"><span class="chapter-number">04</span> War Before the Court of Humanity</a></li>
+<li><a data-page-id="p3-c05" data-search="Part III · Chapter 5 The Fleet Behind the Front" href="../chapters/p3-c05.html"><span class="chapter-number">05</span> The Fleet Behind the Front</a></li>
+<li><a data-page-id="p3-c06" data-search="Part III · Chapter 6 Gamov Risks His Mandate" href="../chapters/p3-c06.html"><span class="chapter-number">06</span> Gamov Risks His Mandate</a></li>
+<li><a data-page-id="p3-c07" data-search="Part III · Chapter 7 Victory at the Ballot, Danger on Every Front" href="../chapters/p3-c07.html"><span class="chapter-number">07</span> Victory at the Ballot, Danger on Every Front</a></li>
+<li><a data-page-id="p3-c08" data-search="Part III · Chapter 8 The Punishment of Konduk" href="../chapters/p3-c08.html"><span class="chapter-number">08</span> The Punishment of Konduk</a></li>
+<li><a data-page-id="p3-c09" data-search="Part III · Chapter 9 A False Agent and a Real Doubt" href="../chapters/p3-c09.html"><span class="chapter-number">09</span> A False Agent and a Real Doubt</a></li>
+<li><a data-page-id="p3-c10" data-search="Part III · Chapter 10 The Mutiny That Demanded Battle" href="../chapters/p3-c10.html"><span class="chapter-number">10</span> The Mutiny That Demanded Battle</a></li>
+<li><a data-page-id="p3-c11" data-search="Part III · Chapter 11 The Captive Who Understands the Plan" href="../chapters/p3-c11.html"><span class="chapter-number">11</span> The Captive Who Understands the Plan</a></li>
+<li><a data-page-id="p3-c12" data-search="Part III · Chapter 12 The Traitor He Agrees to Become" href="../chapters/p3-c12.html"><span class="chapter-number">12</span> The Traitor He Agrees to Become</a></li>
+<li><a data-page-id="p3-c13" data-search="Part III · Chapter 13 Darkness Beneath the Gallows" href="../chapters/p3-c13.html"><span class="chapter-number">13</span> Darkness Beneath the Gallows</a></li>
+</ol></details>
+<details class="contents-group" data-part="4"><summary>Part IV · Offensive</summary><ol class="chapter-list">
+<li><a data-page-id="p4-c01" data-search="Part IV · Chapter 1 A secret return to life" href="../chapters/p4-c01.html"><span class="chapter-number">01</span> A secret return to life</a></li>
+<li><a data-page-id="p4-c02" data-search="Part IV · Chapter 2 A window onto nuclear destruction" href="../chapters/p4-c02.html"><span class="chapter-number">02</span> A window onto nuclear destruction</a></li>
+<li><a data-page-id="p4-c03" data-search="Part IV · Chapter 3 Doubt, complicity, and a delayed return" href="../chapters/p4-c03.html"><span class="chapter-number">03</span> Doubt, complicity, and a delayed return</a></li>
+<li><a data-page-id="p4-c04" data-search="Part IV · Chapter 4 The hidden air army" href="../chapters/p4-c04.html"><span class="chapter-number">04</span> The hidden air army</a></li>
+<li><a data-page-id="p4-c05" data-search="Part IV · Chapter 5 A storm opens the prison camps" href="../chapters/p4-c05.html"><span class="chapter-number">05</span> A storm opens the prison camps</a></li>
+<li><a data-page-id="p4-c06" data-search="Part IV · Chapter 6 Terror, mercy, and public resurrection" href="../chapters/p4-c06.html"><span class="chapter-number">06</span> Terror, mercy, and public resurrection</a></li>
+<li><a data-page-id="p4-c07" data-search="Part IV · Chapter 7 Six strongholds close around the enemy" href="../chapters/p4-c07.html"><span class="chapter-number">07</span> Six strongholds close around the enemy</a></li>
+<li><a data-page-id="p4-c08" data-search="Part IV · Chapter 8 The person beneath the mask" href="../chapters/p4-c08.html"><span class="chapter-number">08</span> The person beneath the mask</a></li>
+<li><a data-page-id="p4-c09" data-search="Part IV · Chapter 9 Independence as punishment, agreement by force" href="../chapters/p4-c09.html"><span class="chapter-number">09</span> Independence as punishment, agreement by force</a></li>
+<li><a data-page-id="p4-c10" data-search="Part IV · Chapter 10 Food pressure and a terrible reprisal" href="../chapters/p4-c10.html"><span class="chapter-number">10</span> Food pressure and a terrible reprisal</a></li>
+<li><a data-page-id="p4-c11" data-search="Part IV · Chapter 11 The execution flight and its unexpected welcome" href="../chapters/p4-c11.html"><span class="chapter-number">11</span> The execution flight and its unexpected welcome</a></li>
+<li><a data-page-id="p4-c12" data-search="Part IV · Chapter 12 Gamov moves the war into public feeling" href="../chapters/p4-c12.html"><span class="chapter-number">12</span> Gamov moves the war into public feeling</a></li>
+<li><a data-page-id="p4-c13" data-search="Part IV · Chapter 13 Private love and failed diplomacy" href="../chapters/p4-c13.html"><span class="chapter-number">13</span> Private love and failed diplomacy</a></li>
+<li><a data-page-id="p4-c14" data-search="Part IV · Chapter 14 Mothers confronted with the war" href="../chapters/p4-c14.html"><span class="chapter-number">14</span> Mothers confronted with the war</a></li>
+<li><a data-page-id="p4-c15" data-search="Part IV · Chapter 15 Nordag’s thirst and a daughter’s defiance" href="../chapters/p4-c15.html"><span class="chapter-number">15</span> Nordag’s thirst and a daughter’s defiance</a></li>
+</ol></details>
+<details class="contents-group" data-part="5"><summary>Part V · The Devil of a God Not Ours</summary><ol class="chapter-list">
+<li><a data-page-id="p5-c01" data-search="Part V · Chapter 1 Anna Kursai&#39;s revenge for Floria" href="../chapters/p5-c01.html"><span class="chapter-number">01</span> Anna Kursai&#39;s revenge for Floria</a></li>
+<li><a data-page-id="p5-c02" data-search="Part V · Chapter 2 A homecoming and an enemy beyond military plans" href="../chapters/p5-c02.html"><span class="chapter-number">02</span> A homecoming and an enemy beyond military plans</a></li>
+<li><a data-page-id="p5-c03" data-search="Part V · Chapter 3 Saving enemy children by force" href="../chapters/p5-c03.html"><span class="chapter-number">03</span> Saving enemy children by force</a></li>
+<li><a data-page-id="p5-c04" data-search="Part V · Chapter 4 Mercy on the public stage" href="../chapters/p5-c04.html"><span class="chapter-number">04</span> Mercy on the public stage</a></li>
+<li><a data-page-id="p5-c05" data-search="Part V · Chapter 5 The first split in the Core" href="../chapters/p5-c05.html"><span class="chapter-number">05</span> The first split in the Core</a></li>
+<li><a data-page-id="p5-c06" data-search="Part V · Chapter 6 Famine, revolt, and a rejected appeal" href="../chapters/p5-c06.html"><span class="chapter-number">06</span> Famine, revolt, and a rejected appeal</a></li>
+<li><a data-page-id="p5-c07" data-search="Part V · Chapter 7 Gamov collapses before the assembled government" href="../chapters/p5-c07.html"><span class="chapter-number">07</span> Gamov collapses before the assembled government</a></li>
+<li><a data-page-id="p5-c08" data-search="Part V · Chapter 8 The sickroom becomes a political force" href="../chapters/p5-c08.html"><span class="chapter-number">08</span> The sickroom becomes a political force</a></li>
+<li><a data-page-id="p5-c09" data-search="Part V · Chapter 9 Semipalov obeys the vote he opposed" href="../chapters/p5-c09.html"><span class="chapter-number">09</span> Semipalov obeys the vote he opposed</a></li>
+<li><a data-page-id="p5-c10" data-search="Part V · Chapter 10 Aid changes the alliances" href="../chapters/p5-c10.html"><span class="chapter-number">10</span> Aid changes the alliances</a></li>
+<li><a data-page-id="p5-c11" data-search="Part V · Chapter 11 Cortezia&#39;s crisis ends in peace" href="../chapters/p5-c11.html"><span class="chapter-number">11</span> Cortezia&#39;s crisis ends in peace</a></li>
+</ol></details>
+<details class="contents-group" data-part="6"><summary>Part VI · Cleansing</summary><ol class="chapter-list">
+<li><a data-page-id="p6-c01" data-search="Part VI · Chapter 1 The condemned return alive" href="../chapters/p6-c01.html"><span class="chapter-number">01</span> The condemned return alive</a></li>
+<li><a data-page-id="p6-c02" data-search="Part VI · Chapter 2 The cost of a useful deception" href="../chapters/p6-c02.html"><span class="chapter-number">02</span> The cost of a useful deception</a></li>
+<li><a data-page-id="p6-c03" data-search="Part VI · Chapter 3 The victor demands a trial" href="../chapters/p6-c03.html"><span class="chapter-number">03</span> The victor demands a trial</a></li>
+<li><a data-page-id="p6-c04" data-search="Part VI · Chapter 4 Semipalov reviews the road to victory" href="../chapters/p6-c04.html"><span class="chapter-number">04</span> Semipalov reviews the road to victory</a></li>
+<li><a data-page-id="p6-c05" data-search="Part VI · Chapter 5 An enemy warns against self-destruction" href="../chapters/p6-c05.html"><span class="chapter-number">05</span> An enemy warns against self-destruction</a></li>
+<li><a data-page-id="p6-c06" data-search="Part VI · Chapter 6 The prosecution exposes the price of policy" href="../chapters/p6-c06.html"><span class="chapter-number">06</span> The prosecution exposes the price of policy</a></li>
+<li><a data-page-id="p6-c07" data-search="Part VI · Chapter 7 Gamov wrote both sides of the dispute" href="../chapters/p6-c07.html"><span class="chapter-number">07</span> Gamov wrote both sides of the dispute</a></li>
+<li><a data-page-id="p6-c08" data-search="Part VI · Chapter 8 Voityuk&#39;s accusation and the shadows of good" href="../chapters/p6-c08.html"><span class="chapter-number">08</span> Voityuk&#39;s accusation and the shadows of good</a></li>
+<li><a data-page-id="p6-c09" data-search="Part VI · Chapter 9 Gonzalez asks for his own death" href="../chapters/p6-c09.html"><span class="chapter-number">09</span> Gonzalez asks for his own death</a></li>
+<li><a data-page-id="p6-c10" data-search="Part VI · Chapter 10 The army prepares to stop an execution" href="../chapters/p6-c10.html"><span class="chapter-number">10</span> The army prepares to stop an execution</a></li>
+<li><a data-page-id="p6-c11" data-search="Part VI · Chapter 11 The individual victim and the unknown origin" href="../chapters/p6-c11.html"><span class="chapter-number">11</span> The individual victim and the unknown origin</a></li>
+<li><a data-page-id="p6-c12" data-search="Part VI · Chapter 12 Sentence, intervention, and the desire to disappear" href="../chapters/p6-c12.html"><span class="chapter-number">12</span> Sentence, intervention, and the desire to disappear</a></li>
+<li><a data-page-id="p6-c13" data-search="Part VI · Chapter 13 A living departure replaces martyrdom" href="../chapters/p6-c13.html"><span class="chapter-number">13</span> A living departure replaces martyrdom</a></li>
+<li><a data-page-id="p6-c14" data-search="Part VI · Chapter 14 Gonzalez changes the passenger" href="../chapters/p6-c14.html"><span class="chapter-number">14</span> Gonzalez changes the passenger</a></li>
+<li><a data-page-id="p6-c15" data-search="Part VI · Chapter 15 The peace-maker faces another divided world" href="../chapters/p6-c15.html"><span class="chapter-number">15</span> The peace-maker faces another divided world</a></li>
+</ol></details>
+<p class="contents-section-label">The reference library</p>
+<a class="contents-link" data-page-id="catalog-index" href="index.html">Explore the novel</a>
+<a class="contents-link" data-page-id="catalog-characters" href="characters.html">Characters and relationships</a>
+<a class="contents-link" data-page-id="catalog-places" href="places.html">Places and political geography</a>
+<a class="contents-link" data-page-id="catalog-timeline" href="timeline.html">Timeline and events</a>
+<a class="contents-link" data-page-id="catalog-world" href="world.html" aria-current="page">World and technology</a>
+<a class="contents-link" data-page-id="catalog-continuity" href="continuity.html">Continuity and open questions</a>
+<a class="contents-link" data-page-id="catalog-source-map" href="source-map.html">Source map</a>
+<a class="contents-link" data-page-id="catalog-chapter-reviews" href="chapter-reviews.html">Chapter evidence</a>
+
+          </nav>
+          <p class="sidebar-note">An English summary and reference.<br>Contains spoilers for the full novel.</p>
+        </div>
+      </details>
+    </aside>
+    <div class="reader-column" hx-history-elt>
+    <main id="main-content" class="main-content" data-page-id="catalog-world" data-page-kind="catalog" tabindex="-1">
+      <header class="page-header">
+        <p class="page-label">Reference library</p>
+        <h1>Institutions, technology, and world rules</h1>
+      </header>
+      <article class="reading-content">
+        <span id="institutions-technology-and-world-rules"></span>
+<p><a href="index.html">Catalog index</a>. Separate demonstrated effects from explanations and public claims. Record changes in institutions and technology against the source chapter.</p>
+<p><a id="weather-generators"></a></p>
+<h2 id="meteorological-warfare-and-weather-generators">Meteorological warfare and weather generators</h2>
+<p>The setting treats controlled weather as a military capability. Bar says a modern war is a meteorological contest, and Gamov predicts that Cortezian weather-generator stations are being forced into enhanced regimes. Latania and Cortezia have a treaty for planned cyclone operation, but Gamov expects the treaty to be ignored. The next morning's hurricane is not in the meteorological forecast and cannot be explained by ordinary station accidents according to Semipalov's observation. The news confirms that Cortezian overseas stations have entered enhanced operation. Source: <a href="source-map.html#p1-c01">P1-C01</a>.</p>
+<p><a id="political-mobilization"></a></p>
+<h2>Political mobilization</h2>
+<p>Marutzian's public promise to support Patina becomes a mobilization decree after Patina attacks Lamaria. Volunteers are accepted from age eighteen through fifty-five. The broadcast frames Patina as a victim and Cortezia as a threatening foreign power. Source: <a href="source-map.html#p1-c01">P1-C01</a>.</p>
+<p><a id="war-doctrine"></a></p>
+<h2 id="gamovs-anti-war-doctrine">Gamov's anti-war doctrine</h2>
+<p>Gamov rejects the conventional view of war as an instrument of state policy. He calls a purposeless war a crime and argues that political words become machines, fire, ash, and civilian deaths. His speech works through conviction and emotional force as well as argument. Source: <a href="source-map.html#p1-c01">P1-C01</a>.</p>
+<p><a id="stereo-communications"></a></p>
+<h2>Stereo communications</h2>
+<p>News reaches Semipalov through a stereo broadcast and a stereovision screen. The storm and power failure interrupt both the audio and visual report. Source: <a href="source-map.html#p1-c01">P1-C01</a>.</p>
+<p><a id="urban-order"></a></p>
+<h2 id="urban-order-and-policing">Urban order and policing</h2>
+<p>Police preserve tolerable order on central avenues, but gangs control local territory on the outskirts at night. Residents avoid late movement and lock themselves in early. Source: <a href="source-map.html#p1-c01">P1-C01</a>.</p>
+<p><a id="cyclone-control"></a></p>
+<h2 id="cyclone-control-limits">Cyclone control limits</h2>
+<p>Weather generators can create cyclones, but steering them through the atmosphere is described as an art rather than a reliable technology. Shtupa says each cyclone has an unknown critical mass and volume beyond which it becomes uncontrollable; operators rely on intuition. Latania's first surprise meteorological attack lasts one night and is repelled, while the land war continues to turn against Latania. Source: <a href="source-map.html#p1-c02">P1-C02</a>.</p>
+<p><a id="resonance-weapons"></a></p>
+<h2 id="resonance-and-electro-artillery">Resonance and electro-artillery</h2>
+<p>The Steel Ram division is equipped with radio-pulse devices, resonance guns, and electro-artillery. Semipalov is assigned as a radio saboteur because of his technical background. Source: <a href="source-map.html#p1-c02">P1-C02</a>.</p>
+<p><a id="wartime-blackout"></a></p>
+<h2 id="wartime-blackout-and-rationing">Wartime blackout and rationing</h2>
+<p>Zabon removes street-lamp bulbs and limits household lighting during the wartime blackout. The institute closes at night to prevent sabotage, buses are donated to the front, and meat disappears from the monthly ration because officials fear weather attacks and crop failure. Source: <a href="source-map.html#p1-c02">P1-C02</a>.</p>
+<p><a id="propaganda-and-queues"></a></p>
+<h2 id="public-claims-and-material-evidence">Public claims and material evidence</h2>
+<p>Official stereo reports claim Patina is advancing while food-queue rumors report retreat and abandoned cities. Semipalov states that political systems treat truth as ineffective. This is an intentional information conflict in the narrative, not yet a factual continuity error. Source: <a href="source-map.html#p1-c02">P1-C02</a>.</p>
+<p><a id="electro-barrier"></a></p>
+<h2 id="electro-barriers-and-condensed-water-energy-stores">Electro-barriers and condensed-water energy stores</h2>
+<p>An electro-barrier is built from concealed electro-guns and condensed-water balloons that serve as high-capacity energy stores. A single balloon failure can cut power to a whole battery. The Golden Wings depot explosion turns water into fire, smoke, steam, and lightning, showing the hazard of this technology. Source: <a href="source-map.html#p1-c03">P1-C03</a>.</p>
+<p><a id="resonance-injury"></a></p>
+<h2 id="resonance-injury-and-counter-resonance-protection">Resonance injury and counter-resonance protection</h2>
+<p>A nearby resonance shell can produce severe whole-body vibration. Leonid Prishchepa requires a braking vest adjusted to counter-resonance and remains incapacitated but in command. Source: <a href="source-map.html#p1-c03">P1-C03</a>.</p>
+<p><a id="aerial-reconnaissance"></a></p>
+<h2 id="aerial-and-automated-reconnaissance">Aerial and automated reconnaissance</h2>
+<p>Enemy aero-scouts overfly the Barta position. Steel Ram uses human and automatic scouts to check its flanks and rear before the expected encirclement. Source: <a href="source-map.html#p1-c03">P1-C03</a>.</p>
+<p><a id="waterplanes"></a></p>
+<h2>Waterplanes</h2>
+<p>Peano's bitter forecast says that, if the division is abandoned, the marshal may send two waterplanes to extract survivors after propaganda has celebrated their defense. The evacuation method is a sarcastic prediction, not a demonstrated operation. Source: <a href="source-map.html#p1-c03">P1-C03</a>.</p>
+<p><a id="humiliation-doctrine"></a></p>
+<h2 id="gamovs-humiliation-doctrine">Gamov's humiliation doctrine</h2>
+<p>Gamov threatens Shtok with drug-induced obedience, a degrading act involving a pig, and mass broadcast. The threat succeeds without injecting Shtok. Gamov says he seeks disgust for war, rejecting conventional military honor as a cover for killing and destruction. Semipalov only later recognizes a concept behind the apparent rage. Source: <a href="source-map.html#p1-c04">P1-C04</a>, P0026–P0045. The will-suppressing drug is used on the pig; its claimed effects on a prisoner are threatened, not demonstrated here.</p>
+<p><a id="kalons"></a></p>
+<h2 id="kalons-and-the-captured-payment">Kalons and the captured payment</h2>
+<p>Three hundred million kalons sent from Adan to Patina's government for purchases from the population are seized by Roder and escorted by Parp. Shtok argues that money can buy weapons and that Patina will regain its surrendered equipment but not this money. Source: <a href="source-map.html#p1-c04">P1-C04</a>, P0055–P0059.</p>
+<p><a id="combat-rewards"></a></p>
+<h2>Combat rewards</h2>
+<p>Gamov's unauthorized initial tariff pays 200 kalons per enemy killed (65, total 13,000), 1,000 per captive (350, total 350,000), and 5,000 for each of 200 hand vibrators and 30 pulsators (total 1,150,000). Two electro-guns earn 100,000 each; weapon rewards go to the actual captors. Each wounded soldier receives 2,000; each dead soldier's family is promised 10,000. Officers record allocations and return the unused balance. Source: <a href="source-map.html#p1-c05">P1-C05</a>, P0040–P0044, P0073, P0094–P0095. The source does not give a complete distribution total because it does not state both casualty counts here.</p>
+<p><a id="field-videoscope"></a></p>
+<h2 id="crossing-equipment-and-small-field-videoscope">Crossing equipment and Small Field Videoscope</h2>
+<p>Inflatable suits support several swimming angles; rafts carry resonators. Pavel's Small Field Videoscope (VPM in the Russian initials) tracks Parp's position and pace, but Pavel declines to explain its principle. Anti-resonance vests are too heavy to wear throughout close combat, according to a wounded soldier. Source: <a href="source-map.html#p1-c05">P1-C05</a>, P0009–P0017, P0081–P0082.</p>
+<h3 id="p1-c06-formal-reward-tariff-and-discipline">P1-C06 — Formal reward tariff and discipline</h3>
+<p>The formal tariff replaces the improvised P1-C05 rates. Capture/destruction rates in kalons: waterplane 2,000,000/1,000,000; electro-gun 200,000/100,000; hand vibrator 10,000/5,000; motor vehicle 20,000/10,000; weather generator 4,000,000/2,000,000. Capture/kill rates: general 500,000/100,000; other officer 50,000/10,000; soldier 1,000/200. Wounded soldiers receive 2,000 and heirs of the dead 10,000; unlisted captures receive individual assessments. Source: <a href="source-map.html#p1-c06">P1-C06</a>, P0075–P0102. The changed gun and vibrator rates are an explicit revision, not a contradiction.</p>
+<p>Gamov applies public humiliation to Serbin's mutiny. His stated rationale is that execution could create a cause for solidarity, while ridicule deters imitation. He orders cleanup afterward and retains Serbin for service. His preference for live captives combines human preservation, reduced revenge, and incentives to surrender. Source: <a href="source-map.html#p1-c06">P1-C06</a>, P0045–P0054, P0079–P0082.</p>
+<p><a id="paired-transmitter"></a></p>
+<h2 id="paired-secret-transmitter">Paired secret transmitter</h2>
+<p>Pavel lends Semipalov a device numbered 77. Pavel says only the two can hear each other and interception is impossible. Clear long-range communication is demonstrated during the rescue; the claimed interception immunity is not tested here. Pavel reclaims the device afterward because Semipalov lacks continuing authority to hold it. Source: <a href="source-map.html#p1-c07">P1-C07</a>, P0022–P0025, P0041–P0048, P0069–P0072.</p>
+<h3 id="p1-c07-technology-observations">P1-C07 technology observations</h3>
+<p>Resonance fragments make a tree vibrate; Semipalov cannot determine its later survival. Three waterplanes are observed in flight. Cortezia has begun mass production and Latania is preparing production, but battlefield appearances remain rare. Source: <a href="source-map.html#p1-c07">P1-C07</a>, P0038–P0040.</p>
+<h3 id="p1-c08-weapons-and-control-of-broadcasts">P1-C08 — Weapons and control of broadcasts</h3>
+<p>A hand resonator can subject several targets to painful vibration; a pulsator kills a single target immediately. Gonzalez kills Mordasov with the latter before Mordasov can use his resonator (P0084). Gamov says public support is the corps' current protection against government retaliation. He uses apparent loyalty to keep the broadcast channel open while relaying damaging accusations. Pavel's recording supports an offered inquiry, but the public description deliberately recasts a real envoy as a saboteur (P0093–P0100). Source: <a href="source-map.html#p1-c08">P1-C08</a>.</p>
+<h3 id="p1-c09-transport-shortage-and-government-containment">P1-C09 — Transport shortage and government containment</h3>
+<p>Woodworth says condensed-water fuel no longer reaches transport; locomotives are being converted to coal and oil (P0056). He reports a plan to neutralize the corps by honors, promotion, dispersal of commanders, disarmament, and dissolution. He also reports a secret allocation of the recaptured money as government bonuses, admitting his own intended share (P0067–P0079). These are disclosures by a participant; the assignments have not been carried out. Source: <a href="source-map.html#p1-c09">P1-C09</a>.</p>
+<h3 id="p1-c10-weather-strategy-and-coerced-transfer">P1-C10 — Weather strategy and coerced transfer</h3>
+<p>Shtupa describes Cortezia's seasonal strategy: deny spring rain, then flood summer fields. Latania secured spring rain but cannot exclude large incoming cyclones, so harvest volume will be reduced. The government protects army rations by cutting civilian supplies. Enemy stations in Roder/Lamaria threaten atmospheric superiority (P0028–P0034).</p>
+<p>Pavel's larger secret device displays about a hundred sevens and receives written status messages, extending the earlier paired communication equipment (P0039–P0044). City and palace telephone failures deprive the government of command channels. A document displayed by Gamov assigns Komlin two million kalons from the recaptured money (P0065–P0067). The public transfer presents willing succession; the witnessed sequence shows armed coercion and a prepared text (P0092–P0119). Source: <a href="source-map.html#p1-c10">P1-C10</a>.</p>
+<h2 id="part-2-government-finance-and-sacred-terror">Part 2 — Government, finance, and Sacred Terror</h2>
+<h3 id="p2-c01-agreed-program">P2-C01 — Agreed program</h3>
+<p>The new rulers plan to use three years of military reserves immediately, raise military output by about 50 percent, release premium goods, and pay gold for additional production and combat achievements. Gamov reports 5,000 chuds of gold. They plan to abandon alliances and retain experienced officials through confidential Repentance Sheets: confessed offenses receive amnesty; concealed ones remain punishable. These are proposals at this stage. <a href="source-map.html#p2-c01">P2-C01</a>, P0009–P0031.</p>
+<p><a id="lats"></a></p>
+<h3 id="p2-c02-currency-and-production">P2-C02 — Currency and production</h3>
+<p>Normal quota output earns kalons; extra output earns lats. Quotas are frozen until war ends. One lat has the value of one kor of gold. Coins of five, ten, and twenty lats and gold-convertible notes use the same unit. Reserve goods are sold in special shops. Military rewards extend the two volunteer divisions' practice to the army. <a href="source-map.html#p2-c02">P2-C02</a>, P0029–P0034.</p>
+<p><a id="sacred-terror"></a></p>
+<h3 id="p2-c02-terror-and-government">P2-C02 — Terror and government</h3>
+<p>Gamov orders repeated murderers shot, other prisoners sent to northern labor or penal units, and prisons abolished. Surrender offers bandits pardon; continued resistance brings degrading execution, family/property penalties, and punishment of complicit police. Earlier confessed offenses can be pardoned. He calls the method barbaric and criminal, then defends it as deterrence. These are announced orders, not proof of each execution. The ten-person Core sits above planned elected ordinary ministers. <a href="source-map.html#p2-c02">P2-C02</a>, P0037–P0055.</p>
+<p><a id="black-white-courts"></a></p>
+<h3 id="p2-c03-black-and-white-courts">P2-C03 — Black and White Courts</h3>
+<p>The proposed joint-stock courts receive ten billion lats, equated with 1,000 chuds of gold and divided equally. The Black Court will investigate war-making power and fund punishment; the White Court will fund relief and redress. Gamov says Mercy must prevail and invites equal foreign participation and jurisdiction over Latanian offenders. This is an institutional design, not proof that foreign states accept it. Bar supervises twenty-four ministries. Pustovoyt blocks general internment of former prisoners by exposing its estimated manpower cost. <a href="source-map.html#p2-c03">P2-C03</a>, P0009–P0018, P0036, P0048–P0070.</p>
+<p>Foreign reserves include Cortezian didans, Great Lepin's yulans, and Konduk's dons. Do not exchange these units with lats without an explicit source ratio. P0050.</p>
+<h3 id="p2-c04-courts-in-public-operation">P2-C04 — Courts in public operation</h3>
+<p>The two newspapers use the same press. Each court receives five billion gold lats. The Black Court publishes eighty-four death sentences in absentia and bounties: minimum 100,000 lats, 300,000 per condemned airman, 500,000 for a camp commandant. Its notice distinguishes paid enforcement of a sentence from unauthorized killing. The White Court advertises appeals, sentence review, and short stays of execution. These public guarantees must be compared with later practice. <a href="source-map.html#p2-c04">P2-C04</a>, P0002–P0016.</p>
+<p>Fagusta reports collective punishment of a murdered family's killer, his parents, and his girlfriend. Semipalov accepts the factual basis while the girlfriend's ignorance remains her claim. Gamov presents press outrage as useful deterrence. P0017–P0046.</p>
+<h3 id="p2-c05-economic-results-and-alliance-strategy">P2-C05 — Economic results and alliance strategy</h3>
+<p>Bar reports industrial output near thirty percent above baseline and recalls a twenty-percent promise. The earlier fifty-percent proposal concerned military production; these different scopes do not establish a contradiction. Gold is hoarded while convertible notes circulate. Energy-water remains scarce. Gamov plans to deny subsidies, drive dependent allies toward Cortezia, and use court bounties to impose personal costs on enemy leaders. This remains a strategy, not demonstrated success abroad. <a href="source-map.html#p2-c05">P2-C05</a>, P0036–P0069.</p>
+<p><a id="iron-mass-sensors"></a></p>
+<h3 id="p2-c07-intelligence-and-weather-limits">P2-C07 — Intelligence and weather limits</h3>
+<p>Hidden nail-like sensors measure total iron mass, without identifying the mix of vehicles, weapons, and smaller objects. Personal sensors are tuned to an individual biofield or receiver. Weather defense has two distinct resources: ordinary cloud water and condensed energy-water. During the flood Semipalov estimates a week of the former but only two days of the latter at the current intensity. Sealed enemy vehicles and amphibians survive; rain delays the army but does not destroy it. <a href="source-map.html#p2-c07">P2-C07</a>, P0011–P0020, P0089–P0095.</p>
+<h3 id="p2-c08-production-secrecy-and-coercion">P2-C08 — Production secrecy and coercion</h3>
+<p>Bar reports four new energy-water factories operating, twelve nearly ready, and thirty-one under construction; roughly sixty in a year is a projection, not their sum. Latania had about five government waterplanes before the coup and no combat fleet; around twenty have now been produced. Earlier rare aircraft sightings remain compatible with this. The secret is the scale of the new fleet. A raid captures about eighty Nordag personnel, including eight generals and thirteen colonels. Gamov orders a public cage and one-quarter of the pre-blockade ration; the wider genocide plan is Semipalov's disinformation. <a href="source-map.html#p2-c08">P2-C08</a>, P0013–P0028, P0091–P0095.</p>
+<h2 id="part-3-consent-deception-and-mass-mobilization">Part 3 — Consent, deception, and mass mobilization</h2>
+<p><a id="operation-cleansing"></a></p>
+<h3 id="p3-c01p3-c02-bandit-amnesty-and-public-opinion">P3-C01–P3-C02 — Bandit amnesty and public opinion</h3>
+<p>Pavel estimates 180,000–190,000 bandits. Gonzalez receives troops and police; Pustovoyt receives power to arrange leniency. At the first natural snow, a week for reflection precedes a week of amnesty. Gamov announces 273,565 surrenders and the end of organized banditry. Proposed new divisions are manpower potential, not completed formations. The larger total exposes unreliable state knowledge; Gamov connects this with dictatorship's suppression of dissent. <a href="source-map.html#p3-c01">P3-C01</a>, P0037–P0046; <a href="source-map.html#p3-c02">P3-C02</a>, P0003–P0026.</p>
+<h3 id="p3-c03-the-bank-demand-and-manufactured-truth">P3-C03 — The bank demand and manufactured truth</h3>
+<p>Semipalov demands 100 million didans in one hundred bearer accounts. Voityuk equates this with ten chuds of gold, with one account worth one hundred dins; keep these stated units. Semipalov invents an imminent peace appeal which Gamov had not planned, then persuades Gamov to make it. Thus his “truthful” channel can include a claim made true afterward. <a href="source-map.html#p3-c03">P3-C03</a>, P0084–P0105, P0129–P0132.</p>
+<p><a id="declaration-on-war"></a></p>
+<h3 id="p3-c04-declaration-on-war">P3-C04 — Declaration on War</h3>
+<p>Gamov condemns the present avoidable war, while accepting historical defense, liberation, and rescue as possible just causes. He argues that rulers' unrestrained will, rather than material necessity, causes this war; he includes himself among those answerable. He promises postwar judgment and invites Cortezia to fund a court section and capture him first. His view that Latania begins a new historical stage is a political theory, not an established world law. <a href="source-map.html#p3-c04">P3-C04</a>, P0041, P0062–P0069, P0094–P0163.</p>
+<p><a id="waterplane-fleet"></a></p>
+<h3 id="p3-c05-energy-water-and-the-hidden-fleet">P3-C05 — Energy-water and the hidden fleet</h3>
+<p>Condensed water resembles glass, weighs twenty times ordinary glass, and releases energy as steam. Separate reservoirs provide lift, propulsion, and braking. The withheld energy-water supports a huge fleet; its scale is secret. Plant reports conceal output by dividing actual quantities by coefficients, three at this plant and as high as nine elsewhere. These are the novel's technical claims. <a href="source-map.html#p3-c05">P3-C05</a>, P0048–P0060.</p>
+<p><a id="referendum"></a></p>
+<h3 id="p3-c06p3-c07-the-referendum">P3-C06–P3-C07 — The referendum</h3>
+<p>The four questions separate blame for aggression, government resignation, reparations, and territorial concessions. Gamov insists on true totals. Isiro's national yes/no results are respectively <strong>7/93, 13/87, 1/99, and 4/96 percent</strong>. Floria's yes percentages are <strong>32, 37, 6, and 18</strong> in that same order. Support for national independence thus exceeds support for this government. The mechanics had been prepared before the diplomatic occasion; this does not prove the enemy declaration was planned by Gamov. <a href="source-map.html#p3-c06">P3-C06</a>, P0027–P0044; <a href="source-map.html#p3-c07">P3-C07</a>, P0019–P0044.</p>
+<p><a id="mamun"></a></p>
+<h3 id="p3-c08-mamun-and-collective-occupation-penalties">P3-C08 — Mamun and collective occupation penalties</h3>
+<p>Mamun's tradition links Sorbas with the prophet's emergence from the desert. Konduk's religious and landowning elites dominate a poor agricultural country. Occupation penalties follow delegates' war votes: executions/property loss and family deportation for supporters; lesser property/labor penalties for abstainers; rewards and a subordinate government for the seventeen percent who opposed war. The bombing itself had not been put to a parliamentary vote. Clergy are spared under a separate, still undisclosed religious plan. <a href="source-map.html#p3-c08">P3-C08</a>, P0004–P0007, P0028–P0043.</p>
+<h3 id="p3-c09p3-c11-information-as-a-weapon">P3-C09–P3-C11 — Information as a weapon</h3>
+<p>The Bernoulli operation combines a fictitious industrialists' donation, police suspicion, abduction, false honors, and photomontages. Newspaper reproduction conceals montage seams; the private negatives could expose them. His actual refusal to cooperate is separate from the proposed public image of a rewarded Latanian agent. The strategy has not yet made Amentola disperse all reserves. <a href="source-map.html#p3-c09">P3-C09</a>, P0006–P0024; <a href="source-map.html#p3-c11">P3-C11</a>, P0002–P0017, P0046–P0078.</p>
+<h3 id="p3-c10-fleet-organization-and-secrecy">P3-C10 — Fleet organization and secrecy</h3>
+<p>Bases lack public names and civilian contact; crews cannot correspond with families. One air division has eight regiments, reorganized here into four two-regiment brigades. A 120-aircraft base and many divisions contradict the enemy-facing claim of only one hundred serviceable aircraft; that claim was intentional deception, not the fleet's actual size. <a href="source-map.html#p3-c10">P3-C10</a>, P0002–P0009, P0047–P0075.</p>
+<p><a id="simulated-execution"></a></p>
+<h3 id="p3-c12p3-c13-simulated-hanging-design">P3-C12–P3-C13 — Simulated hanging design</h3>
+<p>Pustovoyt's engineers design a sack apparatus that supports the prisoner while allowing breathing. The proposed genuine hearing before an uninformed Gonzalez is changed to an announced secret trial. The display height is eight lans. Semipalov consents to condemnation and a simulated death, not to being killed. The next chapter shows terror and apparent loss of consciousness, without an external outcome. <a href="source-map.html#p3-c12">P3-C12</a>, P0092–P0108; <a href="source-map.html#p3-c13">P3-C13</a>, P0002–P0005.</p>
+<p><a id="chronophysics"></a></p>
+<h3 id="p4-c01p4-c03-nuclear-power-and-viewed-worlds">P4-C01–P4-C03 — Nuclear power and viewed worlds</h3>
+<p>Semipalov learns of the two researchers during recovery, then sees their apparatus. Shvurts distinguishes molecular compression of energy-water from nuclear fission and fusion. Kozyura focuses images in space and time; an initial century of superimposed images becomes a coherent scene. This viewing resolution is not a stated ratio between the worlds' clock rates. The images show large aircraft, high buildings, combustion vehicles, and a nuclear massacre. No journey is shown yet. Kozyura's main-stream/side-stream cosmology and explanation of lost hair remain scientific claims within the story, not fully demonstrated laws. Pavel reports changed blood, senses, and ordinary appetites in both men. <a href="source-map.html#p4-c02">P4-C02</a>, P0022–P0052, P0061–P0113; <a href="source-map.html#p4-c03">P4-C03</a>, P0020–P0027, P0050–P0054.</p>
+<h3 id="p4-c04p4-c05-the-offensives-mechanism">P4-C04–P4-C05 — The offensive's mechanism</h3>
+<p>Shtupa prepares cloud cover and energy reserves for the hidden fleet. Enormous cloud masses overwhelm Vaksel's expectations and ground his aircraft, but Semipalov says the plan did not depend on enemy shelter orders. The main goal is to free and rearm Latanian prisoners to attack from the enemy rear. Some enemy headquarters dialogue comes from later-captured recordings, not live knowledge. A vibrator can disable at close range; an impulsator kills more immediately. <a href="source-map.html#p4-c04">P4-C04</a>, P0023–P0040; <a href="source-map.html#p4-c05">P4-C05</a>, P0002–P0024, P0035–P0047.</p>
+<h3 id="p4-c06p4-c08-mercy-retaliation-and-prisoners">P4-C06–P4-C08 — Mercy, retaliation, and prisoners</h3>
+<p>Camp records give consistent totals: 120 admitted, 45 survived; Khota 48/32, Barvell 72/13. Khota's stated two-million-lat reward has inconsistent supporting arithmetic; see C020. The liberated men need feeding before rearmament, explicitly revising the original operational assumption. After the warfront victory, freed Latanian prisoners receive special uniforms, 100 gold lats, and thirty days' leave. <a href="source-map.html#p4-c06">P4-C06</a>, P0003–P0054; <a href="source-map.html#p4-c08">P4-C08</a>, P0003–P0004.</p>
+<h3 id="p4-c09-imposed-political-structures">P4-C09 — Imposed political structures</h3>
+<p>Floria's separation is punitive collective policy, not unconditional self-determination. Patina's four-man Core must agree unanimously; delay brings lashes and eventually threatened hanging. The military governor's supremacy has an explicit exception: the women-only Control Committee may approve or reject decisions, and he cannot reverse it. Gamov's assertions about gender are his political theory. <a href="source-map.html#p4-c09">P4-C09</a>, P0005–P0026, P0192–P0210.</p>
+<p><a id="prisoner-aid"></a></p>
+<h3 id="p4-c10-conditional-prisoner-aid">P4-C10 — Conditional prisoner aid</h3>
+<p>Three captive categories receive the former Latanians' actual camp ration, two-thirds of it, or one-half. Outside supplies are permitted, but confiscation takes respectively one-half, four-fifths, or nine-tenths for Latanian children and hospitals. The proposed Aid Administration includes Cortezian state, charities, families, and Latanian Mercy officials; family visits depend on its performance. This deliberately coercive scheme must not become unconditional humane relief in summary. The separate flight plan uses uncondemned hostages to shield the execution of captured air raiders. <a href="source-map.html#p4-c10">P4-C10</a>, P0013–P0034, P0042–P0054.</p>
+<h3 id="p4-c11-reprisal-and-hostage-release">P4-C11 — Reprisal and hostage release</h3>
+<p>Ten transport aircraft are described as carrying about fifty hostages and twenty condemned men each. These loading figures need not equal the earlier nearly two hundred briefing attendees or about three hundred publicized captives. Cortezian civilians prepare nets and cloth; the narrator reports more than one-quarter of dropped prisoners die immediately and more than half the survivors become permanent asylum inmates. No precise death total is warranted. The hostages are released as promised. Aircraft totals themselves conflict; see C023. <a href="source-map.html#p4-c11">P4-C11</a>, P0002–P0049.</p>
+<h3 id="p4-c12p4-c14-mercy-as-political-pressure">P4-C12–P4-C14 — Mercy as political pressure</h3>
+<p>Gamov links terror, rewards, visits, relief, and publicity as one campaign to make people refuse war. His example is the ancient siege of Ton; the text does not name Troy. Conference civilians receive harsh professional-guilt sentences, with stays and selective mercy. Cortezia forms the Aid Administration and sends women delegates. Gamov attacks their gratitude and argues that maternal action can restrain rulers; the effects are variously called mass psychosis, intimacy, and deliberate policy by different observers. Despite hypothetical arguments for maximum suffering, he keeps actual relief and visits in force. <a href="source-map.html#p4-c12">P4-C12</a>, P0009–P0056; <a href="source-map.html#p4-c14">P4-C14</a>, P0021–P0091.</p>
+<h3 id="p4-c15-thirst-blockade-and-hostage-pressure">P4-C15 — Thirst blockade and hostage pressure</h3>
+<p>The invasion cuts water, heat, light, and supply rather than assaulting defended towns. Drinking released energy-water would consume artillery fuel. Gamov threatens thirst while ordering protection for evacuated women and children. The ultimatum offers one million gold lats for Putrament and threatens Luiza if he fails to surrender. Pustovoyt rejects immediate killing after his arrival; his case goes to Gamov before any court result. <a href="source-map.html#p4-c15">P4-C15</a>, P0002–P0016, P0041–P0058, P0117–P0120.</p>
+<p><a id="water-allergy"></a></p>
+<h3 id="p5-c02p5-c04-water-allergy-and-the-rescue-system">P5-C02–P5-C04 — Water allergy and the rescue system</h3>
+<p>Elena reports a virus whose symptoms are triggered by water vapor, not liquid drinking water. Floods are said to intensify it. Natural human milk protects nursing mothers/infants and can treat patients over weeks or months; manufactured milk does not. These are the fiction's medical reports. Semipalov proposes dry coastal weather plus compulsory Latanian milk collection, high payments, food privileges, a domestic reserve, foreign purchases, and shipments. Gamov adopts the scheme. Norma organizes preservation/routes, Elena medical teams, and Pustovoyt purchases; Anna later mobilizes Floria. <a href="source-map.html#p5-c02">P5-C02</a>, P0054–P0066; <a href="source-map.html#p5-c03">P5-C03</a>, P0009–P0032; <a href="source-map.html#p5-c04">P5-C04</a>, P0010–P0028, P0154–P0168.</p>
+<h3 id="p5-c04-release-is-not-acquittal">P5-C04 — Release is not acquittal</h3>
+<p>The conspiracy trial lacks a Mercy representative. Konrad admits his act but denies orders from the former rulers; Fagusta disputes proof and the future benefit of execution. Gamov assures no defendant will die. Gonzalez releases all without acquitting them. This planned intervention defeats Semipalov's prediction that Anna would certainly be killed. <a href="source-map.html#p5-c04">P5-C04</a>, P0029–P0135.</p>
+<h3 id="p5-c05p5-c06-cost-votes-and-famine">P5-C05–P5-C06 — Cost, votes, and famine</h3>
+<p>The rescue consumes reserves and money. The Core first votes <strong>6–4 against renewed fighting</strong>, then <strong>3–7 against sending famine aid</strong>: Gamov, Pustovoyt, and Gonzalez alone support the latter. These are different questions. Gamov calls a referendum after the second defeat and accepts a question naming the cost to home rations and the risk of helping future enemies. Export authorization is distinct from physical delivery across the stormy ocean. <a href="source-map.html#p5-c05">P5-C05</a>, P0008–P0034; <a href="source-map.html#p5-c06">P5-C06</a>, P0066–P0128.</p>
+<h3 id="p5-c07p5-c10-genuine-illness-and-public-authority">P5-C07–P5-C10 — Genuine illness and public authority</h3>
+<p>Preparing food is initially conditional, not dispatch. Serbin's intimate broadcasts sway public attention; Semipalov suspects political use of genuine illness, not a fabricated attack. The aid vote begins at 06:00 local time from east to west. Early eastern support exceeds two-thirds; Isiro later estimates eighty percent nationally. No certified final total is supplied. Semipalov's no vote coexists with lawful implementation of the public decision. Supplies are received and distributed; the initial forecast of seizure is disproved for this observed operation. <a href="source-map.html#p5-c07">P5-C07</a>, P0016–P0041; <a href="source-map.html#p5-c08">P5-C08</a>, P0049–P0066, P0133–P0160; <a href="source-map.html#p5-c09">P5-C09</a>, P0019–P0047; <a href="source-map.html#p5-c10">P5-C10</a>, P0018–P0047.</p>
+<h3 id="p5-c11-terror-the-womens-movement-and-political-limits">P5-C11 — Terror, the women's movement, and political limits</h3>
+<p>Paid terror gains traction, killing listed industrialists and others; the mine also kills bystanders. Semipalov attacks its national bias and asks about terror against themselves. The first unofficial vote against Amentola attracts fewer than half the women and few men; this is not the Latanian referendum's tally. Violence against the petitioners triggers a general strike. The second march avoids the feared massacre, and Amentola states that his government unanimously ended war after more than a week's deliberation. Radon's gender claims and the proposed woman-only government remain political proposals. <a href="source-map.html#p5-c11">P5-C11</a>, P0012–P0047, P0063–P0133.</p>
+<h3 id="p6-c01p6-c02-secret-mercy-and-its-limits">P6-C01–P6-C02 — Secret mercy and its limits</h3>
+<p>The survivors establish that some public execution reports were false. Gamov claims authorship of a system carried out with Terror and Mercy; Semipalov's genuine ignorance helped its credibility. Gonzalez expressly retains guilt for real killings. The revelation does not undo Mordasov's death, battlefield deaths, or every camp execution. <a href="source-map.html#p6-c01">P6-C01</a>, P0026–P0035; <a href="source-map.html#p6-c02">P6-C02</a>, P0006–P0041.</p>
+<p><a id="world-union"></a></p>
+<h3 id="p6-c02p6-c05-union-and-self-accountability">P6-C02–P6-C05 — Union and self-accountability</h3>
+<p>Biber proposes Gamov as chief world president, a council including monarchs, perpetual peace, disarmament except police needs, open borders, common currency, and free residence. The Core approves; the international conference then accepts union and begins reorganization. Implementation remains a process. After months, the Black Court prepares to judge Gamov, Semipalov, and its own chairman Gonzalez. The judge/defendant combination is explicit, not ordinary independent procedure. Bar's promise to abolish the court if he succeeds them remains prospective. <a href="source-map.html#p6-c02">P6-C02</a>, P0052–P0061; <a href="source-map.html#p6-c03">P6-C03</a>, P0004–P0006, P0061–P0085; <a href="source-map.html#p6-c05">P6-C05</a>, P0002–P0005.</p>
+<p><a id="dual-editorials"></a></p>
+<h3 id="p6-c06p6-c07-dual-editorial-authorship">P6-C06–P6-C07 — Dual editorial authorship</h3>
+<p>Gamov wrote both the unsigned government praise and the unsigned opposition attacks. Each editor knew only his own arrangement. Fagusta reports Gamov's purpose as channeling dissent, preventing an enemy-supported domestic front, and examining resistance without destroying morale. The papers' published positions are therefore not automatic evidence of their editors' private beliefs. <a href="source-map.html#p6-c06">P6-C06</a>, P0026–P0046; <a href="source-map.html#p6-c07">P6-C07</a>, P0020–P0046.</p>
+<h3 id="p6-c08p6-c10-guilt-and-the-machinery-of-mercy">P6-C08–P6-C10 — Guilt and the machinery of mercy</h3>
+<p>Semipalov argues that good creates harmful consequences and judgment must weigh both; he does not say all harms are automatically justified. Gonzalez says real death sentences required no substantial Mercy objection; valid objection plus political necessity led to simulation. This secret process explains earlier public antagonism and misleading refusals, while leaving actual killings. The army's readiness to intervene shows that agreed disarmament is not yet complete; no earlier completion date was supplied. <a href="source-map.html#p6-c08">P6-C08</a>, P0044–P0056; <a href="source-map.html#p6-c09">P6-C09</a>, P0009–P0012; <a href="source-map.html#p6-c10">P6-C10</a>, P0022–P0038.</p>
+<h3 id="p6-c11-conscience-songs-and-origins">P6-C11 — Conscience, songs, and origins</h3>
+<p>Gamov argues that a person's death destroys that person's whole experienced world; aggregate benefit cannot simply cancel it. His blame for the dead girl of P4's air raid is moral responsibility for the war, not a claim that he dropped the bomb. Tarkhun distinguishes seventy-four incarnations from sixty-nine generations. Mamun's songs describe a multilingual lost homeland, cosmic transfer, and hoped-for reunification. Semipalov separates possible remembered history from prophecy; the court does not certify Gamov's other-world birth. <a href="source-map.html#p6-c11">P6-C11</a>, P0007–P0028, P0108–P0136.</p>
+<h3 id="p6-c12p6-c13-sentence-suspended-referendum-and-abolition">P6-C12–P6-C13 — Sentence suspended, referendum, and abolition</h3>
+<p>Semipalov suspends enforcement without pretending to cancel the court's sentence. A worldwide referendum two weeks later overwhelmingly rejects death, with no numerical tally. Gamov is released; the Black Court is actually abolished by special order. Army demobilization and factory conversion are now under way. These completed steps supersede earlier proposals without implying instantaneous global completion. <a href="source-map.html#p6-c12">P6-C12</a>, P0003–P0038; <a href="source-map.html#p6-c13">P6-C13</a>, P0002–P0022.</p>
+<h3 id="p6-c14p6-c15-transfer-equipment-and-limits">P6-C14–P6-C15 — Transfer equipment and limits</h3>
+<p>Nuclear motors power chronomotors and a room-sized cabin. Two microseconds is Kozyura's claimed transfer-matrix spread, not a measured trip duration. Cargo includes weapons, water motors, a one-person aircraft, and roughly two weeks of food. Actual transfer and Semipalov's survival occur; a safe return is not demonstrated. His later recollection of one homeland year to about twenty foreign years is new retrospective information, absent from the first visit's narrated explanation. <a href="source-map.html#p6-c14">P6-C14</a>, P0019–P0024, P0047–P0049; <a href="source-map.html#p6-c15">P6-C15</a>, P0002–P0009, P0035.</p>
+<p><a id="final-world"></a></p>
+<h3 id="p6-c15-language-manuscript-and-renewed-political-danger">P6-C15 — Language, manuscript, and renewed political danger</h3>
+<p>A machine searches four thousand archived languages and identifies Semipalov's speech as a small extinct language; this is archive coverage, not all languages ever spoken. Segovia's vanished-people legend and the shared language lead Semipalov to a transfer hypothesis for his whole civilization. Natural passage and regular transport remain research aims. The hosts falsely report him unconscious while he writes, seeking monopoly of energy-water, weather control, and weapons. They already hold his equipment and manuscript. The final meeting displays the cargo; an accumulator alone cannot make rain without a generator. No actual torture, negotiated technology agreement, completed reproduction of the inventions, rescue, or new war is shown. <a href="source-map.html#p6-c15">P6-C15</a>, P0011–P0015, P0027–P0061.</p>
+
+      </article>
+      <nav class="page-navigation" aria-label="Continue reading">
+        <a class="previous" href="../index.html"><span class="page-direction">Previous</span><span class="page-name">Overview</span></a>
+<a class="next" href="index.html"><span class="page-direction">Next</span><span class="page-name">Explore the novel</span></a>
+
+      </nav>
+      <footer class="reading-footer">
+        <span>Dictator · Sergei Snegov</span>
+        <a href="#main-content" hx-boost="false">Back to top <span aria-hidden="true">↑</span></a>
+      </footer>
+    </main>
+    </div>
+  </div>
+  <div id="navigation-announcement" class="sr-only" role="status" aria-live="polite"></div>
+</body>
+</html>
